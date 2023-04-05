@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/walger/Desenvolvimento/c++/Botanic/build",
-  "command": "/usr/bin/g++  -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.2 -isystem /usr/local/include/wx-3.2   -pthread -g   -o CMakeFiles/botanica.dir/main.cpp.o -c /home/walger/Desenvolvimento/c++/Botanic/main.cpp",
-  "file": "/home/walger/Desenvolvimento/c++/Botanic/main.cpp"
-}
-]

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/walger/Desenvolvimento/c++/Botanic
+CMAKE_SOURCE_DIR = /home/walger/Desenvolvimento/c++/botanica
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/walger/Desenvolvimento/c++/Botanic/build
+CMAKE_BINARY_DIR = /home/walger/Desenvolvimento/c++/botanica/build
 
 # Utility rule file for ContinuousUpdate.
 
@@ -71,6 +71,6 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 CMakeFiles/ContinuousUpdate.dir/depend:
-	cd /home/walger/Desenvolvimento/c++/Botanic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/walger/Desenvolvimento/c++/Botanic /home/walger/Desenvolvimento/c++/Botanic /home/walger/Desenvolvimento/c++/Botanic/build /home/walger/Desenvolvimento/c++/Botanic/build /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/walger/Desenvolvimento/c++/botanica/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/walger/Desenvolvimento/c++/botanica /home/walger/Desenvolvimento/c++/botanica /home/walger/Desenvolvimento/c++/botanica/build /home/walger/Desenvolvimento/c++/botanica/build /home/walger/Desenvolvimento/c++/botanica/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousUpdate.dir/depend
 
