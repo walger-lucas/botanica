@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/walger/Desenvolvimento/c++/botanica
+CMAKE_SOURCE_DIR = /home/walger/Desenvolvimento/c++/botanica/source
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/walger/Desenvolvimento/c++/botanica/build
@@ -58,17 +58,17 @@ include CMakeFiles/botanica.dir/progress.make
 include CMakeFiles/botanica.dir/flags.make
 
 CMakeFiles/botanica.dir/main.cpp.o: CMakeFiles/botanica.dir/flags.make
-CMakeFiles/botanica.dir/main.cpp.o: ../main.cpp
+CMakeFiles/botanica.dir/main.cpp.o: /home/walger/Desenvolvimento/c++/botanica/source/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/walger/Desenvolvimento/c++/botanica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/botanica.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/botanica.dir/main.cpp.o -c /home/walger/Desenvolvimento/c++/botanica/main.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/botanica.dir/main.cpp.o -c /home/walger/Desenvolvimento/c++/botanica/source/main.cpp
 
 CMakeFiles/botanica.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/botanica.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/walger/Desenvolvimento/c++/botanica/main.cpp > CMakeFiles/botanica.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/walger/Desenvolvimento/c++/botanica/source/main.cpp > CMakeFiles/botanica.dir/main.cpp.i
 
 CMakeFiles/botanica.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/botanica.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/walger/Desenvolvimento/c++/botanica/main.cpp -o CMakeFiles/botanica.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/walger/Desenvolvimento/c++/botanica/source/main.cpp -o CMakeFiles/botanica.dir/main.cpp.s
 
 # Object files for target botanica
 botanica_OBJECTS = \
@@ -93,6 +93,6 @@ CMakeFiles/botanica.dir/clean:
 .PHONY : CMakeFiles/botanica.dir/clean
 
 CMakeFiles/botanica.dir/depend:
-	cd /home/walger/Desenvolvimento/c++/botanica/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/walger/Desenvolvimento/c++/botanica /home/walger/Desenvolvimento/c++/botanica /home/walger/Desenvolvimento/c++/botanica/build /home/walger/Desenvolvimento/c++/botanica/build /home/walger/Desenvolvimento/c++/botanica/build/CMakeFiles/botanica.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/walger/Desenvolvimento/c++/botanica/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/walger/Desenvolvimento/c++/botanica/source /home/walger/Desenvolvimento/c++/botanica/source /home/walger/Desenvolvimento/c++/botanica/build /home/walger/Desenvolvimento/c++/botanica/build /home/walger/Desenvolvimento/c++/botanica/build/CMakeFiles/botanica.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/botanica.dir/depend
 

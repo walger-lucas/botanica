@@ -334,7 +334,7 @@ SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 botanica_BINARY_DIR:STATIC=/home/walger/Desenvolvimento/c++/botanica/build
 
 //Value Computed by CMake
-botanica_SOURCE_DIR:STATIC=/home/walger/Desenvolvimento/c++/botanica
+botanica_SOURCE_DIR:STATIC=/home/walger/Desenvolvimento/c++/botanica/source
 
 //Location of wxWidgets library configuration provider binary (wx-config).
 wxWidgets_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/wx-config
@@ -434,7 +434,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/walger/Desenvolvimento/c++/botanica
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/walger/Desenvolvimento/c++/botanica/source
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

@@ -4,7 +4,7 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/walger/Desenvolvimento/c++/botanica
+SourceDirectory: /home/walger/Desenvolvimento/c++/botanica/source
 BuildDirectory: /home/walger/Desenvolvimento/c++/botanica/build
 
 # Where to place the cost data store
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/walger/Desenvolvimento/c++/botanica"
+ConfigureCommand: "/usr/bin/cmake" "/home/walger/Desenvolvimento/c++/botanica/source"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
@@ -57,9 +57,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: /usr/bin/git
+UpdateCommand: 
 UpdateOptions: 
-UpdateType: git
+UpdateType: 
 
 # Compiler info
 Compiler: /usr/bin/c++

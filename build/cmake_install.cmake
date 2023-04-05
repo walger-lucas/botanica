@@ -1,4 +1,4 @@
-# Install script for directory: /home/walger/Desenvolvimento/c++/botanica
+# Install script for directory: /home/walger/Desenvolvimento/c++/botanica/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
