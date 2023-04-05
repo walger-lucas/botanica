@@ -1,0 +1,2480 @@
+The system is: Linux - 5.15.0-69-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/3.16.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b71f2/fast && /usr/bin/make -f CMakeFiles/cmTC_b71f2.dir/build.make CMakeFiles/cmTC_b71f2.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b71f2.dir/testCCompiler.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_b71f2.dir/testCCompiler.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b71f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b71f2.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_b71f2.dir/testCCompiler.c.o  -o cmTC_b71f2 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1b05b/fast && /usr/bin/make -f CMakeFiles/cmTC_1b05b.dir/build.make CMakeFiles/cmTC_1b05b.dir/build
+make[1]: Entering directory '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc   -v -o CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc056j5c.s
+GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/9/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: c0c95c0b4209efec1c1892d5ff24030b
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o /tmp/cc056j5c.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_1b05b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b05b.dir/link.txt --verbose=1
+/usr/bin/gcc     -v -rdynamic CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o  -o cmTC_1b05b 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1b05b' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cciK80fD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b05b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1b05b' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/9/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_1b05b/fast && /usr/bin/make -f CMakeFiles/cmTC_1b05b.dir/build.make CMakeFiles/cmTC_1b05b.dir/build]
+  ignore line: [make[1]: Entering directory '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/gcc   -v -o CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/gcc]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc056j5c.s]
+  ignore line: [GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: c0c95c0b4209efec1c1892d5ff24030b]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o /tmp/cc056j5c.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_1b05b]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b05b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/gcc     -v -rdynamic CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o  -o cmTC_1b05b ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1b05b' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cciK80fD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b05b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cciK80fD.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_1b05b] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
+    arg [CMakeFiles/cmTC_1b05b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9] ==> [/usr/lib/gcc/x86_64-linux-gnu/9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dcf5d/fast && /usr/bin/make -f CMakeFiles/cmTC_dcf5d.dir/build.make CMakeFiles/cmTC_dcf5d.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dcf5d.dir/testCXXCompiler.cxx.o
+/usr/bin/g++     -o CMakeFiles/cmTC_dcf5d.dir/testCXXCompiler.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_dcf5d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcf5d.dir/link.txt --verbose=1
+/usr/bin/g++       -rdynamic CMakeFiles/cmTC_dcf5d.dir/testCXXCompiler.cxx.o  -o cmTC_dcf5d 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7f667/fast && /usr/bin/make -f CMakeFiles/cmTC_7f667.dir/build.make CMakeFiles/cmTC_7f667.dir/build
+make[1]: Entering directory '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/g++    -v -o CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccrkHja8.s
+GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/9"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include/c++/9
+ /usr/include/x86_64-linux-gnu/c++/9
+ /usr/include/c++/9/backward
+ /usr/lib/gcc/x86_64-linux-gnu/9/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 65fe925b83d3956b533de4aaba7dace0
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccrkHja8.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_7f667
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f667.dir/link.txt --verbose=1
+/usr/bin/g++      -v -rdynamic CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7f667 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7f667' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsaCGNC.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7f667 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7f667' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/include/c++/9]
+    add: [/usr/include/x86_64-linux-gnu/c++/9]
+    add: [/usr/include/c++/9/backward]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/include/c++/9] ==> [/usr/include/c++/9]
+  collapse include dir [/usr/include/x86_64-linux-gnu/c++/9] ==> [/usr/include/x86_64-linux-gnu/c++/9]
+  collapse include dir [/usr/include/c++/9/backward] ==> [/usr/include/c++/9/backward]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/9/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_7f667/fast && /usr/bin/make -f CMakeFiles/cmTC_7f667.dir/build.make CMakeFiles/cmTC_7f667.dir/build]
+  ignore line: [make[1]: Entering directory '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/g++    -v -o CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/g++]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccrkHja8.s]
+  ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/9"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/include/c++/9]
+  ignore line: [ /usr/include/x86_64-linux-gnu/c++/9]
+  ignore line: [ /usr/include/c++/9/backward]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 65fe925b83d3956b533de4aaba7dace0]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccrkHja8.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_7f667]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f667.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/g++      -v -rdynamic CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7f667 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7f667' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsaCGNC.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7f667 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccsaCGNC.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_7f667] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
+    arg [CMakeFiles/cmTC_7f667.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9] ==> [/usr/lib/gcc/x86_64-linux-gnu/9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Determining if the GDK_WINDOWING_WAYLAND exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d0899/fast && /usr/bin/make -f CMakeFiles/cmTC_d0899.dir/build.make CMakeFiles/cmTC_d0899.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0899.dir/CheckSymbolExists.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_d0899.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d0899
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0899.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_d0899.dir/CheckSymbolExists.c.o  -o cmTC_d0899 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <gdk/gdk.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef GDK_WINDOWING_WAYLAND
+  return ((int*)(&GDK_WINDOWING_WAYLAND))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the GDK_WINDOWING_X11 exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ed7f1/fast && /usr/bin/make -f CMakeFiles/cmTC_ed7f1.dir/build.make CMakeFiles/cmTC_ed7f1.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed7f1.dir/CheckSymbolExists.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_ed7f1.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ed7f1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed7f1.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_ed7f1.dir/CheckSymbolExists.c.o  -o cmTC_ed7f1 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <gdk/gdk.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef GDK_WINDOWING_X11
+  return ((int*)(&GDK_WINDOWING_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d10dc/fast && /usr/bin/make -f CMakeFiles/cmTC_d10dc.dir/build.make CMakeFiles/cmTC_d10dc.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d10dc.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_d10dc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d10dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d10dc.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    -rdynamic CMakeFiles/cmTC_d10dc.dir/CheckFunctionExists.c.o  -o cmTC_d10dc  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_acbca/fast && /usr/bin/make -f CMakeFiles/cmTC_acbca.dir/build.make CMakeFiles/cmTC_acbca.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_acbca.dir/CheckFunctionExists.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_acbca.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_acbca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acbca.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=gethostbyname    -rdynamic CMakeFiles/cmTC_acbca.dir/CheckFunctionExists.c.o  -o cmTC_acbca 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_518a0/fast && /usr/bin/make -f CMakeFiles/cmTC_518a0.dir/build.make CMakeFiles/cmTC_518a0.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_518a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_518a0.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=connect    -rdynamic CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o  -o cmTC_518a0 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bd145/fast && /usr/bin/make -f CMakeFiles/cmTC_bd145.dir/build.make CMakeFiles/cmTC_bd145.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd145.dir/CheckFunctionExists.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_bd145.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bd145
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd145.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=remove    -rdynamic CMakeFiles/cmTC_bd145.dir/CheckFunctionExists.c.o  -o cmTC_bd145 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8fd14/fast && /usr/bin/make -f CMakeFiles/cmTC_8fd14.dir/build.make CMakeFiles/cmTC_8fd14.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8fd14.dir/CheckFunctionExists.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_8fd14.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8fd14
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fd14.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=shmat    -rdynamic CMakeFiles/cmTC_8fd14.dir/CheckFunctionExists.c.o  -o cmTC_8fd14 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5b635/fast && /usr/bin/make -f CMakeFiles/cmTC_5b635.dir/build.make CMakeFiles/cmTC_5b635.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5b635.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_5b635.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5b635
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b635.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_5b635.dir/CheckFunctionExists.c.o  -o cmTC_5b635  -lICE 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_07e38/fast && /usr/bin/make -f CMakeFiles/cmTC_07e38.dir/build.make CMakeFiles/cmTC_07e38.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_07e38.dir/CheckIncludeFile.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_07e38.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_07e38
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07e38.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_07e38.dir/CheckIncludeFile.c.o  -o cmTC_07e38 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_22eae/fast && /usr/bin/make -f CMakeFiles/cmTC_22eae.dir/build.make CMakeFiles/cmTC_22eae.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_22eae.dir/CheckIncludeFile.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_22eae.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_22eae
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22eae.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_22eae.dir/CheckIncludeFile.c.o  -o cmTC_22eae 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_72d87/fast && /usr/bin/make -f CMakeFiles/cmTC_72d87.dir/build.make CMakeFiles/cmTC_72d87.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72d87.dir/CheckIncludeFile.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_72d87.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_72d87
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72d87.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_72d87.dir/CheckIncludeFile.c.o  -o cmTC_72d87 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of wchar_t passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e18f9/fast && /usr/bin/make -f CMakeFiles/cmTC_e18f9.dir/build.make CMakeFiles/cmTC_e18f9.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e18f9.dir/SIZEOF_WCHAR_T.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_e18f9.dir/SIZEOF_WCHAR_T.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SIZEOF_WCHAR_T.c
+Linking C executable cmTC_e18f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e18f9.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_e18f9.dir/SIZEOF_WCHAR_T.c.o  -o cmTC_e18f9 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_16095/fast && /usr/bin/make -f CMakeFiles/cmTC_16095.dir/build.make CMakeFiles/cmTC_16095.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16095.dir/CheckIncludeFile.c.o
+/usr/bin/gcc  -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -o CMakeFiles/cmTC_16095.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_16095
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16095.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_16095.dir/CheckIncludeFile.c.o  -o cmTC_16095 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb8aa/fast && /usr/bin/make -f CMakeFiles/cmTC_cb8aa.dir/build.make CMakeFiles/cmTC_cb8aa.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb8aa.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cb8aa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cb8aa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb8aa.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cb8aa.dir/CheckFunctionExists.c.o  -o cmTC_cb8aa  -lpthread 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files stdlib.h;stdarg.h;string.h;float.h exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7466e/fast && /usr/bin/make -f CMakeFiles/cmTC_7466e.dir/build.make CMakeFiles/cmTC_7466e.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7466e.dir/STDC_HEADERS.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_7466e.dir/STDC_HEADERS.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckIncludeFiles/STDC_HEADERS.c
+Linking C executable cmTC_7466e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7466e.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_7466e.dir/STDC_HEADERS.c.o  -o cmTC_7466e 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the va_copy exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f19ac/fast && /usr/bin/make -f CMakeFiles/cmTC_f19ac.dir/build.make CMakeFiles/cmTC_f19ac.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f19ac.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_f19ac.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f19ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f19ac.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_f19ac.dir/CheckSymbolExists.c.o  -o cmTC_f19ac 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdarg.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef va_copy
+  return ((int*)(&va_copy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test HAVE_STD_STRING_COMPARE succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6ef09/fast && /usr/bin/make -f CMakeFiles/cmTC_6ef09.dir/build.make CMakeFiles/cmTC_6ef09.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6ef09.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_STD_STRING_COMPARE   -o CMakeFiles/cmTC_6ef09.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6ef09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ef09.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_STD_STRING_COMPARE    -rdynamic CMakeFiles/cmTC_6ef09.dir/src.cxx.o  -o cmTC_6ef09 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <string>
+
+
+int main(int argc, char* argv[]) {
+ 
+    std::string foo, bar;
+    foo.compare(bar);
+    foo.compare(1, 1, bar);
+    foo.compare(1, 1, bar, 1, 1);
+    foo.compare("");
+    foo.compare(1, 1, "");
+    foo.compare(1, 1, "", 2);
+return 0; }
+Performing C++ SOURCE FILE Test HAVE_STD_WSTRING succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8693f/fast && /usr/bin/make -f CMakeFiles/cmTC_8693f.dir/build.make CMakeFiles/cmTC_8693f.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8693f.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_STD_WSTRING   -o CMakeFiles/cmTC_8693f.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8693f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8693f.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_STD_WSTRING    -rdynamic CMakeFiles/cmTC_8693f.dir/src.cxx.o  -o cmTC_8693f 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <string>
+
+
+int main(int argc, char* argv[]) {
+ std::wstring s;
+return 0; }
+Performing C++ SOURCE FILE Test HAVE_EXT_HASH_MAP succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e4ad3/fast && /usr/bin/make -f CMakeFiles/cmTC_e4ad3.dir/build.make CMakeFiles/cmTC_e4ad3.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e4ad3.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_EXT_HASH_MAP   -o CMakeFiles/cmTC_e4ad3.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+In file included from /usr/include/c++/9/ext/hash_map:60,
+                 from /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx:1:
+/usr/include/c++/9/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+   32 | #warning \
+      |  ^~~~~~~
+Linking CXX executable cmTC_e4ad3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4ad3.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_EXT_HASH_MAP    -rdynamic CMakeFiles/cmTC_e4ad3.dir/src.cxx.o  -o cmTC_e4ad3 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <ext/hash_map>
+#include <ext/hash_set>
+
+
+int main(int argc, char* argv[]) {
+ 
+    __gnu_cxx::hash_map<double*, char*, __gnu_cxx::hash<double*>, std::equal_to<double*> > test1;
+    __gnu_cxx::hash_set<char*, __gnu_cxx::hash<char*>, std::equal_to<char*> > test2;
+return 0; }
+Performing C++ SOURCE FILE Test HAVE_STD_UNORDERED_MAP succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f6af6/fast && /usr/bin/make -f CMakeFiles/cmTC_f6af6.dir/build.make CMakeFiles/cmTC_f6af6.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f6af6.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_STD_UNORDERED_MAP   -o CMakeFiles/cmTC_f6af6.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f6af6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6af6.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_STD_UNORDERED_MAP    -rdynamic CMakeFiles/cmTC_f6af6.dir/src.cxx.o  -o cmTC_f6af6 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <unordered_map>
+#include <unordered_set>
+
+
+int main(int argc, char* argv[]) {
+ 
+    std::unordered_map<double*, char*> test1;
+    std::unordered_set<char*> test2;
+return 0; }
+Performing C++ SOURCE FILE Test HAVE_TR1_UNORDERED_MAP succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fe5a0/fast && /usr/bin/make -f CMakeFiles/cmTC_fe5a0.dir/build.make CMakeFiles/cmTC_fe5a0.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fe5a0.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_TR1_UNORDERED_MAP   -o CMakeFiles/cmTC_fe5a0.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_fe5a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe5a0.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_TR1_UNORDERED_MAP    -rdynamic CMakeFiles/cmTC_fe5a0.dir/src.cxx.o  -o cmTC_fe5a0 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <tr1/unordered_map>
+#include <tr1/unordered_set>
+
+
+int main(int argc, char* argv[]) {
+ 
+    std::tr1::unordered_map<double*, char*> test1;
+    std::tr1::unordered_set<char*> test2;
+return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_ATOMIC_BUILTINS succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cf355/fast && /usr/bin/make -f CMakeFiles/cmTC_cf355.dir/build.make CMakeFiles/cmTC_cf355.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cf355.dir/src.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_GCC_ATOMIC_BUILTINS   -o CMakeFiles/cmTC_cf355.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cf355
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf355.dir/link.txt --verbose=1
+/usr/bin/gcc  -DHAVE_GCC_ATOMIC_BUILTINS    -rdynamic CMakeFiles/cmTC_cf355.dir/src.c.o  -o cmTC_cf355 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+
+int main(int argc, char* argv[]) {
+ 
+    unsigned int value=0;
+    /* wxAtomicInc doesn't use return value here */
+    __sync_fetch_and_add(&value, 2);
+    __sync_sub_and_fetch(&value, 1);
+    /* but wxAtomicDec does, so mimic that: */
+    volatile unsigned int r2 = __sync_sub_and_fetch(&value, 1);
+return 0; }
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_271a0/fast && /usr/bin/make -f CMakeFiles/cmTC_271a0.dir/build.make CMakeFiles/cmTC_271a0.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_271a0.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=sigaction   -o CMakeFiles/cmTC_271a0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_271a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_271a0.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=sigaction    -rdynamic CMakeFiles/cmTC_271a0.dir/CheckFunctionExists.c.o  -o cmTC_271a0 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test wxTYPE_SA_HANDLER_IS_INT succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_33529/fast && /usr/bin/make -f CMakeFiles/cmTC_33529.dir/build.make CMakeFiles/cmTC_33529.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_33529.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DwxTYPE_SA_HANDLER_IS_INT   -o CMakeFiles/cmTC_33529.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_33529
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33529.dir/link.txt --verbose=1
+/usr/bin/g++   -DwxTYPE_SA_HANDLER_IS_INT    -rdynamic CMakeFiles/cmTC_33529.dir/src.cxx.o  -o cmTC_33529 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <signal.h>
+
+
+int main(int argc, char* argv[]) {
+ return 0; }
+            extern void testSigHandler(int) { };
+            int foo() {
+            struct sigaction sa;
+            sa.sa_handler = testSigHandler;
+return 0; }
+Performing C++ SOURCE FILE Test wxHAVE_BACKTRACE succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5de09/fast && /usr/bin/make -f CMakeFiles/cmTC_5de09.dir/build.make CMakeFiles/cmTC_5de09.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5de09.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DwxHAVE_BACKTRACE   -o CMakeFiles/cmTC_5de09.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5de09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5de09.dir/link.txt --verbose=1
+/usr/bin/g++   -DwxHAVE_BACKTRACE    -rdynamic CMakeFiles/cmTC_5de09.dir/src.cxx.o  -o cmTC_5de09 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <execinfo.h>
+
+
+int main(int argc, char* argv[]) {
+ 
+            void *trace[1];
+            char **messages;
+            backtrace(trace, 1);
+            messages = backtrace_symbols(trace, 1);
+return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXA_DEMANGLE succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c7399/fast && /usr/bin/make -f CMakeFiles/cmTC_c7399.dir/build.make CMakeFiles/cmTC_c7399.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c7399.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_CXA_DEMANGLE   -o CMakeFiles/cmTC_c7399.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c7399
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7399.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_CXA_DEMANGLE    -rdynamic CMakeFiles/cmTC_c7399.dir/src.cxx.o  -o cmTC_c7399 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <cxxabi.h>
+
+
+int main(int argc, char* argv[]) {
+ int rc;
+                 __cxxabiv1::__cxa_demangle("foo", 0, 0, &rc);
+return 0; }
+Determining if the function mkstemp exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0f1ee/fast && /usr/bin/make -f CMakeFiles/cmTC_0f1ee.dir/build.make CMakeFiles/cmTC_0f1ee.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0f1ee.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=mkstemp   -o CMakeFiles/cmTC_0f1ee.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0f1ee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f1ee.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=mkstemp    -rdynamic CMakeFiles/cmTC_0f1ee.dir/CheckFunctionExists.c.o  -o cmTC_0f1ee 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function mktemp exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a1a11/fast && /usr/bin/make -f CMakeFiles/cmTC_a1a11.dir/build.make CMakeFiles/cmTC_a1a11.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1a11.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=mktemp   -o CMakeFiles/cmTC_a1a11.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a1a11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1a11.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=mktemp    -rdynamic CMakeFiles/cmTC_a1a11.dir/CheckFunctionExists.c.o  -o cmTC_a1a11 
+/usr/bin/ld: CMakeFiles/cmTC_a1a11.dir/CheckFunctionExists.c.o: na função "main":
+CheckFunctionExists.c:(.text+0x14): aviso: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test HAVE_STATVFS succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9021f/fast && /usr/bin/make -f CMakeFiles/cmTC_9021f.dir/build.make CMakeFiles/cmTC_9021f.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9021f.dir/src.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_STATVFS   -o CMakeFiles/cmTC_9021f.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9021f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9021f.dir/link.txt --verbose=1
+/usr/bin/gcc  -DHAVE_STATVFS    -rdynamic CMakeFiles/cmTC_9021f.dir/src.c.o  -o cmTC_9021f 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+
+int main(int argc, char* argv[]) {
+ 
+        return 0; }
+        #include <sys/statvfs.h>
+
+        int foo() {
+        long l;
+        struct statvfs fs;
+        statvfs("/", &fs);
+        l = fs.f_bsize;
+        l += fs.f_blocks;
+        l += fs.f_bavail;
+return 0; }
+Determining if the function fcntl exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6adbf/fast && /usr/bin/make -f CMakeFiles/cmTC_6adbf.dir/build.make CMakeFiles/cmTC_6adbf.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6adbf.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=fcntl   -o CMakeFiles/cmTC_6adbf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6adbf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6adbf.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=fcntl    -rdynamic CMakeFiles/cmTC_6adbf.dir/CheckFunctionExists.c.o  -o cmTC_6adbf 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function flock exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7a97e/fast && /usr/bin/make -f CMakeFiles/cmTC_7a97e.dir/build.make CMakeFiles/cmTC_7a97e.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a97e.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=flock   -o CMakeFiles/cmTC_7a97e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7a97e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a97e.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=flock    -rdynamic CMakeFiles/cmTC_7a97e.dir/CheckFunctionExists.c.o  -o cmTC_7a97e 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function setenv exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_76b59/fast && /usr/bin/make -f CMakeFiles/cmTC_76b59.dir/build.make CMakeFiles/cmTC_76b59.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_76b59.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=setenv   -o CMakeFiles/cmTC_76b59.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_76b59
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76b59.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=setenv    -rdynamic CMakeFiles/cmTC_76b59.dir/CheckFunctionExists.c.o  -o cmTC_76b59 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function putenv exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_03c8d/fast && /usr/bin/make -f CMakeFiles/cmTC_03c8d.dir/build.make CMakeFiles/cmTC_03c8d.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_03c8d.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=putenv   -o CMakeFiles/cmTC_03c8d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_03c8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03c8d.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=putenv    -rdynamic CMakeFiles/cmTC_03c8d.dir/CheckFunctionExists.c.o  -o cmTC_03c8d 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function unsetenv exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9fc42/fast && /usr/bin/make -f CMakeFiles/cmTC_9fc42.dir/build.make CMakeFiles/cmTC_9fc42.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9fc42.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=unsetenv   -o CMakeFiles/cmTC_9fc42.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9fc42
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fc42.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=unsetenv    -rdynamic CMakeFiles/cmTC_9fc42.dir/CheckFunctionExists.c.o  -o cmTC_9fc42 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the nanosleep exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_61b1a/fast && /usr/bin/make -f CMakeFiles/cmTC_61b1a.dir/build.make CMakeFiles/cmTC_61b1a.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61b1a.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_61b1a.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_61b1a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61b1a.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_61b1a.dir/CheckSymbolExists.c.o  -o cmTC_61b1a 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef nanosleep
+  return ((int*)(&nanosleep))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the uname exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fbc97/fast && /usr/bin/make -f CMakeFiles/cmTC_fbc97.dir/build.make CMakeFiles/cmTC_fbc97.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fbc97.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_fbc97.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fbc97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbc97.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_fbc97.dir/CheckSymbolExists.c.o  -o cmTC_fbc97 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef uname
+  return ((int*)(&uname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function gethostname exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_30172/fast && /usr/bin/make -f CMakeFiles/cmTC_30172.dir/build.make CMakeFiles/cmTC_30172.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30172.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=gethostname   -o CMakeFiles/cmTC_30172.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30172
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30172.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=gethostname    -rdynamic CMakeFiles/cmTC_30172.dir/CheckFunctionExists.c.o  -o cmTC_30172 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function strtok_r exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_170ac/fast && /usr/bin/make -f CMakeFiles/cmTC_170ac.dir/build.make CMakeFiles/cmTC_170ac.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_170ac.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D_REENTRANT -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=strtok_r   -o CMakeFiles/cmTC_170ac.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_170ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_170ac.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=strtok_r    -rdynamic CMakeFiles/cmTC_170ac.dir/CheckFunctionExists.c.o  -o cmTC_170ac 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function fdopen exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1a304/fast && /usr/bin/make -f CMakeFiles/cmTC_1a304.dir/build.make CMakeFiles/cmTC_1a304.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a304.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=fdopen   -o CMakeFiles/cmTC_1a304.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1a304
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a304.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=fdopen    -rdynamic CMakeFiles/cmTC_1a304.dir/CheckFunctionExists.c.o  -o cmTC_1a304 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sysconf exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_35399/fast && /usr/bin/make -f CMakeFiles/cmTC_35399.dir/build.make CMakeFiles/cmTC_35399.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_35399.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=sysconf   -o CMakeFiles/cmTC_35399.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_35399
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35399.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=sysconf    -rdynamic CMakeFiles/cmTC_35399.dir/CheckFunctionExists.c.o  -o cmTC_35399 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the getpwuid_r exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_76015/fast && /usr/bin/make -f CMakeFiles/cmTC_76015.dir/build.make CMakeFiles/cmTC_76015.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_76015.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D_REENTRANT -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_76015.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_76015
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76015.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_76015.dir/CheckSymbolExists.c.o  -o cmTC_76015 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pwd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpwuid_r
+  return ((int*)(&getpwuid_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getgrgid_r exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_21cb6/fast && /usr/bin/make -f CMakeFiles/cmTC_21cb6.dir/build.make CMakeFiles/cmTC_21cb6.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21cb6.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D_REENTRANT -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_21cb6.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_21cb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21cb6.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_21cb6.dir/CheckSymbolExists.c.o  -o cmTC_21cb6 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <grp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getgrgid_r
+  return ((int*)(&getgrgid_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/soundcard.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d447e/fast && /usr/bin/make -f CMakeFiles/cmTC_d447e.dir/build.make CMakeFiles/cmTC_d447e.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d447e.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_d447e.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d447e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d447e.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_d447e.dir/CheckIncludeFile.c.o  -o cmTC_d447e 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test WX_SOCKLEN_T_IS_SOCKLEN_T succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8d30c/fast && /usr/bin/make -f CMakeFiles/cmTC_8d30c.dir/build.make CMakeFiles/cmTC_8d30c.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8d30c.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DWX_SOCKLEN_T_IS_SOCKLEN_T   -o CMakeFiles/cmTC_8d30c.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8d30c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d30c.dir/link.txt --verbose=1
+/usr/bin/g++   -DWX_SOCKLEN_T_IS_SOCKLEN_T    -rdynamic CMakeFiles/cmTC_8d30c.dir/src.cxx.o  -o cmTC_8d30c 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/socket.h>
+
+
+int main(int argc, char* argv[]) {
+ socklen_t len;
+        getsockname(0, 0, &len);
+return 0; }
+Performing C++ SOURCE FILE Test SOCKOPTLEN_T_IS_SOCKLEN_T succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_958de/fast && /usr/bin/make -f CMakeFiles/cmTC_958de.dir/build.make CMakeFiles/cmTC_958de.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_958de.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DSOCKOPTLEN_T_IS_SOCKLEN_T   -o CMakeFiles/cmTC_958de.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_958de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_958de.dir/link.txt --verbose=1
+/usr/bin/g++   -DSOCKOPTLEN_T_IS_SOCKLEN_T    -rdynamic CMakeFiles/cmTC_958de.dir/src.cxx.o  -o cmTC_958de 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/socket.h>
+
+
+int main(int argc, char* argv[]) {
+ socklen_t len;
+        getsockopt(0, 0, 0, 0, &len);
+return 0; }
+Determining if the gethostbyname exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_df905/fast && /usr/bin/make -f CMakeFiles/cmTC_df905.dir/build.make CMakeFiles/cmTC_df905.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_df905.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_df905.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_df905
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df905.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_df905.dir/CheckSymbolExists.c.o  -o cmTC_df905 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netdb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethostbyname
+  return ((int*)(&gethostbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the gethostbyname_r exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_43a53/fast && /usr/bin/make -f CMakeFiles/cmTC_43a53.dir/build.make CMakeFiles/cmTC_43a53.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_43a53.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_43a53.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_43a53
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43a53.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_43a53.dir/CheckSymbolExists.c.o  -o cmTC_43a53 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netdb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethostbyname_r
+  return ((int*)(&gethostbyname_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the prototype gethostbyname_r exists for HAVE_FUNC_GETHOSTBYNAME_R_6 passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3d54c/fast && /usr/bin/make -f CMakeFiles/cmTC_3d54c.dir/build.make CMakeFiles/cmTC_3d54c.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d54c.dir/CheckPrototypeDefinition.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_3d54c.dir/CheckPrototypeDefinition.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+Linking C executable cmTC_3d54c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d54c.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_3d54c.dir/CheckPrototypeDefinition.c.o  -o cmTC_3d54c 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the getservbyname exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8adb8/fast && /usr/bin/make -f CMakeFiles/cmTC_8adb8.dir/build.make CMakeFiles/cmTC_8adb8.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8adb8.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_8adb8.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8adb8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8adb8.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_8adb8.dir/CheckSymbolExists.c.o  -o cmTC_8adb8 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netdb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getservbyname
+  return ((int*)(&getservbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_aton exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_51493/fast && /usr/bin/make -f CMakeFiles/cmTC_51493.dir/build.make CMakeFiles/cmTC_51493.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_51493.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_51493.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_51493
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51493.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_51493.dir/CheckSymbolExists.c.o  -o cmTC_51493 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <arpa/inet.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_aton
+  return ((int*)(&inet_aton))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_addr exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2c607/fast && /usr/bin/make -f CMakeFiles/cmTC_2c607.dir/build.make CMakeFiles/cmTC_2c607.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2c607.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_2c607.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2c607
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c607.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_2c607.dir/CheckSymbolExists.c.o  -o cmTC_2c607 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <arpa/inet.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_addr
+  return ((int*)(&inet_addr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if files linux/joystick.h exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fa0a5/fast && /usr/bin/make -f CMakeFiles/cmTC_fa0a5.dir/build.make CMakeFiles/cmTC_fa0a5.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fa0a5.dir/HAVE_JOYSTICK_H.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_fa0a5.dir/HAVE_JOYSTICK_H.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckIncludeFiles/HAVE_JOYSTICK_H.c
+Linking C executable cmTC_fa0a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa0a5.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_fa0a5.dir/HAVE_JOYSTICK_H.c.o  -o cmTC_fa0a5 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test wxHAVE_PTHREAD_CLEANUP succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cde26/fast && /usr/bin/make -f CMakeFiles/cmTC_cde26.dir/build.make CMakeFiles/cmTC_cde26.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cde26.dir/src.cxx.o
+/usr/bin/g++    -DwxHAVE_PTHREAD_CLEANUP   -o CMakeFiles/cmTC_cde26.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_cde26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cde26.dir/link.txt --verbose=1
+/usr/bin/g++   -DwxHAVE_PTHREAD_CLEANUP    -rdynamic CMakeFiles/cmTC_cde26.dir/src.cxx.o  -o cmTC_cde26  -lpthread 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+void ThreadCleanupFunc(void *p) { };
+
+int main(int argc, char* argv[]) {
+ 
+        void *p;
+        pthread_cleanup_push(ThreadCleanupFunc, p);
+        pthread_cleanup_pop(0);
+return 0; }
+Performing C SOURCE FILE Test HAVE_PTHREAD_MUTEXATTR_T succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_36c91/fast && /usr/bin/make -f CMakeFiles/cmTC_36c91.dir/build.make CMakeFiles/cmTC_36c91.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36c91.dir/src.c.o
+/usr/bin/gcc   -DHAVE_PTHREAD_MUTEXATTR_T   -o CMakeFiles/cmTC_36c91.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_36c91
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36c91.dir/link.txt --verbose=1
+/usr/bin/gcc  -DHAVE_PTHREAD_MUTEXATTR_T    -rdynamic CMakeFiles/cmTC_36c91.dir/src.c.o  -o cmTC_36c91  -lpthread 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+
+int main(int argc, char* argv[]) {
+ pthread_mutexattr_t attr;
+        pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+return 0; }
+Performing C SOURCE FILE Test HAVE_PTHREAD_MUTEXATTR_SETTYPE_DECL succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_89c73/fast && /usr/bin/make -f CMakeFiles/cmTC_89c73.dir/build.make CMakeFiles/cmTC_89c73.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_89c73.dir/src.c.o
+/usr/bin/gcc   -DHAVE_PTHREAD_MUTEXATTR_SETTYPE_DECL   -o CMakeFiles/cmTC_89c73.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_89c73
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89c73.dir/link.txt --verbose=1
+/usr/bin/gcc  -DHAVE_PTHREAD_MUTEXATTR_SETTYPE_DECL    -rdynamic CMakeFiles/cmTC_89c73.dir/src.c.o  -o cmTC_89c73  -lpthread 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+
+int main(int argc, char* argv[]) {
+ pthread_mutexattr_t attr;
+            pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+return 0; }
+Performing C SOURCE FILE Test HAVE___THREAD_KEYWORD succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_90d11/fast && /usr/bin/make -f CMakeFiles/cmTC_90d11.dir/build.make CMakeFiles/cmTC_90d11.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90d11.dir/src.c.o
+/usr/bin/gcc   -DHAVE___THREAD_KEYWORD   -o CMakeFiles/cmTC_90d11.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_90d11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90d11.dir/link.txt --verbose=1
+/usr/bin/gcc  -DHAVE___THREAD_KEYWORD    -rdynamic CMakeFiles/cmTC_90d11.dir/src.c.o  -o cmTC_90d11  -lpthread 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+
+int main(int argc, char* argv[]) {
+ 
+            static __thread int n = 0;
+            static __thread int *p = 0;
+return 0; }
+Performing C++ SOURCE FILE Test HAVE_ABI_FORCEDUNWIND succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e4f77/fast && /usr/bin/make -f CMakeFiles/cmTC_e4f77.dir/build.make CMakeFiles/cmTC_e4f77.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e4f77.dir/src.cxx.o
+/usr/bin/g++    -DHAVE_ABI_FORCEDUNWIND   -o CMakeFiles/cmTC_e4f77.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e4f77
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4f77.dir/link.txt --verbose=1
+/usr/bin/g++   -DHAVE_ABI_FORCEDUNWIND    -rdynamic CMakeFiles/cmTC_e4f77.dir/src.cxx.o  -o cmTC_e4f77  -lpthread 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <cxxabi.h>
+
+
+int main(int argc, char* argv[]) {
+ void foo(abi::__forced_unwind&);
+return 0; }
+Determining if the localtime_r exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eb284/fast && /usr/bin/make -f CMakeFiles/cmTC_eb284.dir/build.make CMakeFiles/cmTC_eb284.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eb284.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_eb284.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_eb284
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb284.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_eb284.dir/CheckSymbolExists.c.o  -o cmTC_eb284 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef localtime_r
+  return ((int*)(&localtime_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the gmtime_r exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_30b34/fast && /usr/bin/make -f CMakeFiles/cmTC_30b34.dir/build.make CMakeFiles/cmTC_30b34.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30b34.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_30b34.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_30b34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30b34.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_30b34.dir/CheckSymbolExists.c.o  -o cmTC_30b34 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gmtime_r
+  return ((int*)(&gmtime_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test wxSIZE_T_IS_NOT_UINT succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d8ca4/fast && /usr/bin/make -f CMakeFiles/cmTC_d8ca4.dir/build.make CMakeFiles/cmTC_d8ca4.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d8ca4.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DwxSIZE_T_IS_NOT_UINT   -o CMakeFiles/cmTC_d8ca4.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d8ca4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8ca4.dir/link.txt --verbose=1
+/usr/bin/g++   -DwxSIZE_T_IS_NOT_UINT    -rdynamic CMakeFiles/cmTC_d8ca4.dir/src.cxx.o  -o cmTC_d8ca4 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <stddef.h>
+
+
+int main(int argc, char* argv[]) {
+ return 0; }
+
+            struct Foo { void foo(size_t); void foo(unsigned int); };
+
+            int bar() {
+return 0; }
+Performing C++ SOURCE FILE Test wxWCHAR_T_IS_REAL_TYPE succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a7299/fast && /usr/bin/make -f CMakeFiles/cmTC_a7299.dir/build.make CMakeFiles/cmTC_a7299.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a7299.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DwxWCHAR_T_IS_REAL_TYPE   -o CMakeFiles/cmTC_a7299.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a7299
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7299.dir/link.txt --verbose=1
+/usr/bin/g++   -DwxWCHAR_T_IS_REAL_TYPE    -rdynamic CMakeFiles/cmTC_a7299.dir/src.cxx.o  -o cmTC_a7299 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <wchar.h>
+
+
+int main(int argc, char* argv[]) {
+ return 0; }
+
+            struct Foo { void foo(wchar_t);
+                         void foo(unsigned short);
+                         void foo(unsigned int);
+                         void foo(unsigned long); };
+
+            int bar() {
+return 0; }
+Performing C SOURCE FILE Test HAVE_PW_GECOS succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f75d9/fast && /usr/bin/make -f CMakeFiles/cmTC_f75d9.dir/build.make CMakeFiles/cmTC_f75d9.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f75d9.dir/src.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DHAVE_PW_GECOS   -o CMakeFiles/cmTC_f75d9.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f75d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f75d9.dir/link.txt --verbose=1
+/usr/bin/gcc  -DHAVE_PW_GECOS    -rdynamic CMakeFiles/cmTC_f75d9.dir/src.c.o  -o cmTC_f75d9 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <pwd.h>
+
+int main()
+{
+  (void)sizeof(((struct passwd *)0)->pw_gecos);
+  return 0;
+}
+
+Determining if the wcsftime exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a61df/fast && /usr/bin/make -f CMakeFiles/cmTC_a61df.dir/build.make CMakeFiles/cmTC_a61df.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a61df.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_a61df.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a61df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a61df.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_a61df.dir/CheckSymbolExists.c.o  -o cmTC_a61df 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsftime
+  return ((int*)(&wcsftime))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wprintf exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4c7c4/fast && /usr/bin/make -f CMakeFiles/cmTC_4c7c4.dir/build.make CMakeFiles/cmTC_4c7c4.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4c7c4.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_4c7c4.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4c7c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c7c4.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_4c7c4.dir/CheckSymbolExists.c.o  -o cmTC_4c7c4 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wprintf
+  return ((int*)(&wprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fputws exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_85d69/fast && /usr/bin/make -f CMakeFiles/cmTC_85d69.dir/build.make CMakeFiles/cmTC_85d69.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85d69.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_85d69.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_85d69
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85d69.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_85d69.dir/CheckSymbolExists.c.o  -o cmTC_85d69 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fputws
+  return ((int*)(&fputws))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the vswprintf exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c7d1c/fast && /usr/bin/make -f CMakeFiles/cmTC_c7d1c.dir/build.make CMakeFiles/cmTC_c7d1c.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7d1c.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_c7d1c.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c7d1c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7d1c.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_c7d1c.dir/CheckSymbolExists.c.o  -o cmTC_c7d1c 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vswprintf
+  return ((int*)(&vswprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the vswscanf exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a9c97/fast && /usr/bin/make -f CMakeFiles/cmTC_a9c97.dir/build.make CMakeFiles/cmTC_a9c97.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9c97.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_a9c97.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a9c97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9c97.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_a9c97.dir/CheckSymbolExists.c.o  -o cmTC_a9c97 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vswscanf
+  return ((int*)(&vswscanf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcsdup exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dd3eb/fast && /usr/bin/make -f CMakeFiles/cmTC_dd3eb.dir/build.make CMakeFiles/cmTC_dd3eb.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dd3eb.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_dd3eb.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dd3eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd3eb.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_dd3eb.dir/CheckSymbolExists.c.o  -o cmTC_dd3eb 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsdup
+  return ((int*)(&wcsdup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcsnlen exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_72f4c/fast && /usr/bin/make -f CMakeFiles/cmTC_72f4c.dir/build.make CMakeFiles/cmTC_72f4c.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72f4c.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_72f4c.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_72f4c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72f4c.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_72f4c.dir/CheckSymbolExists.c.o  -o cmTC_72f4c 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsnlen
+  return ((int*)(&wcsnlen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcscasecmp exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1f6d0/fast && /usr/bin/make -f CMakeFiles/cmTC_1f6d0.dir/build.make CMakeFiles/cmTC_1f6d0.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1f6d0.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_1f6d0.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1f6d0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f6d0.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_1f6d0.dir/CheckSymbolExists.c.o  -o cmTC_1f6d0 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcscasecmp
+  return ((int*)(&wcscasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcsncasecmp exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3a37d/fast && /usr/bin/make -f CMakeFiles/cmTC_3a37d.dir/build.make CMakeFiles/cmTC_3a37d.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a37d.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_3a37d.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3a37d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a37d.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_3a37d.dir/CheckSymbolExists.c.o  -o cmTC_3a37d 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsncasecmp
+  return ((int*)(&wcsncasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcstoull exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e6962/fast && /usr/bin/make -f CMakeFiles/cmTC_e6962.dir/build.make CMakeFiles/cmTC_e6962.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6962.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_e6962.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e6962
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6962.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_e6962.dir/CheckSymbolExists.c.o  -o cmTC_e6962 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcstoull
+  return ((int*)(&wcstoull))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslen exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_17537/fast && /usr/bin/make -f CMakeFiles/cmTC_17537.dir/build.make CMakeFiles/cmTC_17537.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17537.dir/CheckSymbolExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_17537.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_17537
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17537.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_17537.dir/CheckSymbolExists.c.o  -o cmTC_17537 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslen
+  return ((int*)(&wcslen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function fsync exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_63b2f/fast && /usr/bin/make -f CMakeFiles/cmTC_63b2f.dir/build.make CMakeFiles/cmTC_63b2f.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_63b2f.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=fsync   -o CMakeFiles/cmTC_63b2f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_63b2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63b2f.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=fsync    -rdynamic CMakeFiles/cmTC_63b2f.dir/CheckFunctionExists.c.o  -o cmTC_63b2f 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function snprintf exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8a690/fast && /usr/bin/make -f CMakeFiles/cmTC_8a690.dir/build.make CMakeFiles/cmTC_8a690.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8a690.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=snprintf   -o CMakeFiles/cmTC_8a690.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function ‘snprintf’; expected ‘int(char *, long unsigned int,  const char *, ...)’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:1:1: note: ‘snprintf’ is declared in header ‘<stdio.h>’
+  +++ |+#include <stdio.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_8a690
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a690.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=snprintf    -rdynamic CMakeFiles/cmTC_8a690.dir/CheckFunctionExists.c.o  -o cmTC_8a690 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function vsnprintf exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bf728/fast && /usr/bin/make -f CMakeFiles/cmTC_bf728.dir/build.make CMakeFiles/cmTC_bf728.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf728.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=vsnprintf   -o CMakeFiles/cmTC_bf728.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function ‘vsnprintf’; expected ‘int(char *, long unsigned int,  const char *, __va_list_tag *)’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:1:1: note: ‘vsnprintf’ is declared in header ‘<stdio.h>’
+  +++ |+#include <stdio.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_bf728
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf728.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=vsnprintf    -rdynamic CMakeFiles/cmTC_bf728.dir/CheckFunctionExists.c.o  -o cmTC_bf728 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function strnlen exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_968a7/fast && /usr/bin/make -f CMakeFiles/cmTC_968a7.dir/build.make CMakeFiles/cmTC_968a7.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_968a7.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=strnlen   -o CMakeFiles/cmTC_968a7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function ‘strnlen’; expected ‘long unsigned int(const char *, long unsigned int)’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_968a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_968a7.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=strnlen    -rdynamic CMakeFiles/cmTC_968a7.dir/CheckFunctionExists.c.o  -o cmTC_968a7 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function strtoull exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_69150/fast && /usr/bin/make -f CMakeFiles/cmTC_69150.dir/build.make CMakeFiles/cmTC_69150.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69150.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=strtoull   -o CMakeFiles/cmTC_69150.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_69150
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69150.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=strtoull    -rdynamic CMakeFiles/cmTC_69150.dir/CheckFunctionExists.c.o  -o cmTC_69150 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function setpriority exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_93a8f/fast && /usr/bin/make -f CMakeFiles/cmTC_93a8f.dir/build.make CMakeFiles/cmTC_93a8f.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_93a8f.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=setpriority   -o CMakeFiles/cmTC_93a8f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_93a8f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93a8f.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=setpriority    -rdynamic CMakeFiles/cmTC_93a8f.dir/CheckFunctionExists.c.o  -o cmTC_93a8f 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function gettimeofday exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_619a4/fast && /usr/bin/make -f CMakeFiles/cmTC_619a4.dir/build.make CMakeFiles/cmTC_619a4.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_619a4.dir/CheckFunctionExists.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DCHECK_FUNCTION_EXISTS=gettimeofday   -o CMakeFiles/cmTC_619a4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_619a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_619a4.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=gettimeofday    -rdynamic CMakeFiles/cmTC_619a4.dir/CheckFunctionExists.c.o  -o cmTC_619a4 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file tr1/type_traits exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ed7a7/fast && /usr/bin/make -f CMakeFiles/cmTC_ed7a7.dir/build.make CMakeFiles/cmTC_ed7a7.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ed7a7.dir/CheckIncludeFile.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_ed7a7.dir/CheckIncludeFile.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ed7a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed7a7.dir/link.txt --verbose=1
+/usr/bin/g++       -rdynamic CMakeFiles/cmTC_ed7a7.dir/CheckIncludeFile.cxx.o  -o cmTC_ed7a7 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file type_traits exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_af056/fast && /usr/bin/make -f CMakeFiles/cmTC_af056.dir/build.make CMakeFiles/cmTC_af056.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_af056.dir/CheckIncludeFile.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_af056.dir/CheckIncludeFile.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_af056
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af056.dir/link.txt --verbose=1
+/usr/bin/g++       -rdynamic CMakeFiles/cmTC_af056.dir/CheckIncludeFile.cxx.o  -o cmTC_af056 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0dde2/fast && /usr/bin/make -f CMakeFiles/cmTC_0dde2.dir/build.make CMakeFiles/cmTC_0dde2.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0dde2.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_0dde2.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0dde2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0dde2.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_0dde2.dir/CheckIncludeFile.c.o  -o cmTC_0dde2 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file langinfo.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9b344/fast && /usr/bin/make -f CMakeFiles/cmTC_9b344.dir/build.make CMakeFiles/cmTC_9b344.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9b344.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_9b344.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9b344
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b344.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_9b344.dir/CheckIncludeFile.c.o  -o cmTC_9b344 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sched.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cbb92/fast && /usr/bin/make -f CMakeFiles/cmTC_cbb92.dir/build.make CMakeFiles/cmTC_cbb92.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cbb92.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_cbb92.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cbb92
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbb92.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_cbb92.dir/CheckIncludeFile.c.o  -o cmTC_cbb92 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8943d/fast && /usr/bin/make -f CMakeFiles/cmTC_8943d.dir/build.make CMakeFiles/cmTC_8943d.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8943d.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_8943d.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8943d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8943d.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_8943d.dir/CheckIncludeFile.c.o  -o cmTC_8943d 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file wchar.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9164/fast && /usr/bin/make -f CMakeFiles/cmTC_c9164.dir/build.make CMakeFiles/cmTC_c9164.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9164.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_c9164.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c9164
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9164.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_c9164.dir/CheckIncludeFile.c.o  -o cmTC_c9164 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test wxTEST_TZ_timezone succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_78572/fast && /usr/bin/make -f CMakeFiles/cmTC_78572.dir/build.make CMakeFiles/cmTC_78572.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_78572.dir/src.cxx.o
+/usr/bin/g++  -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DwxTEST_TZ_timezone   -o CMakeFiles/cmTC_78572.dir/src.cxx.o -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_78572
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78572.dir/link.txt --verbose=1
+/usr/bin/g++   -DwxTEST_TZ_timezone    -rdynamic CMakeFiles/cmTC_78572.dir/src.cxx.o  -o cmTC_78572 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <time.h>
+
+
+int main(int argc, char* argv[]) {
+ 
+            int tz;
+            tz = timezone;
+return 0; }
+Performing C SOURCE FILE Test WX_GMTOFF_IN_TM succeeded with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c3777/fast && /usr/bin/make -f CMakeFiles/cmTC_c3777.dir/build.make CMakeFiles/cmTC_c3777.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c3777.dir/src.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX  -DWX_GMTOFF_IN_TM   -o CMakeFiles/cmTC_c3777.dir/src.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c3777
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3777.dir/link.txt --verbose=1
+/usr/bin/gcc  -DWX_GMTOFF_IN_TM    -rdynamic CMakeFiles/cmTC_c3777.dir/src.c.o  -o cmTC_c3777 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <time.h>
+
+int main()
+{
+  (void)sizeof(((struct tm *)0)->tm_gmtoff);
+  return 0;
+}
+
+Determining if the dlopen exist passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_49a24/fast && /usr/bin/make -f CMakeFiles/cmTC_49a24.dir/build.make CMakeFiles/cmTC_49a24.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_49a24.dir/CheckSymbolExists.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_49a24.dir/CheckSymbolExists.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_49a24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49a24.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_49a24.dir/CheckSymbolExists.c.o  -o cmTC_49a24  -ldl 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+File /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <dlfcn.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef dlopen
+  return ((int*)(&dlopen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/epoll.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_39be8/fast && /usr/bin/make -f CMakeFiles/cmTC_39be8.dir/build.make CMakeFiles/cmTC_39be8.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39be8.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_39be8.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_39be8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39be8.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_39be8.dir/CheckIncludeFile.c.o  -o cmTC_39be8 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/select.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e1e42/fast && /usr/bin/make -f CMakeFiles/cmTC_e1e42.dir/build.make CMakeFiles/cmTC_e1e42.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1e42.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_e1e42.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e1e42
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1e42.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_e1e42.dir/CheckIncludeFile.c.o  -o cmTC_e1e42 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/inotify.h exists passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bafe1/fast && /usr/bin/make -f CMakeFiles/cmTC_bafe1.dir/build.make CMakeFiles/cmTC_bafe1.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bafe1.dir/CheckIncludeFile.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_bafe1.dir/CheckIncludeFile.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_bafe1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bafe1.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_bafe1.dir/CheckIncludeFile.c.o  -o cmTC_bafe1 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of locale_t passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bbb61/fast && /usr/bin/make -f CMakeFiles/cmTC_bbb61.dir/build.make CMakeFiles/cmTC_bbb61.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bbb61.dir/LOCALE_T.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_bbb61.dir/LOCALE_T.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/LOCALE_T.c
+Linking C executable cmTC_bbb61
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbb61.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_bbb61.dir/LOCALE_T.c.o  -o cmTC_bbb61 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_40ac4/fast && /usr/bin/make -f CMakeFiles/cmTC_40ac4.dir/build.make CMakeFiles/cmTC_40ac4.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40ac4.dir/SIZEOF_SIZE_T.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_40ac4.dir/SIZEOF_SIZE_T.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTC_40ac4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40ac4.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_40ac4.dir/SIZEOF_SIZE_T.c.o  -o cmTC_40ac4 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of int passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_533b1/fast && /usr/bin/make -f CMakeFiles/cmTC_533b1.dir/build.make CMakeFiles/cmTC_533b1.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_533b1.dir/SIZEOF_INT.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_533b1.dir/SIZEOF_INT.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SIZEOF_INT.c
+Linking C executable cmTC_533b1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_533b1.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_533b1.dir/SIZEOF_INT.c.o  -o cmTC_533b1 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of long passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_83368/fast && /usr/bin/make -f CMakeFiles/cmTC_83368.dir/build.make CMakeFiles/cmTC_83368.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83368.dir/SIZEOF_LONG.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_83368.dir/SIZEOF_LONG.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SIZEOF_LONG.c
+Linking C executable cmTC_83368
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83368.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_83368.dir/SIZEOF_LONG.c.o  -o cmTC_83368 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of short passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0591d/fast && /usr/bin/make -f CMakeFiles/cmTC_0591d.dir/build.make CMakeFiles/cmTC_0591d.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0591d.dir/SIZEOF_SHORT.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_0591d.dir/SIZEOF_SHORT.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SIZEOF_SHORT.c
+Linking C executable cmTC_0591d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0591d.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_0591d.dir/SIZEOF_SHORT.c.o  -o cmTC_0591d 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f0120/fast && /usr/bin/make -f CMakeFiles/cmTC_f0120.dir/build.make CMakeFiles/cmTC_f0120.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0120.dir/SIZEOF_LONG_LONG.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_f0120.dir/SIZEOF_LONG_LONG.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SIZEOF_LONG_LONG.c
+Linking C executable cmTC_f0120
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0120.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_f0120.dir/SIZEOF_LONG_LONG.c.o  -o cmTC_f0120 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of ssize_t passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d46a7/fast && /usr/bin/make -f CMakeFiles/cmTC_d46a7.dir/build.make CMakeFiles/cmTC_d46a7.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d46a7.dir/SSIZE_T.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_d46a7.dir/SSIZE_T.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/SSIZE_T.c
+Linking C executable cmTC_d46a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d46a7.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_d46a7.dir/SSIZE_T.c.o  -o cmTC_d46a7 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1adbd/fast && /usr/bin/make -f CMakeFiles/cmTC_1adbd.dir/build.make CMakeFiles/cmTC_1adbd.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1adbd.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/gcc -D_GNU_SOURCE -D__LINUX__ -D__UNIX__ -DwxUSE_UNIX   -o CMakeFiles/cmTC_1adbd.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_1adbd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1adbd.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_1adbd.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_1adbd 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d020e/fast && /usr/bin/make -f CMakeFiles/cmTC_d020e.dir/build.make CMakeFiles/cmTC_d020e.dir/build
+make[1]: Entrando no diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d020e.dir/TestEndianess.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_d020e.dir/TestEndianess.c.o   -c /home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_d020e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d020e.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_d020e.dir/TestEndianess.c.o  -o cmTC_d020e 
+make[1]: Saindo do diretório '/home/walger/Desenvolvimento/c++/Botanic/build/CMakeFiles/CMakeTmp'
+
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+

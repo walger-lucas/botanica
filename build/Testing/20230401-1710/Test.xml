@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20230401-1710-Experimental"
+	Name="El-Walgerbook"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="El-Walgerbook"
+	OSRelease="5.15.0-69-generic"
+	OSVersion="#76~20.04.1-Ubuntu SMP Mon Mar 20 15:54:19 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="140"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="7673"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1532.18"
+	>
+	<Testing>
+		<StartDateTime>Apr 01 14:10 -03</StartDateTime>
+		<StartTestTime>1680369035</StartTestTime>
+		<TestList/>
+		<EndDateTime>Apr 01 14:10 -03</EndDateTime>
+		<EndTestTime>1680369035</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
