@@ -1,2 +1,2 @@
 default:
-	cmake -S ./source -B ./build
+	cmake -S . -B ./build
