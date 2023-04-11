@@ -47,7 +47,7 @@ void JanelaPrincipal::PrepararJanela()
     L"Acessa Cronograma de rega de todos os canteiros registrados.");
 
     //Adiciona menus à barra de menu.
-    barraMenu = new wxMenuBar;
+    wxMenuBar* barraMenu = new wxMenuBar;
     barraMenu->Append(menuCanteiro,L"&Canteiros");
     barraMenu->Append(menuRelatorio,L"&Relatórios");
     barraMenu->Append(menuCronograma,L"Crono&grama");
