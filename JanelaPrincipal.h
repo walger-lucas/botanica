@@ -13,12 +13,14 @@ class JanelaPrincipal : public wxFrame
     wxMenu *menuRelatorio; //menu com opcoes para atividades com relatorios
     wxMenu *menuCronograma; // menu com opcoes para atividades com cronogramas
 
+    wxWindow* windows[2];
+
     void PrepararJanela();
 
     //chamado quando Adicionar Canteiro é escolhido.
-    void NewCanteiro(wxCommandEvent& event){ std::cout<<"hey\n";};
+    void NewCanteiro(wxCommandEvent& event);
     //chamado quando Visualizar Canteiros é escolhido.
-    void OpenCanteiro(wxCommandEvent& event){};
+    void OpenCanteiro(wxCommandEvent& event);
     //chamado quando Adicionar Relatorio é escolhido.
     void NewRelatorio(wxCommandEvent& event){};
     //chamado quando Visualizar Relatorios é escolhido.

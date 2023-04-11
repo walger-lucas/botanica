@@ -14,6 +14,16 @@ JanelaPrincipal::JanelaPrincipal(const wxString &titulo)
 : wxFrame(nullptr,wxID_ANY,titulo)
 {
     PrepararJanela();
+    wxPanel* novoCanteiro = new wxPanel(this,1,wxDefaultPosition,wxSize(200,200));
+    novoCanteiro->SetBackgroundColour(wxColour(100,200,100));
+    wxPanel* verCanteiro = new wxPanel(this,2,wxDefaultPosition,wxSize(200,200));
+    verCanteiro->SetBackgroundColour(wxColour(50,250,250));
+    wxBoxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
+    sizer->Add(novoCanteiro,1,wxEXPAND|wxALL);
+    sizer->Add(verCanteiro,1,wxEXPAND|wxALL);
+    SetSizerAndFit(sizer);
+    windows[0]= novoCanteiro;
+    windows[1]= verCanteiro;
 }
 
 JanelaPrincipal::~JanelaPrincipal()
@@ -25,7 +35,6 @@ void JanelaPrincipal::PrepararJanela()
     //INICIO - PREPARANDO MENUS---------------------------------------------------
     //prepara subcategorias de menuCanteiro
     menuCanteiro = new wxMenu;
-   
     menuCanteiro->Append(ID_NEW_CANTEIRO,L"&Adicionar Canteiro...\tCtrl-N",
     "Adiciona um novo Canteiro ao Sistema.");
     menuCanteiro->AppendSeparator();
@@ -40,14 +49,13 @@ void JanelaPrincipal::PrepararJanela()
     menuRelatorio-> Append(ID_OPEN_CANTEIRO,L"&Visualizar Relatórios...",
      L"Acessa Relatórios previamente cadastrados.");
 
-
     //prepara subcategorias de menuCronograma
     menuCronograma = new wxMenu;
     menuCronograma-> Append(ID_OPEN_CRONOGRAMA,L"&Acessar Cronograma de Rega...",
     L"Acessa Cronograma de rega de todos os canteiros registrados.");
 
     //Adiciona menus à barra de menu.
-    barraMenu = new wxMenuBar;
+    wxMenuBar* barraMenu = new wxMenuBar;
     barraMenu->Append(menuCanteiro,L"&Canteiros");
     barraMenu->Append(menuRelatorio,L"&Relatórios");
     barraMenu->Append(menuCronograma,L"Crono&grama");
@@ -55,8 +63,22 @@ void JanelaPrincipal::PrepararJanela()
     SetMenuBar(barraMenu);
     CreateStatusBar();
     SetStatusText(L"Bem vinde ao Botânica, o aplicativo de registro de canteiros.");
-    //Conecta funcoes com as opcoes do menu
-    
     //FIM - PREPARANDO MENUS----------------------------------------------------
 
 }
+
+    void JanelaPrincipal::NewCanteiro(wxCommandEvent& event){ 
+        windows[1]->Show(false);
+        windows[0]->Show(true);
+        menuCanteiro->Enable(ID_NEW_CANTEIRO, false);
+        menuCanteiro->Enable(ID_OPEN_CANTEIRO, true);
+        GetSizer()->Layout();
+        };
+    //chamado quando Visualizar Canteiros é escolhido.
+    void JanelaPrincipal::OpenCanteiro(wxCommandEvent& event){
+        windows[0]->Show(false);
+        windows[1]->Show(true);
+        menuCanteiro->Enable(ID_NEW_CANTEIRO, true);
+        menuCanteiro->Enable(ID_OPEN_CANTEIRO, false);
+        GetSizer()->Layout();
+    };
