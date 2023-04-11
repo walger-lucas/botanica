@@ -7,7 +7,7 @@ find_package(wxWidgets REQUIRED COMPONENTS net core base)
 if(wxWidgets_USE_FILE) # not defined in CONFIG mode
     include(${wxWidgets_USE_FILE})
 endif()
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_NAME ${PROJECT_NAME}) 
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 add_executable(botanica Aplicacao.cpp JanelaPrincipal.cpp)
 target_link_libraries(botanica ${wxWidgets_LIBRARIES})
