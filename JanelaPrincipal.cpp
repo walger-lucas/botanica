@@ -1,4 +1,5 @@
 #include "JanelaPrincipal.h"
+#include "GerenciadorJanelas.h"
 
 //conecta ids com funcoes em compilador
 wxBEGIN_EVENT_TABLE(JanelaPrincipal,wxFrame)
@@ -14,10 +15,15 @@ JanelaPrincipal::JanelaPrincipal(const wxString &titulo)
 : wxFrame(nullptr,wxID_ANY,titulo)
 {
     PrepararJanela();
+    SetSizerAndFit(new wxBoxSizer(wxHORIZONTAL));
+    gJ= new GerenciadorJanelas(this);
+
+    
 }
 
 JanelaPrincipal::~JanelaPrincipal()
 {
+    delete gJ;
 }
 //Prepara toda a parte visual da janela, incluindo preparar a barra de menu.
 void JanelaPrincipal::PrepararJanela()
@@ -59,4 +65,18 @@ void JanelaPrincipal::PrepararJanela()
     
     //FIM - PREPARANDO MENUS----------------------------------------------------
 
+}
+
+
+void JanelaPrincipal::NewCanteiro(wxCommandEvent& ev)
+{
+    cout<<"add canteiro\n";
+    gJ->MudarJanela(Janelas::J_ADD_CANTEIRO);
+    
+}
+void JanelaPrincipal::OpenCanteiro(wxCommandEvent& ev)
+{
+    cout<<"ver canteiro\n";
+    gJ->MudarJanela(Janelas::J_VER_CANTEIRO);
+    
 }

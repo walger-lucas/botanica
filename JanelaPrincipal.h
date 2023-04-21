@@ -1,24 +1,31 @@
 #pragma once
 #include <wx/wx.h>
 #include <iostream>
+#include "EnumeradoresApp.h"
+
+class GerenciadorJanelas;
 
 class JanelaPrincipal : public wxFrame
 {
     public:
     JanelaPrincipal(const wxString &titulo);
     ~JanelaPrincipal();
+
+
     private:
     wxMenuBar *barraMenu; //parte visual com todos os menus.
     wxMenu *menuCanteiro; //menu com opcoes para atividades com canteiros
     wxMenu *menuRelatorio; //menu com opcoes para atividades com relatorios
     wxMenu *menuCronograma; // menu com opcoes para atividades com cronogramas
+    GerenciadorJanelas* gJ; // Gerenciador de Janelas do APP
 
     void PrepararJanela();
 
+    
     //chamado quando Adicionar Canteiro é escolhido.
-    void NewCanteiro(wxCommandEvent& event){ std::cout<<"hey\n";};
+    void NewCanteiro(wxCommandEvent& event);
     //chamado quando Visualizar Canteiros é escolhido.
-    void OpenCanteiro(wxCommandEvent& event){};
+    void OpenCanteiro(wxCommandEvent& event);
     //chamado quando Adicionar Relatorio é escolhido.
     void NewRelatorio(wxCommandEvent& event){};
     //chamado quando Visualizar Relatorios é escolhido.
@@ -27,16 +34,5 @@ class JanelaPrincipal : public wxFrame
     void OpenCronograma(wxCommandEvent& event){};
 
     wxDECLARE_EVENT_TABLE();
-};
-
-//IDs para funcoes
-enum
-{
-    ID_NEW_CANTEIRO = 1,
-    ID_OPEN_CANTEIRO,
-    ID_NEW_RELATORIO,
-    ID_OPEN_RELATORIO,
-    ID_OPEN_CRONOGRAMA
-
 };
 
