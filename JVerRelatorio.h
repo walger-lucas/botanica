@@ -1,10 +1,10 @@
 #pragma once
 #include "Janela.h"
 
-class JVerCanteiro: public Janela
+class JVerRelatorio: public Janela
 {
     public:
-        JVerCanteiro(GerenciadorJanelas* gJ,wxWindow* parent);
+        JVerRelatorio(GerenciadorJanelas* gJ,wxWindow* parent);
         void Inicializar(JanelaPrincipal* jP);
         void Desligar(JanelaPrincipal* jP);
 };

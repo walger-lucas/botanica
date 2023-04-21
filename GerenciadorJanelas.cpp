@@ -2,11 +2,13 @@
 #include "Janela.h"
 #include "JVerCanteiro.h"
 #include "JAddCanteiro.h"
-
+#include "JVerRelatorio.h"
+#include "JAddRelatorio.h"
+#include "JCronograma.h"
 
 
 GerenciadorJanelas::GerenciadorJanelas(JanelaPrincipal* jPrincipal)
-: jP(jPrincipal), jAtual(J_ADD_CANTEIRO)
+: jP(jPrincipal), jAtual(J_VER_CANTEIRO)
 {
     //------------------- Grounda as janelas;
     for(int i=0;i< J_MAX;i++)
@@ -15,11 +17,15 @@ GerenciadorJanelas::GerenciadorJanelas(JanelaPrincipal* jPrincipal)
     }
     //------------------- Cria as Janelas necessárias
     JVerCanteiro* jVCant = new JVerCanteiro(this,jP);
-    janelas[0]=static_cast<Janela*>(jVCant);
+    janelas[J_VER_CANTEIRO]=static_cast<Janela*>(jVCant);
     JAddCanteiro* jACant = new JAddCanteiro(this,jP);
-    janelas[1]= static_cast<Janela*>(jACant);
-
-
+    janelas[J_ADD_CANTEIRO]= static_cast<Janela*>(jACant);
+    JVerRelatorio* jVRel = new JVerRelatorio(this,jP);
+    janelas[J_VER_RELATORIO]= static_cast<Janela*>(jVRel);
+    JAddRelatorio* jARel = new JAddRelatorio(this,jP);
+    janelas[J_ADD_RELATORIO]= static_cast<Janela*>(jARel);
+    JCronograma* jC =new JCronograma(this,jP);
+    janelas[J_CRONOGRAMA]= static_cast<Janela*>(jC);
     //------------------- Desaparece com todas as janelas e coloca no sizer de jP
     wxSizer* sizer = jP->GetSizer();
     for(int i=0;i< J_MAX;i++)

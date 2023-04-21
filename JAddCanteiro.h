@@ -1,3 +1,4 @@
+#pragma once
 #include "Janela.h"
 
 class JAddCanteiro: public Janela

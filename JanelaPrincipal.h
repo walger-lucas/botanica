@@ -27,11 +27,11 @@ class JanelaPrincipal : public wxFrame
     //chamado quando Visualizar Canteiros é escolhido.
     void OpenCanteiro(wxCommandEvent& event);
     //chamado quando Adicionar Relatorio é escolhido.
-    void NewRelatorio(wxCommandEvent& event){};
+    void NewRelatorio(wxCommandEvent& event);
     //chamado quando Visualizar Relatorios é escolhido.
-    void OpenRelatorio(wxCommandEvent& event){};
+    void OpenRelatorio(wxCommandEvent& event);
     //chamado quando Visualizar Cronograma é escolhido
-    void OpenCronograma(wxCommandEvent& event){};
+    void OpenCronograma(wxCommandEvent& event);
 
     wxDECLARE_EVENT_TABLE();
 };
