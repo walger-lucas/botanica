@@ -17,9 +17,9 @@ enum Janelas
 {
     J_VER_CANTEIRO = 0,
     J_ADD_CANTEIRO,
-    /*J_ADD_RELATORIO,
+    J_ADD_RELATORIO,
     J_VER_RELATORIO,
-    J_CRONOGRAMA,*/
+    J_CRONOGRAMA,
     //Adicionar novas janelas aqui.
     J_MAX
 };

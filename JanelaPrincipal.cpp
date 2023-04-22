@@ -43,7 +43,7 @@ void JanelaPrincipal::PrepararJanela()
     menuRelatorio->Append(ID_NEW_RELATORIO,L"&Adicionar Relatório...\tCtrl-R",
      L"Registra novo Relatório de um Canteiro ao sistema.");
     menuRelatorio ->AppendSeparator();
-    menuRelatorio-> Append(ID_OPEN_CANTEIRO,L"&Visualizar Relatórios...",
+    menuRelatorio-> Append(ID_OPEN_RELATORIO,L"&Visualizar Relatórios...",
      L"Acessa Relatórios previamente cadastrados.");
 
 
@@ -79,4 +79,20 @@ void JanelaPrincipal::OpenCanteiro(wxCommandEvent& ev)
     cout<<"ver canteiro\n";
     gJ->MudarJanela(Janelas::J_VER_CANTEIRO);
     
+}
+void JanelaPrincipal::OpenRelatorio(wxCommandEvent& ev)
+{
+    cout<<"ver relatorio\n";
+    gJ->MudarJanela(Janelas::J_VER_RELATORIO);
+}
+void JanelaPrincipal::NewRelatorio(wxCommandEvent& ev)
+{
+    cout<<"add relatorio\n";
+    gJ->MudarJanela(Janelas::J_ADD_RELATORIO);
+}
+
+void JanelaPrincipal::OpenCronograma(wxCommandEvent& ev)
+{
+    cout<<"ver cronograma\n";
+    gJ->MudarJanela(Janelas::J_CRONOGRAMA);
 }
