@@ -35,16 +35,18 @@ class GerenciadorBD
     string user;
     string password;
     string base_de_dados;
-    vector<string> lista_canteiros;
 
   public:
     GerenciadorBD();
     ~GerenciadorBD();
-    int ConectarBD();
-    void DesconectarBD();
+    int conectarBD();
+    void desconectarBD();
+    bool mesmoNome(string nome);
     idCanteiros criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
+    void descartarCanteiro(int id);
+    void atualizarCanteiro(int id, string coluna, double valor);
+    void atualizarCanteiro(int id, string coluna, string valor);
     vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
-    void descartarCanteiro(string nome);
 };
 
 #endif // GERENCIADOR_BD_H

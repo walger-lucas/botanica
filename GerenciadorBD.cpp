@@ -1,12 +1,14 @@
 #include "GerenciadorBD.h"
 
-using namespace std;
 
+/*
+  Construtor da classe GerenciadorBD
+*/
 GerenciadorBD::GerenciadorBD()
 {
   base_de_dados = "botanica";
 
-  GerenciadorBD::ConectarBD();
+  GerenciadorBD::conectarBD();
 
   string query = "CREATE DATABASE IF NOT EXISTS ";
   query+=base_de_dados;
@@ -16,12 +18,21 @@ GerenciadorBD::GerenciadorBD()
   stmt->execute("CREATE TABLE IF NOT EXISTS canteiros (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(50) NOT NULL, especie VARCHAR(50) NOT NULL, status TINYTEXT,periodo_rega INT NOT NULL, ph FLOAT NOT NULL, umidade DOUBLE NOT NULL, descricao TEXT, criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP)  ENGINE=INNODB;");  
 }
 
+
+/*
+  Desconstrutor da classe GerenciadorBD
+*/
 GerenciadorBD::~GerenciadorBD()
 {
-  GerenciadorBD::DesconectarBD();
+  GerenciadorBD::desconectarBD();
 }
 
-int GerenciadorBD::ConectarBD()
+
+/*
+  Retorna status de conexão
+  Conecta ao servidor local do banco de dados
+*/
+int GerenciadorBD::conectarBD()
 {
   string hostname = "tcp://127.0.0.1:3306";
   string usuario = "botanica";
@@ -33,7 +44,10 @@ int GerenciadorBD::ConectarBD()
   stmt = con->createStatement();
 }
 
-void GerenciadorBD::DesconectarBD()
+/*
+  Desconecta do servidor local do banco de dados e desconstroi os parametros de classe
+*/
+void GerenciadorBD::desconectarBD()
 {
   if (stmt) stmt->close();
   if (pstmt) pstmt->close();
@@ -50,8 +64,11 @@ void GerenciadorBD::DesconectarBD()
   delete res;
 }
 
-// Retorna a ID do Canteiro
-idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
+/*
+  Retorna se o nome de interesse já existe no banco de dados
+  | nome: nome de interesse
+*/
+bool GerenciadorBD::mesmoNome(string nome)
 {
   res = stmt->executeQuery("SELECT id FROM canteiros WHERE nome='" + nome + "'");
   while (res->next()) 
@@ -59,44 +76,95 @@ idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int period
     if(res->getInt("id") != 0)
     {
       cout << "Nomes repetidos nao sao permitidos" << endl;
+      return true;
     }
   }
-
-  string query = "INSERT INTO canteiros (nome, especie, periodo_rega, ph, umidade";
-  string valores = " VALUES ('" + nome + "','" + especie + "'," + to_string(periodo_rega) + "," + to_string(ph) + "," + to_string(umidade);
-  if(!descricao.empty())
-  {
-    query+=", descricao";
-    valores+=", '" + descricao + "'";
-  }
-  query += ")" + valores + ")";
-  stmt->execute(query);
-
-  res = stmt->executeQuery("SELECT id FROM canteiros WHERE nome='" + nome + "'");
-
+  return false;
+}
+/*
+  Retorna a struct idCanteiros para cada canteiro criado | id = -1 se o nome for repetido
+  | nome: nome do canteiro (não é permitido repetição)
+  | especie: especie da planta do canteiro
+  | periodo_rega: período entre as regas
+  | ph: ph ideal da planta
+  | umidade: umidade ideal da planta
+  | descricao (opcional): descricao do canteiro
+*/
+idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
+{
   idCanteiros canteiro;
 
-  while (res->next()) 
+  if(GerenciadorBD::mesmoNome(nome))
   {
-    canteiro.id = res->getInt("id");
-    canteiro.nome = res->getInt("nome");
+    canteiro.id = -1;
   }
+  else
+  {
+    string query = "INSERT INTO canteiros (nome, especie, periodo_rega, ph, umidade";
+    string valores = " VALUES ('" + nome + "','" + especie + "'," + to_string(periodo_rega) + "," + to_string(ph) + "," + to_string(umidade);
+    if(!descricao.empty())
+    {
+      query+=", descricao";
+      valores+=", '" + descricao + "'";
+    }
+    query += ")" + valores + ")";
+    stmt->execute(query);
 
+    res = stmt->executeQuery("SELECT * FROM canteiros WHERE nome='" + nome + "'");
+    while (res->next()) 
+    {
+      canteiro.id = res->getInt("id");
+      canteiro.nome = res->getInt("nome");
+    }
+  }
   return canteiro;
 }
 
-void GerenciadorBD::descartarCanteiro(string nome)
+/*
+  Descarta uma linha do banco de dados a partir do seu nome
+  | nome: nome do canteiro a ser descartado
+*/
+void GerenciadorBD::descartarCanteiro(int id)
 {
-  res = stmt->executeQuery("DELETE FROM canteiros WHERE nome='" + nome + "'");
-  cout << res << endl;
+  stmt->execute("DELETE FROM canteiros WHERE id=" + to_string(id));
 }
 
-// Parametro deve ser somente nome ou especie
-vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string parametro, string valor) 
+/*
+  Atualiza parametro de canteiro 
+  | nome: nome do canteiro a ser atualizado
+  | coluna: parametro ("nome", "especie" ou "descricao") do canteiro a ser atualizado
+  | valor: valor string que vai substituir o valor antigo
+*/
+void GerenciadorBD::atualizarCanteiro(int id, string coluna, string valor)
 {
-  if(parametro != "" && valor != "")
+  string query = "UPDATE canteiros SET " + coluna + "=";
+  // if(coluna == "nome" && GerenciadorBD::mesmoNome(nome))
+  //   return;
+  query += "'" + valor + "' WHERE id=" + to_string(id);
+  stmt->execute(query);
+}
+
+/*
+  Atualiza parametro de canteiro 
+  | nome: nome do canteiro a ser atualizado
+  | coluna: parametro ("ph", "periodo_rega" ou "umidade") do canteiro a ser atualizado
+  | valor: valor numérico que vai substituir o valor antigo
+*/
+void GerenciadorBD::atualizarCanteiro(int id, string coluna, double valor)
+{
+  stmt->execute("UPDATE canteiros SET " + coluna + "=" + to_string(valor) + " WHERE id=" + to_string(id));
+}
+
+/*
+  Retorna vetor de idCanteiros para cada canteiro selecionado 
+  | coluna: parametro de busca ("nome" ou "especie")
+  | valor: valor string de filtro
+*/
+vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string coluna, string valor) 
+{
+  if(coluna != "" && valor != "")
   {
-    res = stmt->executeQuery("SELECT * FROM canteiros WHERE "+parametro+"='"+valor+"'");
+    res = stmt->executeQuery("SELECT * FROM canteiros WHERE "+coluna+"='"+valor+"'");
   }
   else
     res = stmt->executeQuery("SELECT * FROM canteiros");
@@ -105,11 +173,8 @@ vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string parametro, string 
 
   while (res->next()) {
     idCanteiros canteiro;
-    int id = res->getInt("id");
-    string nome = res->getString("nome");
-    cout << "ID: " << id << ", Name: " << nome << endl;
-    canteiro.id = id;
-    canteiro.nome = nome;
+    canteiro.id = res->getInt("id");
+    canteiro.nome = res->getString("nome");
     lista_canteiros.push_back(canteiro);
   }
   return lista_canteiros;
