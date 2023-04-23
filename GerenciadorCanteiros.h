@@ -10,6 +10,7 @@ private:
   GerenciadorBD *gerenciadorBD;
 public:
   map<string, idCanteiros> dict_canteiros;
+  DadosCanteiro *dadosCanteiro;
   GerenciadorCanteiros();
   ~GerenciadorCanteiros();
   idCanteiros getId(string nome);
