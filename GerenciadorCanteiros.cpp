@@ -135,7 +135,12 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorEspecie(string especie)
 DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 {
   DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinha(canteiro);
-  cout << to_string(canteiroArmazenado.umidade);
+  cout << canteiroArmazenado.idCanteiro.nome << endl;
+  cout << canteiroArmazenado.especie << endl;
+  cout << to_string(canteiroArmazenado.periodo_rega) << endl;
+  cout << to_string(canteiroArmazenado.ph) << endl;
+  cout << to_string(canteiroArmazenado.umidade) << endl;
+  cout << canteiroArmazenado.descricao << endl;
   return canteiroArmazenado;
 }
 
@@ -143,8 +148,8 @@ int main()
 {
   GerenciadorCanteiros gerenciadorCanteiros = GerenciadorCanteiros();
   // gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Canteiro 2")); //OK, adicionar tratamento de erro de elemento nao existente
-  // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.dict_canteiros.at("Canteiro 1"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
-  // gerenciadorCanteiros.adicionarCanteiro("Canteiro 3", "Lavanda", 6, 7, 55, "Canteiro de lavandas"); //OK
-  gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Canteiro 1"));
+  // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.dict_canteiros.at("Canteiro 15"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
+  // gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
+  // gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"));
   return 0;
 }
