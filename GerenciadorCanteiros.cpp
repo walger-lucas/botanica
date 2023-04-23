@@ -117,14 +117,9 @@ vector<idCanteiros> GerenciadorCanteiros::buscarTodos()
 vector<idCanteiros> GerenciadorCanteiros::buscarPorNome(string substring)
 {
   vector<idCanteiros> canteirosFiltrados;
-  for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)
-  {  
+  for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)  
     if(it->first.find(substring))
-    {
-      vector<idCanteiros> canteiroNome = gerenciadorBD->selecionarCanteiros("nome", it->first);
-      canteirosFiltrados.insert(canteirosFiltrados.end(), canteiroNome.begin(), canteiroNome.end());
-    }
-  }
+      canteirosFiltrados.insert(canteirosFiltrados.end(), *it);
   return canteirosFiltrados;
 }
 
