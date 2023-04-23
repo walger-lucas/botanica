@@ -12,6 +12,7 @@ JAddRelatorio::JAddRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
 void JAddRelatorio::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_NEW_RELATORIO,false);
+    jP->SetStatusText(L"Cadastrar relatório a um canteiro cadastrado no sistema.");
     
 }
 

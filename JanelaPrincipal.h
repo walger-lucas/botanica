@@ -13,6 +13,7 @@ class JanelaPrincipal : public wxFrame
 
 
     private:
+
     wxMenuBar *barraMenu; //parte visual com todos os menus.
     wxMenu *menuCanteiro; //menu com opcoes para atividades com canteiros
     wxMenu *menuRelatorio; //menu com opcoes para atividades com relatorios

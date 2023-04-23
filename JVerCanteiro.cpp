@@ -1,21 +1,22 @@
 #include "JVerCanteiro.h"
 
+
 JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent)
 : Janela(gJ,parent,wxID_ANY)
 {
-    wxPanel* panel = new wxPanel(this,wxID_ANY,wxDefaultPosition,wxSize(400,400));
-    panel->SetBackgroundColour(wxColor(100,200,100));
+    lC = new ListaCanteiros(this);
     SetSizerAndFit(new wxBoxSizer(wxVERTICAL));
-    GetSizer()->Add(panel,1,wxEXPAND|wxALL);
+    GetSizer()->Add(lC,1,wxEXPAND|wxALL);
 }
 
 void JVerCanteiro::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CANTEIRO,false);
-    
+    jP->SetStatusText(L"Acesso aos canteiros cadastrados.");
 }
 
 void JVerCanteiro::Desligar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CANTEIRO,true);
+    lC->ResetText();
 }

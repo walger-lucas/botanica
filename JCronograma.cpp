@@ -12,6 +12,7 @@ JCronograma::JCronograma(GerenciadorJanelas* gJ, wxWindow* parent)
 void JCronograma::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CRONOGRAMA,false);
+    jP->SetStatusText(L"Acesso ao cronograma de rega dos canteiros cadastrados.");
     
 }
 

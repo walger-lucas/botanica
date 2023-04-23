@@ -12,6 +12,7 @@ JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
 void JVerRelatorio::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_RELATORIO,false);
+    jP->SetStatusText(L"Acessar relatório cadastrado no sistema.");
     
 }
 

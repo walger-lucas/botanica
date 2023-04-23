@@ -17,8 +17,7 @@ JanelaPrincipal::JanelaPrincipal(const wxString &titulo)
     PrepararJanela();
     SetSizerAndFit(new wxBoxSizer(wxHORIZONTAL));
     gJ= new GerenciadorJanelas(this);
-
-    
+    SetStatusText(L"Bem vinde ao Botânica, o aplicativo de registro de canteiros.");
 }
 
 JanelaPrincipal::~JanelaPrincipal()
@@ -60,7 +59,6 @@ void JanelaPrincipal::PrepararJanela()
     //Apresenta barra de menus.
     SetMenuBar(barraMenu);
     CreateStatusBar();
-    SetStatusText(L"Bem vinde ao Botânica, o aplicativo de registro de canteiros.");
     //Conecta funcoes com as opcoes do menu
     
     //FIM - PREPARANDO MENUS----------------------------------------------------

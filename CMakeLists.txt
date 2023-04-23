@@ -9,6 +9,6 @@ if(wxWidgets_USE_FILE) # not defined in CONFIG mode
 endif()
 set(CPACK_PROJECT_NAME ${PROJECT_NAME}) 
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-add_executable(botanica Aplicacao.cpp JanelaPrincipal.cpp Janela.cpp GerenciadorJanelas.cpp JVerCanteiro.cpp JAddCanteiro.cpp JVerRelatorio.cpp JAddRelatorio.cpp JCronograma.cpp)
+add_executable(botanica Aplicacao.cpp JanelaPrincipal.cpp Janela.cpp GerenciadorJanelas.cpp JVerCanteiro.cpp JAddCanteiro.cpp JVerRelatorio.cpp JAddRelatorio.cpp JCronograma.cpp ListaCanteiros.cpp)
 target_link_libraries(botanica ${wxWidgets_LIBRARIES})
 include(CPack)

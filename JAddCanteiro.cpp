@@ -12,7 +12,7 @@ JAddCanteiro::JAddCanteiro(GerenciadorJanelas* gJ, wxWindow* parent)
 void JAddCanteiro::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_NEW_CANTEIRO,false);
-    
+    jP->SetStatusText(L"Cadastrar canteiro ao sistema.");
 }
 
 void JAddCanteiro::Desligar(JanelaPrincipal* jP)
