@@ -21,6 +21,7 @@ public:
   vector<idCanteiros> buscarTodos();
   vector<idCanteiros> buscarPorNome(string nome="");
   vector<idCanteiros> buscarPorEspecie(string especie="");
+  DadosCanteiro armazenarCanteiro(idCanteiros canteiro);
 };
 
 #endif // GERENCIADOR_CANTEIROS_H

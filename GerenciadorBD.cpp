@@ -180,4 +180,12 @@ vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string coluna, string val
   return lista_canteiros;
 }
 
+DadosCanteiro GerenciadorBD::armazenarLinha(idCanteiros canteiro)
+{
+  res = stmt->executeQuery("SELECT * FROM canteiros WHERE id=" + to_string(canteiro.id));
+  while (res->next()) 
+  {
+    return DadosCanteiro(canteiro, res->getString("especie"), res->getInt("periodo_rega"), res->getDouble("ph"), res->getDouble("umidade"), res->getString("descricao"));
+  }
+}
 

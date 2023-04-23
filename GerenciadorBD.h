@@ -47,6 +47,7 @@ class GerenciadorBD
     void atualizarCanteiro(int id, string coluna, double valor);
     void atualizarCanteiro(int id, string coluna, string valor);
     vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
+    DadosCanteiro armazenarLinha(idCanteiros canteiros);
 };
 
 #endif // GERENCIADOR_BD_H

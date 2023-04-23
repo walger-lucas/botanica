@@ -1,11 +1,16 @@
-#include "DadosCanteiro.h"
+#include "Canteiro.h"
 
-DadosCanteiro::DadosCanteiro(idCanteiros _idCanteiro, string _especie, int _periodo_rega, float _ph, double _umidade, string _descricao)
+DadosCanteiro::DadosCanteiro(idCanteiros idCanteiro, string especie, int periodo_rega, float ph, double umidade, string descricao)
 {
-  idCanteiro = _idCanteiro;
-  especie = _especie;
-  periodo_rega = _periodo_rega;
-  ph = _ph;
-  umidade = _umidade;
-  descricao = _descricao;
+  this->idCanteiro = idCanteiro;
+  this->especie = especie;
+  this->periodo_rega = periodo_rega;
+  this->ph = ph;
+  this->umidade = umidade;
+  this->descricao = descricao;
 };
+
+DadosCanteiro::~DadosCanteiro()
+{
+
+}

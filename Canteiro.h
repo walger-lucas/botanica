@@ -16,14 +16,14 @@ struct idCanteiros
 class DadosCanteiro
 {
 private:  
+
+public:
   idCanteiros idCanteiro;
   string especie;
   int periodo_rega;
   float ph;
   double umidade;
   string descricao;
-
-public:
   DadosCanteiro(idCanteiros idCanteiro, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
   ~DadosCanteiro();
   void alterarDado();

@@ -119,7 +119,7 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorNome(string substring)
   vector<idCanteiros> canteirosFiltrados;
   for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)  
     if(it->first.find(substring))
-      canteirosFiltrados.insert(canteirosFiltrados.end(), *it);
+      canteirosFiltrados.push_back(it->second);
   return canteirosFiltrados;
 }
 
@@ -132,11 +132,19 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorEspecie(string especie)
   return gerenciadorBD->selecionarCanteiros("especie", especie);
 }
 
+DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
+{
+  DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinha(canteiro);
+  cout << to_string(canteiroArmazenado.umidade);
+  return canteiroArmazenado;
+}
+
 int main()
 {
   GerenciadorCanteiros gerenciadorCanteiros = GerenciadorCanteiros();
   // gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Canteiro 2")); //OK, adicionar tratamento de erro de elemento nao existente
   // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.dict_canteiros.at("Canteiro 1"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
   // gerenciadorCanteiros.adicionarCanteiro("Canteiro 3", "Lavanda", 6, 7, 55, "Canteiro de lavandas"); //OK
+  gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Canteiro 1"));
   return 0;
 }
