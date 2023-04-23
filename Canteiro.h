@@ -1,8 +1,7 @@
-#ifndef CANTEIRO_H
-#define CANTEIRO_H
+#pragma once
 
 /* Standard C++ includes */
-#include <stdlib.h>
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -29,5 +28,3 @@ public:
   void alterarDado();
   void acessarDado();
 };
-
-#endif //CANTEIRO_H

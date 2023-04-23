@@ -1,5 +1,4 @@
-#ifndef GERENCIADOR_CANTEIROS_H
-#define GERENCIADOR_CANTEIROS_H
+#pragma once
 
 #include "GerenciadorBD.h"
 #include "Canteiro.h"
@@ -23,5 +22,3 @@ public:
   vector<idCanteiros> buscarPorEspecie(string especie="");
   DadosCanteiro armazenarCanteiro(idCanteiros canteiro);
 };
-
-#endif // GERENCIADOR_CANTEIROS_H

@@ -1,11 +1,6 @@
-#ifndef GERENCIADOR_BD_H
-#define GERENCIADOR_BD_H
+#pragma once
 
 #include "Canteiro.h"
-
-/* Standard C++ includes */
-#include <stdlib.h>
-#include <iostream>
 #include <vector>
 
 /*
@@ -49,5 +44,3 @@ class GerenciadorBD
     vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
     DadosCanteiro armazenarLinha(idCanteiros canteiros);
 };
-
-#endif // GERENCIADOR_BD_H
