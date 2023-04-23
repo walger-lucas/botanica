@@ -7,14 +7,14 @@
 class GerenciadorCanteiros
 {
 private:  
-  vector<idCanteiros> lista_canteiros;
-  GerenciadorBD gerenciadorBD = GerenciadorBD();
+  GerenciadorBD gerenciadorBD;
 public:
+  map<string, idCanteiros> dict_canteiros;
   GerenciadorCanteiros();
   ~GerenciadorCanteiros();
   void adicionarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao);
+  void removerCanteiro(idCanteiros canteiro);
+  vector<idCanteiros> buscarPorNome(string filtro="");
 };
-
-
 
 #endif // GERENCIADOR_CANTEIROS_H

@@ -51,7 +51,7 @@ void GerenciadorBD::DesconectarBD()
 }
 
 // Retorna a ID do Canteiro
-int GerenciadorBD::criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
+idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
 {
   res = stmt->executeQuery("SELECT id FROM canteiros WHERE nome='" + nome + "'");
   while (res->next()) 
@@ -59,7 +59,6 @@ int GerenciadorBD::criarCanteiro(string nome, string especie, int periodo_rega, 
     if(res->getInt("id") != 0)
     {
       cout << "Nomes repetidos nao sao permitidos" << endl;
-      return -1;
     }
   }
 
@@ -73,41 +72,47 @@ int GerenciadorBD::criarCanteiro(string nome, string especie, int periodo_rega, 
   query += ")" + valores + ")";
   stmt->execute(query);
 
-  lista_canteiros.push_back(nome);
-
   res = stmt->executeQuery("SELECT id FROM canteiros WHERE nome='" + nome + "'");
-  int id = -1;
+
+  idCanteiros canteiro;
+
   while (res->next()) 
   {
-    id = res->getInt("id");
+    canteiro.id = res->getInt("id");
+    canteiro.nome = res->getInt("nome");
   }
 
-  return id;
+  return canteiro;
 }
 
-void GerenciadorBD::removerCanteiro(int id)
+void GerenciadorBD::descartarCanteiro(string nome)
 {
-  stmt->executeQuery("DELETE FROM canteiros WHERE id=" + id);
-  // Adicionar remoção da lista de canteiros
+  res = stmt->executeQuery("DELETE FROM canteiros WHERE nome='" + nome + "'");
+  cout << res << endl;
 }
 
-void GerenciadorBD::selecionarCanteiros() 
+// Parametro deve ser somente nome ou especie
+vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string parametro, string valor) 
 {
-  res = stmt->executeQuery("SELECT * FROM canteiros");
+  if(parametro != "" && valor != "")
+  {
+    res = stmt->executeQuery("SELECT * FROM canteiros WHERE "+parametro+"='"+valor+"'");
+  }
+  else
+    res = stmt->executeQuery("SELECT * FROM canteiros");
+
+  vector<idCanteiros> lista_canteiros;
 
   while (res->next()) {
+    idCanteiros canteiro;
     int id = res->getInt("id");
-    string name = res->getString("nome");
-    cout << "ID: " << id << ", Name: " << name << endl;
+    string nome = res->getString("nome");
+    cout << "ID: " << id << ", Name: " << nome << endl;
+    canteiro.id = id;
+    canteiro.nome = nome;
+    lista_canteiros.push_back(canteiro);
   }
-}
-
-int main()
-{
-  GerenciadorBD gerenciadorBD = GerenciadorBD();
-  gerenciadorBD.criarCanteiro("Bromelia 1", "Bromelia", 6, 7.0, 10.5);
-  gerenciadorBD.selecionarCanteiros();
-  return 0;
+  return lista_canteiros;
 }
 
 

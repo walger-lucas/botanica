@@ -1,6 +1,8 @@
 #ifndef GERENCIADOR_BD_H
 #define GERENCIADOR_BD_H
 
+#include "Canteiro.h"
+
 /* Standard C++ includes */
 #include <stdlib.h>
 #include <iostream>
@@ -40,9 +42,9 @@ class GerenciadorBD
     ~GerenciadorBD();
     int ConectarBD();
     void DesconectarBD();
-    int criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
-    void selecionarCanteiros();
-    void removerCanteiro(int id);
+    idCanteiros criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
+    vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
+    void descartarCanteiro(string nome);
 };
 
 #endif // GERENCIADOR_BD_H
