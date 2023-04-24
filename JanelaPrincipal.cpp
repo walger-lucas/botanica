@@ -18,6 +18,7 @@ JanelaPrincipal::JanelaPrincipal(const wxString &titulo)
     SetSizerAndFit(new wxBoxSizer(wxHORIZONTAL));
     gJ= new GerenciadorJanelas(this);
     SetStatusText(L"Bem vinde ao Botânica, o aplicativo de registro de canteiros.");
+    SetMinClientSize(wxSize(450,400));
 }
 
 JanelaPrincipal::~JanelaPrincipal()
