@@ -5,6 +5,7 @@
 
 class GerenciadorJanelas;
 
+/*Frame principal, onde todas as Janelas se conectam*/
 class JanelaPrincipal : public wxFrame
 {
     public:
