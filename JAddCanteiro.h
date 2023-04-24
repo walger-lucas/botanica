@@ -1,6 +1,7 @@
 #pragma once
 #include "Janela.h"
 
+/*Janela para adicionar canteiro*/
 class JAddCanteiro: public Janela
 {
     public:

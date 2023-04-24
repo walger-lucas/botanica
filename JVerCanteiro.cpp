@@ -1,12 +1,12 @@
 #include "JVerCanteiro.h"
-
+#include "PainelCanteiro.h"
 
 JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent)
 : Janela(gJ,parent,wxID_ANY)
 {
     
     splitter = new wxSplitterWindow(this,-1,wxDefaultPosition,wxDefaultSize,wxSP_LIVE_UPDATE);
-    wxPanel* direito = new wxPanel(splitter);
+    PainelCanteiro* direito = new PainelCanteiro(splitter,false);
     lC = new ListaCanteiros(splitter);
     direito->SetBackgroundColour(wxColor(50,120,50));
     splitter->SplitVertically(lC,direito);

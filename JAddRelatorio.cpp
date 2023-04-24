@@ -3,10 +3,13 @@
 JAddRelatorio::JAddRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
 : Janela(gJ,parent,wxID_ANY)
 {
-    wxPanel* panel = new wxPanel(this,wxID_ANY,wxDefaultPosition,wxSize(400,400));
-    panel->SetBackgroundColour(wxColor(100,200,200));
+    
+    lC = new ListaCanteiros(this);
+    lC->SetBackgroundColour(wxColor(100,200,200));
     SetSizerAndFit(new wxBoxSizer(wxVERTICAL));
-    GetSizer()->Add(panel,1,wxEXPAND|wxALL);
+    GetSizer()->Add(lC,1,wxEXPAND|wxALL);
+    wxButton* button = new wxButton(lC,-1,L"Adicionar Relatório");
+    lC->GetSizer()->Add(button,0.3,wxEXPAND|wxALL,10);
 }
 
 void JAddRelatorio::Inicializar(JanelaPrincipal* jP)
