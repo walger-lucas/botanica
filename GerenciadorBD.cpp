@@ -4,10 +4,9 @@
 /*
   Construtor da classe GerenciadorBD
 */
-GerenciadorBD::GerenciadorBD()
+GerenciadorBD::GerenciadorBD() 
+: base_de_dados("botanica"), hostname("tcp://127.0.0.1:3306"), usuario("botanica"), senha("$Bromelia5")
 {
-  base_de_dados = "botanica";
-
   GerenciadorBD::conectarBD();
 
   string query = "CREATE DATABASE IF NOT EXISTS ";
@@ -34,13 +33,8 @@ GerenciadorBD::~GerenciadorBD()
 */
 int GerenciadorBD::conectarBD()
 {
-  string hostname = "tcp://127.0.0.1:3306";
-  string usuario = "botanica";
-  string senha = "$Bromelia5";
-
   driver = get_driver_instance();
   con = driver->connect(hostname, usuario, senha);
-  
   stmt = con->createStatement();
 }
 

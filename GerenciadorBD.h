@@ -27,8 +27,9 @@ class GerenciadorBD
     Statement* stmt;
     PreparedStatement *pstmt;
     ResultSet* res;
-    string user;
-    string password;
+    string hostname;
+    string usuario;
+    string senha;
     string base_de_dados;
 
   public:

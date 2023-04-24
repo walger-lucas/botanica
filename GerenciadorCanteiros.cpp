@@ -3,10 +3,9 @@
 /*
   Construtor da classe GerenciadorCanteiros
 */
-GerenciadorCanteiros::GerenciadorCanteiros()
+GerenciadorCanteiros::GerenciadorCanteiros() 
+: gerenciadorBD(new GerenciadorBD)
 {
-  // Cria gerenciador de banco de dados
-  gerenciadorBD = new GerenciadorBD();
   // Recebe as idCanteiros dos canteiros registrados no banco de dados
   vector<idCanteiros> canteiros = gerenciadorBD->selecionarCanteiros();
   // Armazena as idCanteiros em um dicionário a partir do nome
