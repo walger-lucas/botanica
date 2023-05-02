@@ -1,5 +1,4 @@
-#ifndef GERENCIADOR_CANTEIROS_H
-#define GERENCIADOR_CANTEIROS_H
+#pragma once
 
 #include "GerenciadorBD.h"
 #include "Canteiro.h"
@@ -10,6 +9,7 @@ private:
   GerenciadorBD *gerenciadorBD;
 public:
   map<string, idCanteiros> dict_canteiros;
+  DadosCanteiro *dadosCanteiro;
   GerenciadorCanteiros();
   ~GerenciadorCanteiros();
   idCanteiros getId(string nome);
@@ -20,6 +20,5 @@ public:
   vector<idCanteiros> buscarTodos();
   vector<idCanteiros> buscarPorNome(string nome="");
   vector<idCanteiros> buscarPorEspecie(string especie="");
+  DadosCanteiro armazenarCanteiro(idCanteiros canteiro);
 };
-
-#endif // GERENCIADOR_CANTEIROS_H

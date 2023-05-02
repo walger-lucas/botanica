@@ -1,8 +1,7 @@
-#ifndef CANTEIRO_H
-#define CANTEIRO_H
+#pragma once
 
 /* Standard C++ includes */
-#include <stdlib.h>
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -16,18 +15,16 @@ struct idCanteiros
 class DadosCanteiro
 {
 private:  
+
+public:
   idCanteiros idCanteiro;
   string especie;
   int periodo_rega;
   float ph;
   double umidade;
   string descricao;
-
-public:
   DadosCanteiro(idCanteiros idCanteiro, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
   ~DadosCanteiro();
   void alterarDado();
   void acessarDado();
 };
-
-#endif //CANTEIRO_H

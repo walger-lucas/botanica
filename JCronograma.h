@@ -1,6 +1,7 @@
 #pragma once
 #include "Janela.h"
 
+/*Janela para acessar cronogramas.*/
 class JCronograma: public Janela
 {
     public:
