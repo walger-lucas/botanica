@@ -20,6 +20,7 @@ void JVerCanteiro::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CANTEIRO,false);
     jP->SetStatusText(L"Acesso aos canteiros cadastrados.");
+    lC->Atualizar();
 }
 
 void JVerCanteiro::Desligar(JanelaPrincipal* jP)
