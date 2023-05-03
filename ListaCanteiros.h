@@ -4,6 +4,10 @@
 class ListaCanteiros: public wxPanel
 {
 
+    private:
+        wxTextCtrl* text= nullptr;
+        wxListBox* list= nullptr;
+        wxDECLARE_EVENT_TABLE();
     public:
         enum IDs
         {
@@ -14,8 +18,7 @@ class ListaCanteiros: public wxPanel
         ListaCanteiros(wxWindow* parent);
         void ResetText();
         void Select(long ID);
-    private:
-        wxTextCtrl* text= nullptr;
-        wxListBox* list= nullptr;
+        void Atualizar();
+        void AtualizarTexto(wxCommandEvent& event);
         
 };

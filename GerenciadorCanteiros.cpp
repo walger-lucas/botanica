@@ -4,7 +4,7 @@
   Construtor da classe GerenciadorCanteiros
 */
 GerenciadorCanteiros::GerenciadorCanteiros() 
-: gerenciadorBD(new GerenciadorBD)
+: gerenciadorBD(new GerenciadorBD())
 {
   // Recebe as idCanteiros dos canteiros registrados no banco de dados
   vector<idCanteiros> canteiros = gerenciadorBD->selecionarCanteiros();
@@ -18,7 +18,8 @@ GerenciadorCanteiros::GerenciadorCanteiros()
 */
 GerenciadorCanteiros::~GerenciadorCanteiros()
 {
-  delete gerenciadorBD;
+  if(gerenciadorBD)
+    delete gerenciadorBD;
   dict_canteiros.clear();
 }
 
@@ -48,19 +49,30 @@ idCanteiros GerenciadorCanteiros::getId(string nome)
   | umidade: umidade ideal da planta
   | descricao (opcional): descricao do canteiro
 */
-void GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
+bool GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
 {
-  if(dict_canteiros.count(nome) == 0)
+
+  if(dict_canteiros.count(nome) == 0 && nome!="")
   {
     idCanteiros canteiroCriado = gerenciadorBD->criarCanteiro(nome, especie, periodo_rega, ph, umidade, descricao);
     cout << "Canteiro criado" << endl;
     if(canteiroCriado.id != -1)
       dict_canteiros[nome] = canteiroCriado;
     else
-      cout << "Não é permitido nomes repetidos" << endl;
+      return false;
   }
   else
-    cout << "Não é permitido nomes repetidos" << endl;
+    return false;
+  return true;
+}
+
+/*
+  Adiciona um novo canteiro ao registro
+  | canteiro: instância DadosCanteiro
+*/
+bool GerenciadorCanteiros::adicionarCanteiro(const DadosCanteiro canteiro)
+{
+  return adicionarCanteiro(canteiro.idCanteiro.nome, canteiro.especie, canteiro.periodo_rega, canteiro.ph, canteiro.umidade, canteiro.descricao);
 }
 
 /*
@@ -90,6 +102,7 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parame
   }
 }
 
+
 /*
   Atualiza um parametro de um canteiro 
   | nome: nome do canteiro a ser atualizado
@@ -99,6 +112,20 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parame
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parametro, double valor)
 {
   gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
+}
+
+/*
+  Atualiza todos os parametros de um canteiro 
+  | canteiro: instância DadosCanteiro
+*/
+void GerenciadorCanteiros::atualizarCanteiro(idCanteiros idCanteiro, const DadosCanteiro canteiro)
+{
+  atualizarCanteiro(idCanteiro, "nome", canteiro.idCanteiro.nome);
+  atualizarCanteiro(idCanteiro, "especie", canteiro.especie);
+  atualizarCanteiro(idCanteiro, "periodo_rega", canteiro.periodo_rega);
+  atualizarCanteiro(idCanteiro, "ph", canteiro.ph);
+  atualizarCanteiro(idCanteiro, "umidade", canteiro.umidade);
+  atualizarCanteiro(idCanteiro, "descricao", canteiro.descricao);
 }
 
 /*
@@ -141,14 +168,4 @@ DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
   cout << to_string(canteiroArmazenado.umidade) << endl;
   cout << canteiroArmazenado.descricao << endl;
   return canteiroArmazenado;
-}
-
-int main()
-{
-  GerenciadorCanteiros gerenciadorCanteiros = GerenciadorCanteiros();
-  // gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Canteiro 2")); //OK, adicionar tratamento de erro de elemento nao existente
-  // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.dict_canteiros.at("Canteiro 15"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
-  // gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
-  // gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"));
-  return 0;
 }
