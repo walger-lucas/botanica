@@ -118,8 +118,8 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorNome(string substring)
 {
   vector<idCanteiros> canteirosFiltrados;
   for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)  
-    if(it->first.find(substring))
-      canteirosFiltrados.insert(canteirosFiltrados.end(), *it);
+    if(it->first.find(substring) != -1)
+      canteirosFiltrados.push_back(it->second);
   return canteirosFiltrados;
 }
 
