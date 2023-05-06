@@ -4,10 +4,9 @@
 /*
   Construtor da classe GerenciadorBD
 */
-GerenciadorBD::GerenciadorBD()
+GerenciadorBD::GerenciadorBD() 
+: base_de_dados("botanica"), hostname("tcp://127.0.0.1:3306"), usuario("botanica"), senha("$Bromelia5")
 {
-  base_de_dados = "botanica";
-
   GerenciadorBD::conectarBD();
 
   string query = "CREATE DATABASE IF NOT EXISTS ";
@@ -34,13 +33,8 @@ GerenciadorBD::~GerenciadorBD()
 */
 int GerenciadorBD::conectarBD()
 {
-  string hostname = "tcp://127.0.0.1:3306";
-  string usuario = "botanica";
-  string senha = "$Bromelia5";
-
   driver = get_driver_instance();
   con = driver->connect(hostname, usuario, senha);
-  
   stmt = con->createStatement();
 }
 
@@ -58,10 +52,14 @@ void GerenciadorBD::desconectarBD()
   } catch (sql::SQLException &e) {
     // do nothing
   }
-  delete con;
-  delete stmt;
-  delete pstmt;
-  delete res;
+  if(con!=nullptr)
+    delete con;
+  if(stmt!=nullptr)
+    delete stmt;
+  if(pstmt!=nullptr)
+    delete pstmt;
+  if(res!=nullptr)
+    delete res;
 }
 
 /*
@@ -180,4 +178,12 @@ vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string coluna, string val
   return lista_canteiros;
 }
 
+DadosCanteiro GerenciadorBD::armazenarLinha(idCanteiros canteiro)
+{
+  res = stmt->executeQuery("SELECT * FROM canteiros WHERE id=" + to_string(canteiro.id));
+  while (res->next()) 
+  {
+    return DadosCanteiro(canteiro, res->getString("especie"), res->getInt("periodo_rega"), res->getDouble("ph"), res->getDouble("umidade"), res->getString("descricao"));
+  }
+}
 

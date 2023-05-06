@@ -1,2 +1,4 @@
 default:
-	cmake -S . -B ./build
+	cmake -S . -B ./build		
+execute:
+	./build/botanica

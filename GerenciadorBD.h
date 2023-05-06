@@ -1,11 +1,6 @@
-#ifndef GERENCIADOR_BD_H
-#define GERENCIADOR_BD_H
+#pragma once
 
 #include "Canteiro.h"
-
-/* Standard C++ includes */
-#include <stdlib.h>
-#include <iostream>
 #include <vector>
 
 /*
@@ -28,12 +23,13 @@ class GerenciadorBD
 {
   private:
     Driver* driver;
-    Connection* con;
-    Statement* stmt;
-    PreparedStatement *pstmt;
-    ResultSet* res;
-    string user;
-    string password;
+    Connection* con=nullptr;
+    Statement* stmt=nullptr;
+    PreparedStatement *pstmt=nullptr;
+    ResultSet* res=nullptr;
+    string hostname;
+    string usuario;
+    string senha;
     string base_de_dados;
 
   public:
@@ -47,6 +43,5 @@ class GerenciadorBD
     void atualizarCanteiro(int id, string coluna, double valor);
     void atualizarCanteiro(int id, string coluna, string valor);
     vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
+    DadosCanteiro armazenarLinha(idCanteiros canteiros);
 };
-
-#endif // GERENCIADOR_BD_H
