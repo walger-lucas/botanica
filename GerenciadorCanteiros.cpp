@@ -117,8 +117,10 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorNome(string substring)
 {
   vector<idCanteiros> canteirosFiltrados;
   for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)  
-    if(it->first.find(substring))
+    if(it->first.find(substring) != -1)
+    {
       canteirosFiltrados.push_back(it->second);
+    }
   return canteirosFiltrados;
 }
 
@@ -146,6 +148,7 @@ DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 int main()
 {
   GerenciadorCanteiros gerenciadorCanteiros = GerenciadorCanteiros();
+  // gerenciadorCanteiros.buscarPorNome("Jarra");
   // gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Canteiro 2")); //OK, adicionar tratamento de erro de elemento nao existente
   // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.dict_canteiros.at("Canteiro 15"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
   // gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
