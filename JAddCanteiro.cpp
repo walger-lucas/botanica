@@ -1,5 +1,4 @@
 #include "JAddCanteiro.h"
-#include "PainelCanteiro.h"
 #include "Aplicacao.h"
 
 wxBEGIN_EVENT_TABLE(JAddCanteiro,wxWindow)
