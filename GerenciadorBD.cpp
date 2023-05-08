@@ -112,7 +112,7 @@ idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int period
     while (res->next()) 
     {
       canteiro.id = res->getInt("id");
-      canteiro.nome = res->getInt("nome");
+      canteiro.nome = nome;
     }
   }
   return canteiro;

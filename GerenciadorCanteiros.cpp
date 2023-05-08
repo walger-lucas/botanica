@@ -36,6 +36,10 @@ idCanteiros GerenciadorCanteiros::getId(string nome)
   catch(const std::exception& e)
   {
     std::cerr << e.what() << '\n';
+    idCanteiros id;
+    id.id=-1;
+    id.nome="ERRO";
+    return id;
   }
   
 }

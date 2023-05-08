@@ -125,10 +125,10 @@ DadosCanteiro PainelCanteiro::PegarCanteiro()
 {
     idCanteiros id;
     id.id= -1;
-    id.nome= nome->GetValue().mb_str();
+    id.nome= nome->GetValue().ToStdString();
     string especiet, descricaot;
-    especiet=especie->GetValue().mb_str();
-    descricaot=descricao->GetValue().mb_str();
+    especiet=especie->GetValue().ToStdString();
+    descricaot=descricao->GetValue().ToStdString();
     double umidade = (double) umidadeSlider->GetValue();
     float ph = (float) phSlider->GetValue();
     int periodo = periodoSlider->GetValue();

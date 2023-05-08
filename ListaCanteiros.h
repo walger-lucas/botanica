@@ -1,5 +1,6 @@
 #pragma once
 #include <wx/wx.h>
+#include "Canteiro.h"
 
 class ListaCanteiros: public wxPanel
 {
@@ -17,6 +18,7 @@ class ListaCanteiros: public wxPanel
         long idSelected;
         ListaCanteiros(wxWindow* parent);
         void ResetText();
+        idCanteiros GetIdCanteiro();
         void Select(long ID);
         void Atualizar();
         void AtualizarTexto(wxCommandEvent& event);
