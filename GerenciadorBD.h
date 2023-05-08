@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Canteiro.h"
+#include "Relatorio.h"
 #include <vector>
 
 /*
@@ -43,5 +44,6 @@ class GerenciadorBD
     void atualizarCanteiro(int id, string coluna, double valor);
     void atualizarCanteiro(int id, string coluna, string valor);
     vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
-    DadosCanteiro armazenarLinha(idCanteiros canteiros);
+    DadosCanteiro armazenarLinhaCanteiros(idCanteiros canteiros);
+    idRelatorios criarRelatorio(idCanteiros canteiro, string nome, float ph = -1, double umidade = -1, string saude = "", string obs = "");
 };

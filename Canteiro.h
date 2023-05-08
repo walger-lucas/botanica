@@ -25,6 +25,4 @@ public:
   string descricao;
   DadosCanteiro(idCanteiros idCanteiro, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
   ~DadosCanteiro();
-  void alterarDado();
-  void acessarDado();
 };

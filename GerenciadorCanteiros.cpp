@@ -91,10 +91,10 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parame
 }
 
 /*
-  Atualiza um parametro de um canteiro 
-  | nome: nome do canteiro a ser atualizado
-  | coluna: parametro ("ph", "periodo_rega" ou "umidade") do canteiro a ser atualizado
-  | valor: valor numérico que vai substituir o valor antigo
+  Atualiza um parametro de um canteiro
+  | canteiro: struct idCanteiros do canteiro de interesse
+  | parametro: parametro de interesse ("nome", "especie" ou "descricao")
+  | valor: valor string que vai substituir o valor antigo
 */
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parametro, double valor)
 {
@@ -131,9 +131,13 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorEspecie(string especie)
   return gerenciadorBD->selecionarCanteiros("especie", especie);
 }
 
+/*
+  Retorna uma instância da classe DadosCanteiro com os dados do canteiro requisitado preenchidos
+  | canteiro: struct idCanteiros do canteiro de interesse
+*/
 DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 {
-  DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinha(canteiro);
+  DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinhaCanteiros(canteiro);
   cout << canteiroArmazenado.idCanteiro.nome << endl;
   cout << canteiroArmazenado.especie << endl;
   cout << to_string(canteiroArmazenado.periodo_rega) << endl;
