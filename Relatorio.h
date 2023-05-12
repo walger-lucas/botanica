@@ -8,10 +8,13 @@ using namespace std;
 
 struct idRelatorios
 {
-  int id_rel;
+  int id;
   string nome;
   int id_cant;
 };
+
+const idRelatorios RELATORIO_NULO = {-1, "__nulo__", -1};
+bool relatorioEhNulo(idRelatorios relatorio);
 
 class DadosRelatorio
 {

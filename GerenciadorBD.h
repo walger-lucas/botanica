@@ -40,10 +40,12 @@ class GerenciadorBD
     void desconectarBD();
     bool mesmoNome(string nome);
     idCanteiros criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
-    void descartarCanteiro(int id);
-    void atualizarCanteiro(int id, string coluna, double valor);
-    void atualizarCanteiro(int id, string coluna, string valor);
+    void descartarCanteiro(idCanteiros canteiro);
+    void atualizarCanteiro(idCanteiros canteiro, string coluna, double valor);
+    void atualizarCanteiro(idCanteiros canteiro, string coluna, string valor);
     vector<idCanteiros> selecionarCanteiros(string parametro = "", string valor = "");
     DadosCanteiro armazenarLinhaCanteiros(idCanteiros canteiros);
     idRelatorios criarRelatorio(idCanteiros canteiro, string nome, float ph = -1, double umidade = -1, string saude = "", string obs = "");
+    void descartarRelatorio(idRelatorios relatorio);
+    DadosRelatorio armazenarLinhaRelatorios(idRelatorios relatorio);
 };
