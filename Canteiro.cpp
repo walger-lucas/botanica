@@ -8,3 +8,12 @@ DadosCanteiro::DadosCanteiro(idCanteiros idCanteiro, string especie, int periodo
 DadosCanteiro::~DadosCanteiro()
 {
 }
+
+/*
+  Retorna se a instancia de idCanteiros é nula ou não
+  | canteiro: canteiro a ser avaliado
+*/
+bool canteiroEhNulo(idCanteiros canteiro)
+{
+  return (canteiro.id == CANTEIRO_NULO.id && canteiro.nome == CANTEIRO_NULO.nome);
+}

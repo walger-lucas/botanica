@@ -11,8 +11,8 @@ GerenciadorBD::GerenciadorBD()
   stmt->execute("CREATE DATABASE IF NOT EXISTS " + base_de_dados);
   con->setSchema(base_de_dados);
 
-  stmt->execute("CREATE TABLE IF NOT EXISTS canteiros (id INT PRIMARY KEY, nome VARCHAR(50) NOT NULL, especie VARCHAR(50) NOT NULL, periodo_rega INT NOT NULL, ph FLOAT NOT NULL, umidade DOUBLE NOT NULL, descricao TEXT, criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP, n_relatorios INT DEFAULT 0)  ENGINE=INNODB;");
-  stmt->execute("CREATE TABLE relatorios(id INT AUTO_INCREMENT PRIMARY KEY, nome varchar(100), ph_atual float, umidade_atual double, saude tinytext, obs text, data timestamp DEFAULT CURRENT_TIMESTAMP, id_cant int NOT NULL, FOREIGN KEY (id_cant) REFERENCES canteiros(id)) ENGINE=INNODB;");    
+  stmt->execute("CREATE TABLE IF NOT EXISTS canteiros (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(50) NOT NULL, especie VARCHAR(50) NOT NULL, periodo_rega INT NOT NULL, ph FLOAT NOT NULL, umidade DOUBLE NOT NULL, descricao TEXT, criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP, n_relatorios INT DEFAULT 0)  ENGINE=INNODB;");
+  stmt->execute("CREATE TABLE IF NOT EXISTS relatorios(id INT AUTO_INCREMENT PRIMARY KEY, nome varchar(100), ph_atual float, umidade_atual double, saude tinytext, obs text, data timestamp DEFAULT CURRENT_TIMESTAMP, id_cant int NOT NULL, FOREIGN KEY (id_cant) REFERENCES canteiros(id)) ENGINE=INNODB;");    
 }
 
 /*
@@ -74,7 +74,7 @@ bool GerenciadorBD::mesmoNome(string nome)
 }
 
 /*
-  Retorna a struct idCanteiros para cada canteiro criado | id = -1 se o nome for repetido
+  Retorna a struct idCanteiros para cada canteiro criado | canteiroNulo se 
   | nome: nome do canteiro (não é permitido repetição)
   | especie: especie da planta do canteiro
   | periodo_rega: período entre as regas
@@ -87,9 +87,7 @@ idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int period
   idCanteiros canteiro;
 
   if(GerenciadorBD::mesmoNome(nome))
-  {
-    canteiro.id = -1;
-  }
+    canteiro = CANTEIRO_NULO;
   else
   {
     string query = "INSERT INTO canteiros (nome, especie, periodo_rega, ph, umidade";
@@ -129,11 +127,7 @@ void GerenciadorBD::descartarCanteiro(int id)
 */
 void GerenciadorBD::atualizarCanteiro(int id, string coluna, string valor)
 {
-  string query = "UPDATE canteiros SET " + coluna + "=";
-  // if(coluna == "nome" && GerenciadorBD::mesmoNome(nome))
-  //   return;
-  query += "'" + valor + "' WHERE id=" + to_string(id);
-  stmt->execute(query);
+  stmt->execute("UPDATE canteiros SET " + coluna + "=" + "'" + valor + "' WHERE id=" + to_string(id));
 }
 
 /*

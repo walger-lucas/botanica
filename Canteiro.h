@@ -12,6 +12,9 @@ struct idCanteiros
   string nome;
 };
 
+const idCanteiros CANTEIRO_NULO = {-1, "__nulo__"};
+bool canteiroEhNulo(idCanteiros canteiro);
+
 class DadosCanteiro
 {
 private:  

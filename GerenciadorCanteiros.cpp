@@ -34,9 +34,9 @@ idCanteiros GerenciadorCanteiros::getId(string nome)
   }
   catch(const std::exception& e)
   {
-    std::cerr << e.what() << '\n';
+    std::cerr << "Canteiro não encontrado" << '\n';
+    return CANTEIRO_NULO;
   }
-  
 }
 
 /*
@@ -53,8 +53,7 @@ void GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int pe
   if(dict_canteiros.count(nome) == 0)
   {
     idCanteiros canteiroCriado = gerenciadorBD->criarCanteiro(nome, especie, periodo_rega, ph, umidade, descricao);
-    cout << "Canteiro criado" << endl;
-    if(canteiroCriado.id != -1)
+    if(!canteiroEhNulo(canteiroCriado))
       dict_canteiros[nome] = canteiroCriado;
     else
       cout << "Não é permitido nomes repetidos" << endl;
@@ -69,8 +68,11 @@ void GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int pe
 */
 void GerenciadorCanteiros::removerCanteiro(idCanteiros canteiro)
 {
-  gerenciadorBD->descartarCanteiro(canteiro.id);
-  dict_canteiros.erase(canteiro.nome);
+  if(!canteiroEhNulo(canteiro))
+  {
+    gerenciadorBD->descartarCanteiro(canteiro.id);
+    dict_canteiros.erase(canteiro.nome);
+  }
 }
 
 /*
@@ -81,12 +83,15 @@ void GerenciadorCanteiros::removerCanteiro(idCanteiros canteiro)
 */
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parametro, string valor)
 {
-  gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
-  if(parametro == "nome")
+  if(!canteiroEhNulo(canteiro))
   {
-    dict_canteiros.erase(canteiro.nome);
-    canteiro.nome = valor;
-    dict_canteiros[valor] = canteiro;
+    gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
+    if(parametro == "nome")
+    {
+      dict_canteiros.erase(canteiro.nome);
+      canteiro.nome = valor;
+      dict_canteiros[valor] = canteiro;
+    }
   }
 }
 
@@ -98,7 +103,8 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parame
 */
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parametro, double valor)
 {
-  gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
+  if(!canteiroEhNulo(canteiro))
+    gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
 }
 
 /*
@@ -137,23 +143,26 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorEspecie(string especie)
 */
 DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 {
-  DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinhaCanteiros(canteiro);
-  cout << canteiroArmazenado.idCanteiro.nome << endl;
-  cout << canteiroArmazenado.especie << endl;
-  cout << to_string(canteiroArmazenado.periodo_rega) << endl;
-  cout << to_string(canteiroArmazenado.ph) << endl;
-  cout << to_string(canteiroArmazenado.umidade) << endl;
-  cout << canteiroArmazenado.descricao << endl;
-  return canteiroArmazenado;
+  if(!canteiroEhNulo(canteiro))
+  {
+    DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinhaCanteiros(canteiro);
+    cout << canteiroArmazenado.idCanteiro.nome << endl;
+    cout << canteiroArmazenado.especie << endl;
+    cout << to_string(canteiroArmazenado.periodo_rega) << endl;
+    cout << to_string(canteiroArmazenado.ph) << endl;
+    cout << to_string(canteiroArmazenado.umidade) << endl;
+    cout << canteiroArmazenado.descricao << endl;
+    return canteiroArmazenado;
+  }
 }
 
 int main()
 {
   GerenciadorCanteiros gerenciadorCanteiros = GerenciadorCanteiros();
-  // gerenciadorCanteiros.buscarPorNome("Jarra");
-  // gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Canteiro 2")); //OK, adicionar tratamento de erro de elemento nao existente
-  // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.dict_canteiros.at("Canteiro 15"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
-  // gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
-  // gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"));
+  gerenciadorCanteiros.buscarPorNome("Jarra");
+  gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
+  gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
+  gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"));
+  gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Jardim Zen")); //OK, adicionar tratamento de erro de elemento nao existente
   return 0;
 }
