@@ -29,7 +29,7 @@ class DadosRelatorio
 private:  
 
 public:
-  idRelatorios idRelatorio;
+  idRelatorios relatorio;
   string data;
   float ph;
   double umidade;

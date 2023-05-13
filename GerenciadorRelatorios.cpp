@@ -105,6 +105,11 @@ DadosRelatorio GerenciadorRelatorios::armazenarRelatorio(idRelatorios relatorio)
   if(!relatorioEhNulo(relatorio))
   {
     DadosRelatorio relatorioArmazenado = gerenciadorBD->armazenarLinhaRelatorios(relatorio);
+    cout << relatorioArmazenado.relatorio.nome << endl;
+    cout << relatorioArmazenado.ph << endl;
+    cout << relatorioArmazenado.umidade << endl;
+    cout << relatorioArmazenado.saude << endl;
+    cout << relatorioArmazenado.obs << endl;
     return relatorioArmazenado;
   }
 }
@@ -112,10 +117,13 @@ DadosRelatorio GerenciadorRelatorios::armazenarRelatorio(idRelatorios relatorio)
 int main()
 {
   GerenciadorRelatorios gerenciadorRelatorios = GerenciadorRelatorios();
-  idCanteiros canteiro;
-  canteiro.id = 2;
-  canteiro.nome = "Jardim";
+  gerenciadorRelatorios.armazenarRelatorio(gerenciadorRelatorios.getId("Relatorio2"));
+  // idCanteiros canteiro;
+  // canteiro.id = 10;
+  // canteiro.nome = "Jadim";
   // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio1"); //OK
-  gerenciadorRelatorios.removerRelatorio(gerenciadorRelatorios.getId("Relatorio1")); //OK, adicionar tratamento de erro de elemento nao existente
+  // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio2", 7, 50, "boa", "baixa temperatura"); //OK
+  // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio3", 14, 2.4312, "ruim");
+  // gerenciadorRelatorios.removerRelatorio(gerenciadorRelatorios.getId("Relatorio1")); //OK, adicionar tratamento de erro de elemento nao existente
   return 0;
 }

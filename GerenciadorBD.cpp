@@ -118,8 +118,8 @@ idCanteiros GerenciadorBD::criarCanteiro(string nome, string especie, int period
 */
 void GerenciadorBD::descartarCanteiro(idCanteiros canteiro)
 {
-  stmt->execute("DELETE FROM canteiros WHERE id=" + to_string(canteiro.id));
   stmt->execute("DELETE FROM relatorios WHERE id_cant=" + to_string(canteiro.id));
+  stmt->execute("DELETE FROM canteiros WHERE id=" + to_string(canteiro.id));
 }
 
 /*
@@ -198,7 +198,7 @@ idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, fl
   // Cria linha e adiciona os parâmetros
   string query = "INSERT INTO relatorios (id_cant, nome";
   string valores = " VALUES (" + to_string(canteiro.id) + ",'" + nome + "'";
-  string campos[4] = {"ph", "umidade", "saude", "obs"};
+  string campos[4] = {"ph_atual", "umidade_atual", "saude", "obs"};
 
   //// Parâmetros opcionais numéricos (-1 significa nulo)
   double campos_num[2] = {ph, umidade};
@@ -270,6 +270,6 @@ DadosRelatorio GerenciadorBD::armazenarLinhaRelatorios(idRelatorios relatorio)
   res = stmt->executeQuery("SELECT * FROM relatorios WHERE id=" + to_string(relatorio.id));
   while (res->next()) 
   {
-    // return DadosRelatorio(relatorio, res->getString("data"), res->getDouble("ph"), res->getDouble("umidade"), res->getString("saude"), res->getString("obs"));
+    return DadosRelatorio(relatorio, res->getString("data"), res->getDouble("ph_atual"), res->getDouble("umidade_atual"), res->getString("saude"), res->getString("obs"));
   }
 }
