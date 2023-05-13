@@ -2,6 +2,8 @@
 
 /* Standard C++ includes */
 #include <string>
+#include <vector>
+#include <map>
 #include <iostream>
 
 using namespace std;
@@ -15,6 +17,12 @@ struct idRelatorios
 
 const idRelatorios RELATORIO_NULO = {-1, "__nulo__", -1};
 bool relatorioEhNulo(idRelatorios relatorio);
+
+class DictRelatorios
+{
+public:
+  map<string, idRelatorios> dict_relatorios;
+};
 
 class DadosRelatorio
 {

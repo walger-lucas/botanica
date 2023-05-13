@@ -47,5 +47,6 @@ class GerenciadorBD
     DadosCanteiro armazenarLinhaCanteiros(idCanteiros canteiros);
     idRelatorios criarRelatorio(idCanteiros canteiro, string nome, float ph = -1, double umidade = -1, string saude = "", string obs = "");
     void descartarRelatorio(idRelatorios relatorio);
+    vector<idRelatorios> selecionarRelatorios();
     DadosRelatorio armazenarLinhaRelatorios(idRelatorios relatorio);
 };

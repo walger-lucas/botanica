@@ -3,7 +3,7 @@
 #include "GerenciadorBD.h"
 #include "Relatorio.h"
 
-class GerenciadorRelatorios : private DictCanteiros
+class GerenciadorRelatorios : private DictRelatorios
 {
 private:  
   GerenciadorBD *gerenciadorBD;
@@ -12,11 +12,9 @@ public:
   GerenciadorRelatorios();
   ~GerenciadorRelatorios();
   idRelatorios getId(string nome);
-  void adicionarRelatorio(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao);
+  void adicionarRelatorio(idCanteiros canteiro, string nome, float ph = -1, double umidade = -1, string saude = "", string obs = "");
   void removerRelatorio(idRelatorios relatorio);
-  void GerenciadorRelatorios::atualizarRelatorio(idRelatorios relatorio, const DadosRelatorio dadosRelatorio);
   vector<idRelatorios> buscarTodos();
   vector<idRelatorios> buscarPorNome(string nome="");
-  vector<idRelatorios> buscarPorEspecie(string especie="");
   DadosRelatorio armazenarRelatorio(idRelatorios relatorio);
 };

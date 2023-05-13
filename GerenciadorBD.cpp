@@ -196,11 +196,11 @@ idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, fl
   }
 
   // Cria linha e adiciona os parâmetros
-  string query = "INSERT INTO canteiros (id_cant, nome";
-  string valores = " VALUES (" + to_string(canteiro.id) + ",'" + nome + "',";
+  string query = "INSERT INTO relatorios (id_cant, nome";
+  string valores = " VALUES (" + to_string(canteiro.id) + ",'" + nome + "'";
   string campos[4] = {"ph", "umidade", "saude", "obs"};
 
-  //// Parâmetros opcionais numéricos
+  //// Parâmetros opcionais numéricos (-1 significa nulo)
   double campos_num[2] = {ph, umidade};
   for(int i=0, j=0; i<2, j<2; i++, j++){
     if(campos_num[i] != -1){
@@ -219,6 +219,7 @@ idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, fl
   }
 
   query += ")" + valores + ")";
+  cout << query << endl;
   stmt->execute(query);
 
   // Cria a struct idRelatorio
@@ -241,6 +242,26 @@ void GerenciadorBD::descartarRelatorio(idRelatorios relatorio)
 }
 
 /*
+  Retorna vetor de todos os idRelatorios
+*/
+vector<idRelatorios> GerenciadorBD::selecionarRelatorios() 
+{
+  res = stmt->executeQuery("SELECT * FROM relatorios");
+
+  // Cria a lista de canteiros buscados
+  vector<idRelatorios> lista_relatorios;
+  while (res->next()) {
+    idRelatorios relatorio;
+    relatorio.id = res->getInt("id");
+    relatorio.nome = res->getString("nome");
+    relatorio.id_cant = res->getInt("id_cant");
+    lista_relatorios.push_back(relatorio);
+  }
+  return lista_relatorios;
+}
+
+
+/*
   Retorna uma instância da classe DadosRelatorio com os dados do relatorio requisitado preenchidos
   | relatorio: struct idRelatorios do relatorio de interesse
 */
@@ -251,9 +272,4 @@ DadosRelatorio GerenciadorBD::armazenarLinhaRelatorios(idRelatorios relatorio)
   {
     // return DadosRelatorio(relatorio, res->getString("data"), res->getDouble("ph"), res->getDouble("umidade"), res->getString("saude"), res->getString("obs"));
   }
-}
-
-int main()
-{
-  GerenciadorBD gerenciadorBD = GerenciadorBD();
 }
