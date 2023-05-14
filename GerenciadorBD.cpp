@@ -30,11 +30,17 @@ GerenciadorBD::~GerenciadorBD()
   Retorna status de conexão
   Conecta ao servidor local do banco de dados
 */
-int GerenciadorBD::conectarBD()
+bool GerenciadorBD::conectarBD()
 {
-  driver = get_driver_instance();
-  con = driver->connect(hostname, usuario, senha);
-  stmt = con->createStatement();
+  try {
+    driver = get_driver_instance();
+    con = driver->connect(hostname, usuario, senha);
+    stmt = con->createStatement();
+    return true;
+  } catch (sql::SQLException &e) {
+    cout << e.what() << endl;
+    return false;
+  }
 }
 
 /*
@@ -49,7 +55,7 @@ void GerenciadorBD::desconectarBD()
     driver = get_driver_instance();
     driver->threadEnd();
   } catch (sql::SQLException &e) {
-    // do nothing
+    cout << e.what() << endl;
   }
   if(con!=nullptr)
     delete con;
@@ -185,6 +191,7 @@ DadosCanteiro GerenciadorBD::armazenarLinhaCanteiros(idCanteiros canteiro)
   {
     return DadosCanteiro(canteiro, res->getString("especie"), res->getInt("periodo_rega"), res->getDouble("ph"), res->getDouble("umidade"), res->getString("descricao"));
   }
+  return DadosCanteiro(CANTEIRO_NULO, "", 0, -1, -1, "ERRO NO ARMAZENAMENTO - CANTEIRO_NULO");
 }
 
 idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, float ph, double umidade, string saude, string obs)
@@ -276,4 +283,5 @@ DadosRelatorio GerenciadorBD::armazenarLinhaRelatorios(idRelatorios relatorio)
   {
     return DadosRelatorio(relatorio, res->getString("data"), res->getDouble("ph_atual"), res->getDouble("umidade_atual"), res->getString("saude"), res->getString("obs"));
   }
+  return DadosRelatorio(RELATORIO_NULO, "", -1, -1, "", "ERRO NO ARMAZENAMENTO - BANCO DE DADOS");
 }

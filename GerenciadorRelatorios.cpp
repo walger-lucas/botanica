@@ -109,27 +109,21 @@ vector<idRelatorios> GerenciadorRelatorios::buscarPorNome(string substring)
 DadosRelatorio GerenciadorRelatorios::armazenarRelatorio(idRelatorios relatorio)
 {
   if(!relatorioEhNulo(relatorio))
-  {
-    DadosRelatorio relatorioArmazenado = gerenciadorBD->armazenarLinhaRelatorios(relatorio);
-    cout << relatorioArmazenado.relatorio.nome << endl;
-    cout << relatorioArmazenado.ph << endl;
-    cout << relatorioArmazenado.umidade << endl;
-    cout << relatorioArmazenado.saude << endl;
-    cout << relatorioArmazenado.obs << endl;
-    return relatorioArmazenado;
-  }
+    return gerenciadorBD->armazenarLinhaRelatorios(relatorio);
+  else
+    return DadosRelatorio(RELATORIO_NULO, "", -1, -1, "", "ERRO NO ARMAZENAMENTO - RELATORIO NULO");
 }
 
-int main()
-{
-  GerenciadorRelatorios gerenciadorRelatorios = GerenciadorRelatorios();
-  gerenciadorRelatorios.armazenarRelatorio(gerenciadorRelatorios.getId("Relatorio2"));
-  // idCanteiros canteiro;
-  // canteiro.id = 10;
-  // canteiro.nome = "Jadim";
-  // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio1"); //OK
-  // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio2", 7, 50, "boa", "baixa temperatura"); //OK
-  // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio3", 14, 2.4312, "ruim");
-  // gerenciadorRelatorios.removerRelatorio(gerenciadorRelatorios.getId("Relatorio1")); //OK, adicionar tratamento de erro de elemento nao existente
-  return 0;
-}
+// int main()
+// {
+//   GerenciadorRelatorios gerenciadorRelatorios = GerenciadorRelatorios();
+//   gerenciadorRelatorios.armazenarRelatorio(gerenciadorRelatorios.getId("Relatorio2"));
+//   // idCanteiros canteiro;
+//   // canteiro.id = 10;
+//   // canteiro.nome = "Jadim";
+//   // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio1"); //OK
+//   // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio2", 7, 50, "boa", "baixa temperatura"); //OK
+//   // gerenciadorRelatorios.adicionarRelatorio(canteiro, "Relatorio3", 14, 2.4312, "ruim");
+//   // gerenciadorRelatorios.removerRelatorio(gerenciadorRelatorios.getId("Relatorio1")); //OK, adicionar tratamento de erro de elemento nao existente
+//   return 0;
+// }

@@ -36,7 +36,7 @@ class GerenciadorBD
   public:
     GerenciadorBD();
     ~GerenciadorBD();
-    int conectarBD();
+    bool conectarBD();
     void desconectarBD();
     bool mesmoNome(string nome);
     idCanteiros criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao = "");

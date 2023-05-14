@@ -69,9 +69,9 @@ bool GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int pe
   Adiciona um novo canteiro ao registro
   | canteiro: instância DadosCanteiro
 */
-bool GerenciadorCanteiros::adicionarCanteiro(const DadosCanteiro canteiro)
+bool GerenciadorCanteiros::adicionarCanteiro(const DadosCanteiro dadosCanteiro)
 {
-  return adicionarCanteiro(canteiro.idCanteiro.nome, canteiro.especie, canteiro.periodo_rega, canteiro.ph, canteiro.umidade, canteiro.descricao);
+  return adicionarCanteiro(dadosCanteiro.canteiro.nome, dadosCanteiro.especie, dadosCanteiro.periodo_rega, dadosCanteiro.ph, dadosCanteiro.umidade, dadosCanteiro.descricao);
 }
 
 /*
@@ -124,28 +124,6 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parame
   Atualiza todos os parametros de um canteiro 
   | canteiro: instância DadosCanteiro
 */
-void GerenciadorCanteiros::atualizarCanteiro(idCanteiros idCanteiro, const DadosCanteiro canteiro)
-{
-  atualizarCanteiro(idCanteiro, "nome", canteiro.idCanteiro.nome);
-  atualizarCanteiro(idCanteiro, "especie", canteiro.especie);
-  atualizarCanteiro(idCanteiro, "periodo_rega", canteiro.periodo_rega);
-  atualizarCanteiro(idCanteiro, "ph", canteiro.ph);
-  atualizarCanteiro(idCanteiro, "umidade", canteiro.umidade);
-  atualizarCanteiro(idCanteiro, "descricao", canteiro.descricao);
-}
-
-/*
-  Retorna um vetor de todos os canteiros registrados
-*/
-vector<idCanteiros> GerenciadorCanteiros::buscarTodos()
-{
-  return gerenciadorBD->selecionarCanteiros();
-}
-
-/*
-  Atualiza todos os parametros de um canteiro 
-  | canteiro: instância DadosCanteiro
-*/
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, const DadosCanteiro dadosCanteiro)
 {
   atualizarCanteiro(canteiro, "nome", dadosCanteiro.canteiro.nome);
@@ -154,6 +132,14 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, const DadosCa
   atualizarCanteiro(canteiro, "ph", dadosCanteiro.ph);
   atualizarCanteiro(canteiro, "umidade", dadosCanteiro.umidade);
   atualizarCanteiro(canteiro, "descricao", dadosCanteiro.descricao);
+}
+
+/*
+  Retorna um vetor de todos os canteiros registrados
+*/
+vector<idCanteiros> GerenciadorCanteiros::buscarTodos()
+{
+  return gerenciadorBD->selecionarCanteiros();
 }
 
 /*
@@ -185,13 +171,7 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorEspecie(string especie)
 DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 {
   if(!canteiroEhNulo(canteiro))
-  {
-    DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinhaCanteiros(canteiro);
-    cout << canteiroArmazenado.canteiro.nome << endl;
-    cout << canteiroArmazenado.especie << endl;
-    cout << to_string(canteiroArmazenado.periodo_rega) << endl;
-    cout << to_string(canteiroArmazenado.ph) << endl;
-    cout << to_string(canteiroArmazenado.umidade) << endl;
-    cout << canteiroArmazenado.descricao << endl;
-    return canteiroArmazenado;
-  }
+    return gerenciadorBD->armazenarLinhaCanteiros(canteiro);
+  else
+    return DadosCanteiro(CANTEIRO_NULO, "", 0, -1, -1, "ERRO NO ARMAZENAMENTO - CANTEIRO_NULO");
+}
