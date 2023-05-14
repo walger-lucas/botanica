@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <algorithm>
 #include <iostream>
 
 using namespace std;
@@ -17,6 +18,7 @@ struct idRelatorios
 
 const idRelatorios RELATORIO_NULO = {-1, "__nulo__", -1};
 bool relatorioEhNulo(idRelatorios relatorio);
+vector<idRelatorios> removerDaLista(vector<idRelatorios> lista, idRelatorios relatorio);
 
 class DictRelatorios
 {

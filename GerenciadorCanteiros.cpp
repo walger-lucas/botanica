@@ -173,10 +173,10 @@ DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 // int main()
 // {
 //   GerenciadorCanteiros gerenciadorCanteiros = GerenciadorCanteiros();
-//   // gerenciadorCanteiros.buscarPorNome("Jarra");
-//   // gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
-//   // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
-//   // gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"));
-//   gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Jardim")); //OK, adicionar tratamento de erro de elemento nao existente
+// //   // gerenciadorCanteiros.buscarPorNome("Jarra");
+// //   // gerenciadorCanteiros.adicionarCanteiro("Jardim Zen", "Bonsai", 15, 14, 55.2, "Canteiro zen de bonsais"); //OK
+// //   // gerenciadorCanteiros.atualizarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"), "umidade", 455); //OK, adicionar tratamento de erro de elemento nao existente
+// //   // gerenciadorCanteiros.armazenarCanteiro(gerenciadorCanteiros.getId("Jardim Zen"));
+// //   gerenciadorCanteiros.removerCanteiro(gerenciadorCanteiros.getId("Jardim")); //OK, adicionar tratamento de erro de elemento nao existente
 //   return 0;
 // }

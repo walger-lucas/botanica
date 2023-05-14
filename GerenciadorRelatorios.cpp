@@ -54,7 +54,10 @@ void GerenciadorRelatorios::adicionarRelatorio(idCanteiros canteiro, string nome
   {
     idRelatorios relatorioCriado = gerenciadorBD->criarRelatorio(canteiro, nome, ph, umidade, saude, obs);
     if(!relatorioEhNulo(relatorioCriado))
+    {
       dict_relatorios[nome] = relatorioCriado;
+      canteiro.relatorios.push_back(relatorioCriado);
+    }
     else
       cout << "Não é permitido nomes repetidos" << endl;
   }
@@ -72,6 +75,9 @@ void GerenciadorRelatorios::removerRelatorio(idRelatorios relatorio)
   {
     gerenciadorBD->descartarRelatorio(relatorio);
     dict_relatorios.erase(relatorio.nome);
+    for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)
+      if(it->second.id == relatorio.id_cant)
+        it->second.relatorios = removerDaLista(it->second.relatorios, relatorio);
   }
 }
 

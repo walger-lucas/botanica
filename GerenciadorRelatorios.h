@@ -3,7 +3,7 @@
 #include "GerenciadorBD.h"
 #include "Relatorio.h"
 
-class GerenciadorRelatorios : private DictRelatorios
+class GerenciadorRelatorios : private DictRelatorios, private DictCanteiros
 {
 private:  
   GerenciadorBD *gerenciadorBD;
