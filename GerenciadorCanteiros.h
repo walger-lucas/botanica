@@ -3,12 +3,11 @@
 #include "GerenciadorBD.h"
 #include "Canteiro.h"
 
-class GerenciadorCanteiros
+class GerenciadorCanteiros : private DictCanteiros
 {
 private:  
   GerenciadorBD *gerenciadorBD;
 public:
-  map<string, idCanteiros> dict_canteiros;
   DadosCanteiro *dadosCanteiro;
   GerenciadorCanteiros();
   ~GerenciadorCanteiros();
@@ -18,7 +17,7 @@ public:
   void removerCanteiro(idCanteiros canteiro);
   void atualizarCanteiro(idCanteiros canteiro, string parametro, string valor);
   void atualizarCanteiro(idCanteiros canteiro, string parametro, double valor);
-  void atualizarCanteiro(idCanteiros idCanteiro, const DadosCanteiro canteiro);
+  void atualizarCanteiro(idCanteiros canteiro, const DadosCanteiro dadosCanteiro);
   vector<idCanteiros> buscarTodos();
   vector<idCanteiros> buscarPorNome(string nome="");
   vector<idCanteiros> buscarPorEspecie(string especie="");

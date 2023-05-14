@@ -35,13 +35,9 @@ idCanteiros GerenciadorCanteiros::getId(string nome)
   }
   catch(const std::exception& e)
   {
-    std::cerr << e.what() << '\n';
-    idCanteiros id;
-    id.id=-1;
-    id.nome="ERRO";
-    return id;
+    std::cerr << "Canteiro não encontrado" << '\n';
+    return CANTEIRO_NULO;
   }
-  
 }
 
 /*
@@ -59,8 +55,7 @@ bool GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int pe
   if(dict_canteiros.count(nome) == 0 && nome!="")
   {
     idCanteiros canteiroCriado = gerenciadorBD->criarCanteiro(nome, especie, periodo_rega, ph, umidade, descricao);
-    cout << "Canteiro criado" << endl;
-    if(canteiroCriado.id != -1)
+    if(!canteiroEhNulo(canteiroCriado))
       dict_canteiros[nome] = canteiroCriado;
     else
       return false;
@@ -85,8 +80,11 @@ bool GerenciadorCanteiros::adicionarCanteiro(const DadosCanteiro canteiro)
 */
 void GerenciadorCanteiros::removerCanteiro(idCanteiros canteiro)
 {
-  gerenciadorBD->descartarCanteiro(canteiro.id);
-  dict_canteiros.erase(canteiro.nome);
+  if(!canteiroEhNulo(canteiro))
+  {
+    gerenciadorBD->descartarCanteiro(canteiro);
+    dict_canteiros.erase(canteiro.nome);
+  }
 }
 
 /*
@@ -97,25 +95,29 @@ void GerenciadorCanteiros::removerCanteiro(idCanteiros canteiro)
 */
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parametro, string valor)
 {
-  gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
-  if(parametro == "nome")
+  if(!canteiroEhNulo(canteiro))
   {
-    dict_canteiros.erase(canteiro.nome);
-    canteiro.nome = valor;
-    dict_canteiros[valor] = canteiro;
+    gerenciadorBD->atualizarCanteiro(canteiro, parametro, valor);
+    if(parametro == "nome")
+    {
+      dict_canteiros.erase(canteiro.nome);
+      canteiro.nome = valor;
+      dict_canteiros[valor] = canteiro;
+    }
   }
 }
 
 
 /*
-  Atualiza um parametro de um canteiro 
-  | nome: nome do canteiro a ser atualizado
-  | coluna: parametro ("ph", "periodo_rega" ou "umidade") do canteiro a ser atualizado
-  | valor: valor numérico que vai substituir o valor antigo
+  Atualiza um parametro de um canteiro
+  | canteiro: struct idCanteiros do canteiro de interesse
+  | parametro: parametro de interesse ("nome", "especie" ou "descricao")
+  | valor: valor string que vai substituir o valor antigo
 */
 void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parametro, double valor)
 {
-  gerenciadorBD->atualizarCanteiro(canteiro.id, parametro, valor);
+  if(!canteiroEhNulo(canteiro))
+    gerenciadorBD->atualizarCanteiro(canteiro, parametro, valor);
 }
 
 /*
@@ -141,6 +143,20 @@ vector<idCanteiros> GerenciadorCanteiros::buscarTodos()
 }
 
 /*
+  Atualiza todos os parametros de um canteiro 
+  | canteiro: instância DadosCanteiro
+*/
+void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, const DadosCanteiro dadosCanteiro)
+{
+  atualizarCanteiro(canteiro, "nome", dadosCanteiro.canteiro.nome);
+  atualizarCanteiro(canteiro, "especie", dadosCanteiro.especie);
+  atualizarCanteiro(canteiro, "periodo_rega", dadosCanteiro.periodo_rega);
+  atualizarCanteiro(canteiro, "ph", dadosCanteiro.ph);
+  atualizarCanteiro(canteiro, "umidade", dadosCanteiro.umidade);
+  atualizarCanteiro(canteiro, "descricao", dadosCanteiro.descricao);
+}
+
+/*
   Retorna um vetor de todos os canteiros que contém a substring de pesquisa
   | substring: substring de pesquisa
 */
@@ -162,14 +178,20 @@ vector<idCanteiros> GerenciadorCanteiros::buscarPorEspecie(string especie)
   return gerenciadorBD->selecionarCanteiros("especie", especie);
 }
 
+/*
+  Retorna uma instância da classe DadosCanteiro com os dados do canteiro requisitado preenchidos
+  | canteiro: struct idCanteiros do canteiro de interesse
+*/
 DadosCanteiro GerenciadorCanteiros::armazenarCanteiro(idCanteiros canteiro)
 {
-  DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinha(canteiro);
-  cout << canteiroArmazenado.idCanteiro.nome << endl;
-  cout << canteiroArmazenado.especie << endl;
-  cout << to_string(canteiroArmazenado.periodo_rega) << endl;
-  cout << to_string(canteiroArmazenado.ph) << endl;
-  cout << to_string(canteiroArmazenado.umidade) << endl;
-  cout << canteiroArmazenado.descricao << endl;
-  return canteiroArmazenado;
-}
+  if(!canteiroEhNulo(canteiro))
+  {
+    DadosCanteiro canteiroArmazenado = gerenciadorBD->armazenarLinhaCanteiros(canteiro);
+    cout << canteiroArmazenado.canteiro.nome << endl;
+    cout << canteiroArmazenado.especie << endl;
+    cout << to_string(canteiroArmazenado.periodo_rega) << endl;
+    cout << to_string(canteiroArmazenado.ph) << endl;
+    cout << to_string(canteiroArmazenado.umidade) << endl;
+    cout << canteiroArmazenado.descricao << endl;
+    return canteiroArmazenado;
+  }
