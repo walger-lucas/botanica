@@ -2,7 +2,7 @@
 #include "JanelaPrincipal.h"
 
 wxIMPLEMENT_APP(Aplicacao);
-
+GerenciadorCanteiros Aplicacao::gerCant=GerenciadorCanteiros();
 bool Aplicacao::OnInit()
 {
     JanelaPrincipal* janelaPrincipal = new JanelaPrincipal(L"Botânica");

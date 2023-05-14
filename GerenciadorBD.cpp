@@ -51,10 +51,14 @@ void GerenciadorBD::desconectarBD()
   } catch (sql::SQLException &e) {
     // do nothing
   }
-  delete con;
-  delete stmt;
-  delete pstmt;
-  delete res;
+  if(con!=nullptr)
+    delete con;
+  if(stmt!=nullptr)
+    delete stmt;
+  if(pstmt!=nullptr)
+    delete pstmt;
+  if(res!=nullptr)
+    delete res;
 }
 
 /*

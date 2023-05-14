@@ -24,10 +24,10 @@ class GerenciadorBD
 {
   private:
     Driver* driver;
-    Connection* con;
-    Statement* stmt;
-    PreparedStatement *pstmt;
-    ResultSet* res;
+    Connection* con=nullptr;
+    Statement* stmt=nullptr;
+    PreparedStatement *pstmt=nullptr;
+    ResultSet* res=nullptr;
     string hostname;
     string usuario;
     string senha;
