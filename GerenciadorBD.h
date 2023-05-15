@@ -36,7 +36,7 @@ class GerenciadorBD
   public:
     GerenciadorBD();
     ~GerenciadorBD();
-    int conectarBD();
+    bool conectarBD();
     void desconectarBD();
     bool mesmoNome(string nome);
     idCanteiros criarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao = "");
@@ -47,6 +47,6 @@ class GerenciadorBD
     DadosCanteiro armazenarLinhaCanteiros(idCanteiros canteiros);
     idRelatorios criarRelatorio(idCanteiros canteiro, string nome, float ph = -1, double umidade = -1, string saude = "", string obs = "");
     void descartarRelatorio(idRelatorios relatorio);
-    vector<idRelatorios> selecionarRelatorios();
+    vector<idRelatorios> selecionarRelatorios(int id_cant = -1);
     DadosRelatorio armazenarLinhaRelatorios(idRelatorios relatorio);
 };

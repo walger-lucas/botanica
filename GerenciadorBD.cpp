@@ -30,11 +30,17 @@ GerenciadorBD::~GerenciadorBD()
   Retorna status de conexão
   Conecta ao servidor local do banco de dados
 */
-int GerenciadorBD::conectarBD()
+bool GerenciadorBD::conectarBD()
 {
-  driver = get_driver_instance();
-  con = driver->connect(hostname, usuario, senha);
-  stmt = con->createStatement();
+  try {
+    driver = get_driver_instance();
+    con = driver->connect(hostname, usuario, senha);
+    stmt = con->createStatement();
+    return true;
+  } catch (sql::SQLException &e) {
+    cout << e.what() << endl;
+    return false;
+  }
 }
 
 /*
@@ -49,7 +55,7 @@ void GerenciadorBD::desconectarBD()
     driver = get_driver_instance();
     driver->threadEnd();
   } catch (sql::SQLException &e) {
-    // do nothing
+    cout << e.what() << endl;
   }
   if(con!=nullptr)
     delete con;
@@ -171,6 +177,11 @@ vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string coluna, string val
     canteiro.nome = res->getString("nome");
     lista_canteiros.push_back(canteiro);
   }
+
+  // Adiciona a lista de relatorios para cada canteiro
+  for(auto it = lista_canteiros.begin(); it != lista_canteiros.end(); it++)
+    it->relatorios = selecionarRelatorios(it->id);
+
   return lista_canteiros;
 }
 
@@ -185,6 +196,7 @@ DadosCanteiro GerenciadorBD::armazenarLinhaCanteiros(idCanteiros canteiro)
   {
     return DadosCanteiro(canteiro, res->getString("especie"), res->getInt("periodo_rega"), res->getDouble("ph"), res->getDouble("umidade"), res->getString("descricao"));
   }
+  return DadosCanteiro(CANTEIRO_NULO, "", 0, -1, -1, "ERRO NO ARMAZENAMENTO - CANTEIRO_NULO");
 }
 
 idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, float ph, double umidade, string saude, string obs)
@@ -248,9 +260,13 @@ void GerenciadorBD::descartarRelatorio(idRelatorios relatorio)
 /*
   Retorna vetor de todos os idRelatorios
 */
-vector<idRelatorios> GerenciadorBD::selecionarRelatorios() 
+vector<idRelatorios> GerenciadorBD::selecionarRelatorios(int id_cant) 
 {
-  res = stmt->executeQuery("SELECT * FROM relatorios");
+  if(id_cant != -1)
+    res = stmt->executeQuery("SELECT * FROM canteiros WHERE id_cant="+id_cant);
+  // Sem parâmetros de busca retorna todos os canteiros
+  else
+    res = stmt->executeQuery("SELECT * FROM relatorios");
 
   // Cria a lista de canteiros buscados
   vector<idRelatorios> lista_relatorios;
@@ -276,4 +292,5 @@ DadosRelatorio GerenciadorBD::armazenarLinhaRelatorios(idRelatorios relatorio)
   {
     return DadosRelatorio(relatorio, res->getString("data"), res->getDouble("ph_atual"), res->getDouble("umidade_atual"), res->getString("saude"), res->getString("obs"));
   }
+  return DadosRelatorio(RELATORIO_NULO, "", -1, -1, "", "ERRO NO ARMAZENAMENTO - BANCO DE DADOS");
 }
