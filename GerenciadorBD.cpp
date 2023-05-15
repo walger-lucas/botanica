@@ -177,6 +177,11 @@ vector<idCanteiros> GerenciadorBD::selecionarCanteiros(string coluna, string val
     canteiro.nome = res->getString("nome");
     lista_canteiros.push_back(canteiro);
   }
+
+  // Adiciona a lista de relatorios para cada canteiro
+  for(auto it = lista_canteiros.begin(); it != lista_canteiros.end(); it++)
+    it->relatorios = selecionarRelatorios(it->id);
+
   return lista_canteiros;
 }
 
@@ -255,9 +260,13 @@ void GerenciadorBD::descartarRelatorio(idRelatorios relatorio)
 /*
   Retorna vetor de todos os idRelatorios
 */
-vector<idRelatorios> GerenciadorBD::selecionarRelatorios() 
+vector<idRelatorios> GerenciadorBD::selecionarRelatorios(int id_cant) 
 {
-  res = stmt->executeQuery("SELECT * FROM relatorios");
+  if(id_cant != -1)
+    res = stmt->executeQuery("SELECT * FROM relatorios WHERE id_cant="+to_string(id_cant));
+  // Sem parâmetros de busca retorna todos os canteiros
+  else
+    res = stmt->executeQuery("SELECT * FROM relatorios");
 
   // Cria a lista de canteiros buscados
   vector<idRelatorios> lista_relatorios;

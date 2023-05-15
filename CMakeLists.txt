@@ -12,8 +12,8 @@ find_library(MYSQLCPPCONN_LIBRARY mysqlcppconn)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME}) 
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
-# add_executable(banco GerenciadorCanteiros.cpp GerenciadorRelatorios.cpp GerenciadorBD.cpp Canteiro.cpp Relatorio.cpp)
-add_executable(botanica Aplicacao.cpp JanelaPrincipal.cpp Janela.cpp GerenciadorJanelas.cpp JVerCanteiro.cpp JAddCanteiro.cpp JVerRelatorio.cpp JAddRelatorio.cpp JCronograma.cpp ListaCanteiros.cpp PainelCanteiro.cpp Canteiro.cpp GerenciadorCanteiros.cpp GerenciadorRelatorios.cpp Relatorio.cpp GerenciadorBD.cpp PainelRelatorio.cpp)
+add_executable(banco main.cpp GerenciadorCanteiros.cpp GerenciadorRelatorios.cpp GerenciadorBD.cpp Canteiro.cpp Relatorio.cpp)
+add_executable(botanica Aplicacao.cpp JanelaPrincipal.cpp Janela.cpp GerenciadorJanelas.cpp JVerCanteiro.cpp JAddCanteiro.cpp JVerRelatorio.cpp JAddRelatorio.cpp JCronograma.cpp)
 
 target_link_libraries(botanica ${wxWidgets_LIBRARIES})
 target_link_libraries(botanica ${MYSQLCPPCONN_LIBRARY})
