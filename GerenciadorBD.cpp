@@ -263,7 +263,7 @@ void GerenciadorBD::descartarRelatorio(idRelatorios relatorio)
 vector<idRelatorios> GerenciadorBD::selecionarRelatorios(int id_cant) 
 {
   if(id_cant != -1)
-    res = stmt->executeQuery("SELECT * FROM canteiros WHERE id_cant="+id_cant);
+    res = stmt->executeQuery("SELECT * FROM relatorios WHERE id_cant="+to_string(id_cant));
   // Sem parâmetros de busca retorna todos os canteiros
   else
     res = stmt->executeQuery("SELECT * FROM relatorios");
