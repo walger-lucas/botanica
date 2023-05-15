@@ -11,9 +11,7 @@ GerenciadorCanteiros::GerenciadorCanteiros()
   vector<idCanteiros> canteiros = gerenciadorBD->selecionarCanteiros();
   // Armazena as idCanteiros em um dicionário a partir do nome
   for(auto it = canteiros.begin(); it != canteiros.end(); it++)
-  {
     idCanteiros::dict_canteiros[it->nome] = *it;
-  }
 }
 
 /*
