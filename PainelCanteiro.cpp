@@ -1,5 +1,6 @@
 #include "PainelCanteiro.h"
 #include "Canteiro.h"
+#include "Aplicacao.h"
 
 PainelCanteiro::PainelCanteiro(wxWindow* parent,bool editavel)
 : wxPanel(parent), editavel(editavel)
@@ -107,18 +108,27 @@ void PainelCanteiro::Atualizar()
     Layout();
 }
 
-void PainelCanteiro::AdicionarCanteiro(const DadosCanteiro canteiro)
+void PainelCanteiro::AdicionarCanteiro(const DadosCanteiro dadosCanteiro)
 {
-    phText->SetLabelText(L"pH preferido: "+std::to_string(canteiro.ph));
-    umidadeText->SetLabelText(L"Umidade preferida: "+std::to_string(canteiro.umidade));
-    periodoText->SetLabelText(L"Período de rega em horas:"+std::to_string(canteiro.periodo_rega));
+    
+    if(dadosCanteiro.canteiro.relatorios.size()>0)
+    {
+        DadosRelatorio rel= Aplicacao::gerRel.armazenarRelatorio(dadosCanteiro.canteiro.relatorios[0]);//TUDO ERRADO
+        phText->SetLabelText(L"pH preferido: "+std::to_string(dadosCanteiro.ph)+"\t pH atual: "+std::to_string(rel.ph));
+        umidadeText->SetLabelText(L"Umidade preferida: "+std::to_string(dadosCanteiro.umidade)+"\t pH atual: "+std::to_string(rel.umidade));
+    } else
+    {
+        phText->SetLabelText(L"pH preferido: "+std::to_string(dadosCanteiro.ph));
+        umidadeText->SetLabelText(L"Umidade preferida: "+std::to_string(dadosCanteiro.umidade));
+    }
+    periodoText->SetLabelText(L"Período de rega em horas:"+std::to_string(dadosCanteiro.periodo_rega));
 
-    nome->ChangeValue(canteiro.idCanteiro.nome);
-    especie->ChangeValue(canteiro.especie);
-    descricao->ChangeValue(canteiro.descricao);
-    phSlider->SetValue((int)canteiro.ph);
-    umidadeSlider->SetValue((int)canteiro.umidade);
-    periodoSlider->SetValue(canteiro.periodo_rega);
+    nome->ChangeValue(dadosCanteiro.canteiro.nome);
+    especie->ChangeValue(dadosCanteiro.especie);
+    descricao->ChangeValue(dadosCanteiro.descricao);
+    phSlider->SetValue((int)dadosCanteiro.ph);
+    umidadeSlider->SetValue((int)dadosCanteiro.umidade);
+    periodoSlider->SetValue(dadosCanteiro.periodo_rega);
 }
 
 DadosCanteiro PainelCanteiro::PegarCanteiro()
@@ -132,6 +142,6 @@ DadosCanteiro PainelCanteiro::PegarCanteiro()
     double umidade = (double) umidadeSlider->GetValue();
     float ph = (float) phSlider->GetValue();
     int periodo = periodoSlider->GetValue();
-    DadosCanteiro canteiro(id,especiet,periodo,ph,umidade,descricaot);
-    return canteiro;
+    DadosCanteiro dadosCanteiro(id,especiet,periodo,ph,umidade,descricaot);
+    return dadosCanteiro;
 }

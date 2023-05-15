@@ -1,5 +1,10 @@
 #include "JVerRelatorio.h"
-
+#include "Aplicacao.h"
+#include <vector>
+wxBEGIN_EVENT_TABLE(JVerRelatorio,wxWindow)
+EVT_LISTBOX(ListaCanteiros::ID_SELECT,JVerRelatorio::Select)
+EVT_LISTBOX(51,JVerRelatorio::SelectRelatorio)
+wxEND_EVENT_TABLE()
 JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
 : Janela(gJ,parent,wxID_ANY)
 {
@@ -9,7 +14,9 @@ JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
     wxSplitterWindow* splitter2 = new wxSplitterWindow(splitter,-1,wxDefaultPosition,wxDefaultSize,wxSP_LIVE_UPDATE);
     wxPanel* relatorios = new wxPanel(splitter2);
     wxPanel* direito = new wxPanel(splitter2);
-
+    pRelatorios = new PainelRelatorio(direito,false);
+    direito->SetSizerAndFit(new wxBoxSizer(wxVERTICAL));
+    direito->GetSizer()->Add(pRelatorios,wxSizerFlags(1).Expand());
     //-------------------------------------------------- Preparando Relatorios
     wxStaticText* relat = new wxStaticText(relatorios,-1,L"Relatórios:",wxDefaultPosition,
         wxSize(160,30),wxALIGN_CENTRE_HORIZONTAL | wxST_NO_AUTORESIZE);
@@ -20,7 +27,7 @@ JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
     relatorios->SetSizerAndFit(new wxBoxSizer(wxVERTICAL));
     relatorios->GetSizer()->Add(relat,wxSizerFlags(0.3).CenterHorizontal().Border(wxDirection::wxALL,10).FixedMinSize());
     relatorios->SetBackgroundColour(wxColor(50,50,90));
-
+    
 
     wxArrayString rels;
     rels.Add("RELATORIO 1");
@@ -28,9 +35,10 @@ JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
     rels.Add("RELATORIO 3");
     rels.Add("RELATORIO 4");
 
-    wxListBox* list = new wxListBox(relatorios,-1,wxDefaultPosition,wxSize(150,-1),rels);
-    relatorios->GetSizer()->Add(list,wxSizerFlags(1).Align(wxALIGN_TOP).FixedMinSize().Border(wxLEFT|wxBOTTOM|wxRIGHT,10).Expand());
+    listRelat = new wxListBox(relatorios,51,wxDefaultPosition,wxSize(150,-1),rels);
+    relatorios->GetSizer()->Add(listRelat,wxSizerFlags(1).Align(wxALIGN_TOP).FixedMinSize().Border(wxLEFT|wxBOTTOM|wxRIGHT,10).Expand());
     //--------------------------------------------------
+    pRelatorios->SetBackgroundColour(wxColor(50,50,120));
     direito->SetBackgroundColour(wxColor(50,50,120));
     splitter->SplitVertically(lC,splitter2);
     splitter2->SplitVertically(relatorios,direito);
@@ -39,16 +47,42 @@ JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
     SetSizerAndFit(new wxBoxSizer(wxVERTICAL));
     
     GetSizer()->Add(splitter,1,wxEXPAND|wxALL);
+    Layout();
 }
 
 void JVerRelatorio::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_RELATORIO,false);
+    lC->ResetText();
     jP->SetStatusText(L"Acessar relatório cadastrado no sistema.");
-    
+    listRelat->DeselectAll();
+    listRelat->Clear();
+    pRelatorios->Show(false);
+    Layout();
 }
 
 void JVerRelatorio::Desligar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_RELATORIO,true);
+}
+
+void JVerRelatorio::Select(wxCommandEvent& evt)
+{
+    pRelatorios->Show(false);
+    idCant = lC->GetIdCanteiro();
+    vector<idRelatorios>::iterator it;
+    for(it=idCant.relatorios.begin();it<idCant.relatorios.end();it++)
+    {
+        listRelat->Append((*it).nome);
+    }
+    Layout();
+}
+
+void JVerRelatorio::SelectRelatorio(wxCommandEvent& evt)
+{
+
+    pRelatorios->AdicionarRelatorio(Aplicacao::gerRel.armazenarRelatorio(idCant.relatorios[listRelat->GetSelection()]));
+    pRelatorios->Show(true);
+    Layout();
+    
 }

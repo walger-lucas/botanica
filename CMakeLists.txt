@@ -18,4 +18,6 @@ add_executable(botanica Aplicacao.cpp JanelaPrincipal.cpp Janela.cpp Gerenciador
 target_link_libraries(botanica ${wxWidgets_LIBRARIES})
 target_link_libraries(botanica ${MYSQLCPPCONN_LIBRARY})
 target_include_directories(botanica PUBLIC ${MYSQLCPP_INCLUDE_DIRS})
+# target_link_libraries(banco ${MYSQLCPPCONN_LIBRARY})
+# target_include_directories(banco PUBLIC ${MYSQLCPP_INCLUDE_DIRS})
 include(CPack)
