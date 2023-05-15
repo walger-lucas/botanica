@@ -67,7 +67,11 @@ void ListaCanteiros::AtualizarTexto(wxCommandEvent& event)
 idCanteiros ListaCanteiros::GetIdCanteiro()
 {
 
-    int id = list->GetSelection();
-    wxString nome = list->GetString(id);
-    return Aplicacao::gerCant.getId(nome.ToStdString());
+        int id = list->GetSelection();
+        if(id!=wxNOT_FOUND)
+        {
+            wxString nome = list->GetString(id);
+            return Aplicacao::gerCant.getId(nome.ToStdString());
+        }
+        return CANTEIRO_NULO;
 }

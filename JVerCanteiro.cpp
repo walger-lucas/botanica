@@ -3,14 +3,15 @@
 
 wxBEGIN_EVENT_TABLE(JVerCanteiro,wxWindow)
 EVT_BUTTON(101,JVerCanteiro::DeleteCanteiro)
+EVT_BUTTON(104,JVerCanteiro::AddRelatorio)
 EVT_LISTBOX(ListaCanteiros::ID_SELECT,JVerCanteiro::Select)
 wxEND_EVENT_TABLE()
 
 
-JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent)
+JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent,JAddRelatorio* _jRel)
 : Janela(gJ,parent,wxID_ANY)
 {
-    
+    jRel=_jRel;
     splitter = new wxSplitterWindow(this,-1,wxDefaultPosition,wxDefaultSize,wxSP_LIVE_UPDATE);
     direito = new wxPanel(splitter,-1);
 
@@ -25,11 +26,9 @@ JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent)
     botoes->SetBackgroundColour(wxColor(50,120,50));
     botoes->SetSizerAndFit(new wxBoxSizer(wxHORIZONTAL));
     botaoDeletar = new wxButton(botoes,101,L"Deletar Canteiro");
-    botaoEditar = new wxButton(botoes,102,L"Editar Canteiro");
     botaoAcessarRelatorio = new wxButton(botoes,103,L"Acessar Relatório");
     botaoAdicionarRelatorio = new wxButton(botoes,104,L"Adicionar Relatório");
     botoes->GetSizer()->Add(botaoDeletar);
-    botoes->GetSizer()->Add(botaoEditar);
     botoes->GetSizer()->Add(botaoAcessarRelatorio);
     botoes->GetSizer()->Add(botaoAdicionarRelatorio);
     botoes->Layout();
@@ -47,6 +46,7 @@ JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent)
 void JVerCanteiro::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CANTEIRO,false);
+    lC->ResetText();
     jP->SetStatusText(L"Acesso aos canteiros cadastrados.");
     lC->Atualizar();
     botoes->Show(false);
@@ -56,7 +56,7 @@ void JVerCanteiro::Inicializar(JanelaPrincipal* jP)
 void JVerCanteiro::Desligar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CANTEIRO,true);
-    lC->ResetText();
+    
 }
 
 void JVerCanteiro::DeleteCanteiro(wxCommandEvent& evt)
@@ -80,5 +80,15 @@ void JVerCanteiro::Select(wxCommandEvent& evt)
         botoes->Layout();
         painelCanteiro->Layout();
         direito->Layout();
+    }
+}
+
+void JVerCanteiro::AddRelatorio(wxCommandEvent& evt)
+{
+    idCanteiros idCant=lC->GetIdCanteiro();
+    if(idCant.id>=0)
+    {
+        gJ->MudarJanela(J_ADD_RELATORIO);
+        jRel->SelecionarCanteiro(idCant);
     }
 }

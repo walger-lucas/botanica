@@ -2,12 +2,14 @@
 #include "Janela.h"
 #include "ListaCanteiros.h"
 #include "PainelCanteiro.h"
+#include "JAddRelatorio.h"
 #include <wx/splitter.h>
 
 /* Janela para acessar canteiros no sistema*/
 class JVerCanteiro: public Janela
 {
     private:
+        JAddRelatorio* jRel;
         ListaCanteiros* lC; //painel esquerdo
         PainelCanteiro* painelCanteiro;
         wxPanel* direito;//painel direito
@@ -16,15 +18,15 @@ class JVerCanteiro: public Janela
         idCanteiros idSelecionado;
 
         wxButton* botaoDeletar;
-        wxButton* botaoEditar;
         wxButton* botaoAcessarRelatorio;
         wxButton* botaoAdicionarRelatorio;
         
         void DeleteCanteiro(wxCommandEvent& event);
         void Select(wxCommandEvent& event);
+        void AddRelatorio(wxCommandEvent& event);
     public:
         
-        JVerCanteiro(GerenciadorJanelas* gJ,wxWindow* parent);
+        JVerCanteiro(GerenciadorJanelas* gJ,wxWindow* parent,JAddRelatorio* jRel);
         void Inicializar(JanelaPrincipal* jP);
         void Desligar(JanelaPrincipal* jP);
 

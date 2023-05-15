@@ -16,8 +16,7 @@ GerenciadorJanelas::GerenciadorJanelas(JanelaPrincipal* jPrincipal)
         janelas[i]=nullptr;
     }
     //------------------- Cria as Janelas necessárias
-    JVerCanteiro* jVCant = new JVerCanteiro(this,jP);
-    janelas[J_VER_CANTEIRO]=static_cast<Janela*>(jVCant);
+
     JAddCanteiro* jACant = new JAddCanteiro(this,jP);
     janelas[J_ADD_CANTEIRO]= static_cast<Janela*>(jACant);
     JVerRelatorio* jVRel = new JVerRelatorio(this,jP);
@@ -26,6 +25,8 @@ GerenciadorJanelas::GerenciadorJanelas(JanelaPrincipal* jPrincipal)
     janelas[J_ADD_RELATORIO]= static_cast<Janela*>(jARel);
     JCronograma* jC =new JCronograma(this,jP);
     janelas[J_CRONOGRAMA]= static_cast<Janela*>(jC);
+    JVerCanteiro* jVCant = new JVerCanteiro(this,jP,jARel);
+    janelas[J_VER_CANTEIRO]=static_cast<Janela*>(jVCant);
     //------------------- Desaparece com todas as janelas e coloca no sizer de jP
     wxSizer* sizer = jP->GetSizer();
     for(int i=0;i< J_MAX;i++)

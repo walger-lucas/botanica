@@ -3,6 +3,7 @@
 
 wxIMPLEMENT_APP(Aplicacao);
 GerenciadorCanteiros Aplicacao::gerCant=GerenciadorCanteiros();
+GerenciadorRelatorios Aplicacao::gerRel=GerenciadorRelatorios();
 bool Aplicacao::OnInit()
 {
     JanelaPrincipal* janelaPrincipal = new JanelaPrincipal(L"Botânica");

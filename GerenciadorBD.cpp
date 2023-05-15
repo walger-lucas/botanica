@@ -197,7 +197,6 @@ DadosCanteiro GerenciadorBD::armazenarLinhaCanteiros(idCanteiros canteiro)
 idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, float ph, double umidade, string saude, string obs)
 {
   idRelatorios relatorio;
-
   // Atualiza valor do id de acordo com o numero de relatorios
   res = stmt->executeQuery("SELECT n_relatorios FROM canteiros WHERE id=" + to_string(canteiro.id));
   while (res->next())
@@ -205,11 +204,12 @@ idRelatorios GerenciadorBD::criarRelatorio(idCanteiros canteiro, string nome, fl
     int n_relatorios = res->getInt("n_relatorios");
     stmt->execute("UPDATE canteiros SET n_relatorios = " + to_string(n_relatorios+1) + " WHERE id=" + to_string(canteiro.id));
   }
-
+  
   // Cria linha e adiciona os parâmetros
   string query = "INSERT INTO relatorios (id_cant, nome";
   string valores = " VALUES (" + to_string(canteiro.id) + ",'" + nome + "'";
   string campos[4] = {"ph_atual", "umidade_atual", "saude", "obs"};
+  
 
   //// Parâmetros opcionais numéricos (-1 significa nulo)
   double campos_num[2] = {ph, umidade};
