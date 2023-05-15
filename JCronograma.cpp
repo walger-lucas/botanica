@@ -1,12 +1,14 @@
 #include "JCronograma.h"
-#include <wx/grid.h>
+#include "Aplicacao.h"
+
 
 JCronograma::JCronograma(GerenciadorJanelas* gJ, wxWindow* parent)
 : Janela(gJ,parent,wxID_ANY)
 {
     wxPanel* panel = new wxPanel(this,wxID_ANY,wxDefaultPosition,wxSize(400,400));
-    wxGrid* grid = new wxGrid(panel,-1,wxDefaultPosition,wxSize(400,400));
-    grid->CreateGrid(25,2);
+    grid = new wxGrid(panel,-1,wxDefaultPosition,wxSize(400,400));
+    vector<idCanteiros> ids = Aplicacao::GetGerCanteiros().buscarTodos();
+    grid->CreateGrid(200,2);
     grid->SetColSize(0,200);
     grid->SetColSize(1,200);
     grid->SetCellValue(0,0,L"Canteiro");
@@ -33,6 +35,16 @@ void JCronograma::Inicializar(JanelaPrincipal* jP)
 {
     jP->GetMenuBar()->Enable(MenuID::ID_OPEN_CRONOGRAMA,false);
     jP->SetStatusText(L"Acesso ao cronograma de rega dos canteiros cadastrados.");
+    vector<idCanteiros> ids = Aplicacao::GetGerCanteiros().buscarTodos();
+    grid->ClearGrid();
+    grid->SetCellValue(0,0,L"Canteiro");
+    grid->SetCellValue(0,1,L"Data para Rega");
+    size_t size = ids.size()+1;
+    for(int i =1;i<size&& i<200;i++)
+    {
+        grid->SetCellValue(i,0,ids[i-1].nome);
+        grid->SetCellValue(i,1,ids[i-1].prox_rega);
+    }
     
 }
 

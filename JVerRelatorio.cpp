@@ -92,7 +92,7 @@ void JVerRelatorio::Select(idCanteiros id)
 void JVerRelatorio::SelectRelatorio(wxCommandEvent& evt)
 {
 
-    pRelatorios->AdicionarRelatorio(Aplicacao::GetGerRelatorios().armazenarRelatorio(idCant.relatorios[listRelat->GetSelection()]));
+    pRelatorios->AdicionarRelatorio(Aplicacao::GetGerRelatorios().armazenarRelatorio(idCant.relatorios[idCant.relatorios.size()-listRelat->GetSelection()-1]));
     pRelatorios->Show(true);
     direito->Layout();
     pRelatorios->Layout();
