@@ -6,11 +6,12 @@
 GerenciadorRelatorios::GerenciadorRelatorios() 
 : gerenciadorBD(new GerenciadorBD)
 {
+  idRelatorios::dict_relatorios.clear();
   // Recebe as idRelatorios dos relatorios registrados no banco de dados
   vector<idRelatorios> relatorios = gerenciadorBD->selecionarRelatorios();
   // Armazena as idRelatorios em um dicionário a partir do nome
   for(auto it = relatorios.begin(); it != relatorios.end(); it++)
-    dict_relatorios[it->nome] = *it;
+   idRelatorios::dict_relatorios[it->nome] = *it;
 }
 
 /*
@@ -19,7 +20,6 @@ GerenciadorRelatorios::GerenciadorRelatorios()
 GerenciadorRelatorios::~GerenciadorRelatorios()
 {
   delete gerenciadorBD;
-  dict_relatorios.clear();
 }
 
 /*
@@ -30,7 +30,7 @@ idRelatorios GerenciadorRelatorios::getId(string nome)
 {
   try
   {
-    return dict_relatorios.at(nome);
+    return idRelatorios::dict_relatorios.at(nome);
   }
   catch(const std::exception& e)
   {
@@ -50,13 +50,13 @@ idRelatorios GerenciadorRelatorios::getId(string nome)
 */
 void GerenciadorRelatorios::adicionarRelatorio(idCanteiros canteiro, string nome, float ph, double umidade, string saude, string obs)
 {
-  if(dict_relatorios.count(nome) == 0)
+  if(idRelatorios::dict_relatorios.count(nome) == 0)
   {
     idRelatorios relatorioCriado = gerenciadorBD->criarRelatorio(canteiro, nome, ph, umidade, saude, obs);
     if(!relatorioEhNulo(relatorioCriado))
     {
-      dict_relatorios[nome] = relatorioCriado;
-      dict_canteiros[canteiro.nome].relatorios.push_back(relatorioCriado);
+      idRelatorios::dict_relatorios[nome] = relatorioCriado;
+      idCanteiros::dict_canteiros[canteiro.nome].relatorios.push_back(relatorioCriado);
     }
     else
       cout << "Não é permitido nomes repetidos" << endl;
@@ -74,8 +74,8 @@ void GerenciadorRelatorios::removerRelatorio(idRelatorios relatorio)
   if(!relatorioEhNulo(relatorio))
   {
     gerenciadorBD->descartarRelatorio(relatorio);
-    dict_relatorios.erase(relatorio.nome);
-    for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)
+    idRelatorios::dict_relatorios.erase(relatorio.nome);
+    for(auto it = idCanteiros::dict_canteiros.begin(); it != idCanteiros::dict_canteiros.end(); it++)
       if(it->second.id == relatorio.id_cant)
         it->second.relatorios = removerDaLista(it->second.relatorios, relatorio);
   }
@@ -96,7 +96,7 @@ vector<idRelatorios> GerenciadorRelatorios::buscarTodos()
 vector<idRelatorios> GerenciadorRelatorios::buscarPorNome(string substring)
 {
   vector<idRelatorios> relatoriosFiltrados;
-  for(auto it = dict_relatorios.begin(); it != dict_relatorios.end(); it++)  
+  for(auto it = idRelatorios::dict_relatorios.begin(); it != idRelatorios::dict_relatorios.end(); it++)  
     if(it->first.find(substring) != -1)
       relatoriosFiltrados.push_back(it->second);
   return relatoriosFiltrados;

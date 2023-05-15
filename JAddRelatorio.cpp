@@ -57,8 +57,7 @@ void JAddRelatorio::Select(wxCommandEvent& evt)
         relatorios->Show(false);
         lC->Show(true);
         segundaPag=false;
-        cout<<rel.relatorio.nome<<endl;
-        Aplicacao::gerRel.adicionarRelatorio(id,rel.relatorio.nome,rel.ph,rel.umidade,rel.saude,rel.obs);
+        Aplicacao::GetGerRelatorios().adicionarRelatorio(id,rel.relatorio.nome,rel.ph,rel.umidade,rel.saude,rel.obs);
         
     }
     Layout();

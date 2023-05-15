@@ -25,7 +25,7 @@ GerenciadorJanelas::GerenciadorJanelas(JanelaPrincipal* jPrincipal)
     janelas[J_ADD_RELATORIO]= static_cast<Janela*>(jARel);
     JCronograma* jC =new JCronograma(this,jP);
     janelas[J_CRONOGRAMA]= static_cast<Janela*>(jC);
-    JVerCanteiro* jVCant = new JVerCanteiro(this,jP,jARel);
+    JVerCanteiro* jVCant = new JVerCanteiro(this,jP,jARel,jVRel);
     janelas[J_VER_CANTEIRO]=static_cast<Janela*>(jVCant);
     //------------------- Desaparece com todas as janelas e coloca no sizer de jP
     wxSizer* sizer = jP->GetSizer();

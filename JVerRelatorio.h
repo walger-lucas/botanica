@@ -12,10 +12,12 @@ class JVerRelatorio: public Janela
     wxListBox* listRelat;
     idCanteiros idCant;
     PainelRelatorio* pRelatorios;
+    wxPanel* direito;
     void Select(wxCommandEvent& event);
     void SelectRelatorio(wxCommandEvent& event);
     public:
         JVerRelatorio(GerenciadorJanelas* gJ,wxWindow* parent);
+        void Select(idCanteiros id);
         void Inicializar(JanelaPrincipal* jP);
         void Desligar(JanelaPrincipal* jP);
     

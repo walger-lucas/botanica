@@ -3,15 +3,17 @@
 
 wxBEGIN_EVENT_TABLE(JVerCanteiro,wxWindow)
 EVT_BUTTON(101,JVerCanteiro::DeleteCanteiro)
+EVT_BUTTON(103,JVerCanteiro::VerRelatorio)
 EVT_BUTTON(104,JVerCanteiro::AddRelatorio)
 EVT_LISTBOX(ListaCanteiros::ID_SELECT,JVerCanteiro::Select)
 wxEND_EVENT_TABLE()
 
 
-JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent,JAddRelatorio* _jRel)
+JVerCanteiro::JVerCanteiro(GerenciadorJanelas* gJ, wxWindow* parent,JAddRelatorio* _jRel,JVerRelatorio* _jvRel)
 : Janela(gJ,parent,wxID_ANY)
 {
     jRel=_jRel;
+    jvRel=_jvRel;
     splitter = new wxSplitterWindow(this,-1,wxDefaultPosition,wxDefaultSize,wxSP_LIVE_UPDATE);
     direito = new wxPanel(splitter,-1);
 
@@ -61,7 +63,7 @@ void JVerCanteiro::Desligar(JanelaPrincipal* jP)
 
 void JVerCanteiro::DeleteCanteiro(wxCommandEvent& evt)
 {
-    Aplicacao::gerCant.removerCanteiro(idSelecionado);
+    Aplicacao::GetGerCanteiros().removerCanteiro(idSelecionado);
     lC->Atualizar();
     botoes->Show(false);
     painelCanteiro->Show(false);
@@ -71,10 +73,11 @@ void JVerCanteiro::DeleteCanteiro(wxCommandEvent& evt)
 void JVerCanteiro::Select(wxCommandEvent& evt)
 {
     idCanteiros id =lC->GetIdCanteiro();
+    
     if(id.id>=0)
     {
         idSelecionado=lC->GetIdCanteiro();
-        painelCanteiro->AdicionarCanteiro(Aplicacao::gerCant.armazenarCanteiro(idSelecionado));
+        painelCanteiro->AdicionarCanteiro(Aplicacao::GetGerCanteiros().armazenarCanteiro(idSelecionado));
         botoes->Show(true);
         painelCanteiro->Show(true);
         botoes->Layout();
@@ -90,5 +93,15 @@ void JVerCanteiro::AddRelatorio(wxCommandEvent& evt)
     {
         gJ->MudarJanela(J_ADD_RELATORIO);
         jRel->SelecionarCanteiro(idCant);
+    }
+}
+
+void JVerCanteiro::VerRelatorio(wxCommandEvent& evt)
+{
+    idCanteiros idCant=lC->GetIdCanteiro();
+    if(idCant.id>=0)
+    {
+        gJ->MudarJanela(J_VER_RELATORIO);
+        jvRel->Select(idCant);
     }
 }

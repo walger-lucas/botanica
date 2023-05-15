@@ -1,5 +1,5 @@
 #include "Relatorio.h"
-
+map<string,idRelatorios> idRelatorios::dict_relatorios=map<string,idRelatorios>();
 DadosRelatorio::DadosRelatorio(idRelatorios relatorio, string data, float ph, double umidade, string saude, string obs)
 : relatorio(relatorio), data(data), ph(ph), umidade(umidade), saude(saude), obs(obs)
 {

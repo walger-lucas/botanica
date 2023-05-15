@@ -31,7 +31,7 @@ void JAddCanteiro::Desligar(JanelaPrincipal* jP)
 
 void JAddCanteiro::AddCanteiro(wxCommandEvent& event)
 {
-    if(Aplicacao::gerCant.adicionarCanteiro(panel->PegarCanteiro()))
+    if(Aplicacao::GetGerCanteiros().adicionarCanteiro(panel->PegarCanteiro()))
     {
         wxMessageBox("Adicionado Canteiro.","Canteiro foi adicionado com sucesso.");
         panel->Reset();

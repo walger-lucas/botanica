@@ -3,6 +3,7 @@
 #include "ListaCanteiros.h"
 #include "PainelCanteiro.h"
 #include "JAddRelatorio.h"
+#include "JVerRelatorio.h"
 #include <wx/splitter.h>
 
 /* Janela para acessar canteiros no sistema*/
@@ -10,6 +11,7 @@ class JVerCanteiro: public Janela
 {
     private:
         JAddRelatorio* jRel;
+        JVerRelatorio* jvRel;
         ListaCanteiros* lC; //painel esquerdo
         PainelCanteiro* painelCanteiro;
         wxPanel* direito;//painel direito
@@ -24,9 +26,10 @@ class JVerCanteiro: public Janela
         void DeleteCanteiro(wxCommandEvent& event);
         void Select(wxCommandEvent& event);
         void AddRelatorio(wxCommandEvent& event);
+        void VerRelatorio(wxCommandEvent& evt);
     public:
         
-        JVerCanteiro(GerenciadorJanelas* gJ,wxWindow* parent,JAddRelatorio* jRel);
+        JVerCanteiro(GerenciadorJanelas* gJ,wxWindow* parent,JAddRelatorio* jRel,JVerRelatorio* jvRel);
         void Inicializar(JanelaPrincipal* jP);
         void Desligar(JanelaPrincipal* jP);
 

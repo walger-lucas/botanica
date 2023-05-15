@@ -44,12 +44,12 @@ void ListaCanteiros::Atualizar()
     list->Clear();
     vector<idCanteiros> ids;
     if(text->GetValue()=="")
-        ids = Aplicacao::gerCant.buscarTodos();
+        ids = Aplicacao::GetGerCanteiros().buscarTodos();
     else
     {
         std::string texto;
         texto = text->GetValue().mb_str();
-        ids = Aplicacao::gerCant.buscarPorNome(texto);
+        ids = Aplicacao::GetGerCanteiros().buscarPorNome(texto);
     }
     vector<idCanteiros>::iterator it;
     for(it = ids.begin();it<ids.end();it++)
@@ -71,7 +71,27 @@ idCanteiros ListaCanteiros::GetIdCanteiro()
         if(id!=wxNOT_FOUND)
         {
             wxString nome = list->GetString(id);
-            return Aplicacao::gerCant.getId(nome.ToStdString());
+            return Aplicacao::GetGerCanteiros().getId(nome.ToStdString());
         }
         return CANTEIRO_NULO;
+}
+
+void ListaCanteiros::Select(string nome)
+{
+   text->SetValue(nome);
+   Atualizar();
+   wxArrayString nomes= list->GetStrings();
+   size_t size = nomes.size();
+   
+   
+   for (int i=0;i<size;i++)
+   {
+        if(nomes[i].ToStdString()==nome)
+        {
+            list->Select(i);
+            break;
+        }
+   }
+   
+   
 }

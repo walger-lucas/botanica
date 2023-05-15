@@ -113,9 +113,9 @@ void PainelCanteiro::AdicionarCanteiro(const DadosCanteiro dadosCanteiro)
     
     if(dadosCanteiro.canteiro.relatorios.size()>0)
     {
-        DadosRelatorio rel= Aplicacao::gerRel.armazenarRelatorio(dadosCanteiro.canteiro.relatorios[0]);//TUDO ERRADO
+        DadosRelatorio rel= Aplicacao::GetGerRelatorios().armazenarRelatorio(*(--dadosCanteiro.canteiro.relatorios.end()));//TUDO ERRADO
         phText->SetLabelText(L"pH preferido: "+std::to_string(dadosCanteiro.ph)+"\t pH atual: "+std::to_string(rel.ph));
-        umidadeText->SetLabelText(L"Umidade preferida: "+std::to_string(dadosCanteiro.umidade)+"\t pH atual: "+std::to_string(rel.umidade));
+        umidadeText->SetLabelText(L"Umidade preferida: "+std::to_string(dadosCanteiro.umidade)+"\t Umidade atual: "+std::to_string(rel.umidade));
     } else
     {
         phText->SetLabelText(L"pH preferido: "+std::to_string(dadosCanteiro.ph));

@@ -5,8 +5,10 @@
 
 class Aplicacao : public wxApp
 {
+    static GerenciadorCanteiros* gerCant;
+    static GerenciadorRelatorios* gerRel;
     public:
-        static GerenciadorCanteiros gerCant;
-        static GerenciadorRelatorios gerRel;
         bool OnInit();
+        static GerenciadorCanteiros& GetGerCanteiros() {return *gerCant;};
+        static GerenciadorRelatorios& GetGerRelatorios() {return *gerRel;};
 };

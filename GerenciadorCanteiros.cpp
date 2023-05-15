@@ -6,11 +6,14 @@
 GerenciadorCanteiros::GerenciadorCanteiros() 
 : gerenciadorBD(new GerenciadorBD())
 {
+  idCanteiros::dict_canteiros.clear();
   // Recebe as idCanteiros dos canteiros registrados no banco de dados
   vector<idCanteiros> canteiros = gerenciadorBD->selecionarCanteiros();
   // Armazena as idCanteiros em um dicionário a partir do nome
   for(auto it = canteiros.begin(); it != canteiros.end(); it++)
-    dict_canteiros[it->nome] = *it;
+  {
+    idCanteiros::dict_canteiros[it->nome] = *it;
+  }
 }
 
 /*
@@ -20,7 +23,6 @@ GerenciadorCanteiros::~GerenciadorCanteiros()
 {
   if(gerenciadorBD)
     delete gerenciadorBD;
-  dict_canteiros.clear();
 }
 
 /*
@@ -31,7 +33,7 @@ idCanteiros GerenciadorCanteiros::getId(string nome)
 {
   try
   {
-    return dict_canteiros.at(nome);
+    return idCanteiros::dict_canteiros.at(nome);
   }
   catch(const std::exception& e)
   {
@@ -52,11 +54,11 @@ idCanteiros GerenciadorCanteiros::getId(string nome)
 bool GerenciadorCanteiros::adicionarCanteiro(string nome, string especie, int periodo_rega, float ph, double umidade, string descricao)
 {
 
-  if(dict_canteiros.count(nome) == 0 && nome!="")
+  if(idCanteiros::dict_canteiros.count(nome) == 0 && nome!="")
   {
     idCanteiros canteiroCriado = gerenciadorBD->criarCanteiro(nome, especie, periodo_rega, ph, umidade, descricao);
     if(!canteiroEhNulo(canteiroCriado))
-      dict_canteiros[nome] = canteiroCriado;
+      idCanteiros::dict_canteiros[nome] = canteiroCriado;
     else
       return false;
   }
@@ -83,7 +85,7 @@ void GerenciadorCanteiros::removerCanteiro(idCanteiros canteiro)
   if(!canteiroEhNulo(canteiro))
   {
     gerenciadorBD->descartarCanteiro(canteiro);
-    dict_canteiros.erase(canteiro.nome);
+    idCanteiros::dict_canteiros.erase(canteiro.nome);
   }
 }
 
@@ -100,9 +102,9 @@ void GerenciadorCanteiros::atualizarCanteiro(idCanteiros canteiro, string parame
     gerenciadorBD->atualizarCanteiro(canteiro, parametro, valor);
     if(parametro == "nome")
     {
-      dict_canteiros.erase(canteiro.nome);
+      idCanteiros::dict_canteiros.erase(canteiro.nome);
       canteiro.nome = valor;
-      dict_canteiros[valor] = canteiro;
+      idCanteiros::dict_canteiros[valor] = canteiro;
     }
   }
 }
@@ -149,7 +151,7 @@ vector<idCanteiros> GerenciadorCanteiros::buscarTodos()
 vector<idCanteiros> GerenciadorCanteiros::buscarPorNome(string substring)
 {
   vector<idCanteiros> canteirosFiltrados;
-  for(auto it = dict_canteiros.begin(); it != dict_canteiros.end(); it++)  
+  for(auto it = idCanteiros::dict_canteiros.begin(); it != idCanteiros::dict_canteiros.end(); it++)  
     if(it->first.find(substring) != -1)
       canteirosFiltrados.push_back(it->second);
   return canteirosFiltrados;

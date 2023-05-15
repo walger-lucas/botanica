@@ -19,7 +19,7 @@ class ListaCanteiros: public wxPanel
         ListaCanteiros(wxWindow* parent);
         void ResetText();
         idCanteiros GetIdCanteiro();
-        void Select(long ID);
+        void Select(string nome);
         void Atualizar();
         void AtualizarTexto(wxCommandEvent& event);
         

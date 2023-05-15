@@ -1,5 +1,5 @@
 #include "Canteiro.h"
-
+map<string,idCanteiros> idCanteiros::dict_canteiros=map<string,idCanteiros>();
 DadosCanteiro::DadosCanteiro(idCanteiros canteiro, string especie, int periodo_rega, float ph, double umidade, string descricao)
 : canteiro(canteiro), especie(especie), periodo_rega(periodo_rega), ph(ph), umidade(umidade), descricao(descricao)
 {

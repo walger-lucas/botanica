@@ -13,7 +13,7 @@ JVerRelatorio::JVerRelatorio(GerenciadorJanelas* gJ, wxWindow* parent)
     lC->SetBackgroundColour(wxColor(100,100,200));
     wxSplitterWindow* splitter2 = new wxSplitterWindow(splitter,-1,wxDefaultPosition,wxDefaultSize,wxSP_LIVE_UPDATE);
     wxPanel* relatorios = new wxPanel(splitter2);
-    wxPanel* direito = new wxPanel(splitter2);
+    direito = new wxPanel(splitter2);
     pRelatorios = new PainelRelatorio(direito,false);
     direito->SetSizerAndFit(new wxBoxSizer(wxVERTICAL));
     direito->GetSizer()->Add(pRelatorios,wxSizerFlags(1).Expand());
@@ -68,21 +68,34 @@ void JVerRelatorio::Desligar(JanelaPrincipal* jP)
 
 void JVerRelatorio::Select(wxCommandEvent& evt)
 {
+    
     pRelatorios->Show(false);
     idCant = lC->GetIdCanteiro();
     vector<idRelatorios>::iterator it;
-    for(it=idCant.relatorios.begin();it<idCant.relatorios.end();it++)
+    listRelat->Clear();
+    if(!idCant.relatorios.empty())
     {
-        listRelat->Append((*it).nome);
+        for(it=--idCant.relatorios.end();it>=idCant.relatorios.begin();it--)
+        {
+            listRelat->Append((*it).nome);
+        }
+        Layout();
     }
-    Layout();
+}
+void JVerRelatorio::Select(idCanteiros id)
+{
+    lC->Select(id.nome);
+    wxCommandEvent evt;
+    Select(evt);
 }
 
 void JVerRelatorio::SelectRelatorio(wxCommandEvent& evt)
 {
 
-    pRelatorios->AdicionarRelatorio(Aplicacao::gerRel.armazenarRelatorio(idCant.relatorios[listRelat->GetSelection()]));
+    pRelatorios->AdicionarRelatorio(Aplicacao::GetGerRelatorios().armazenarRelatorio(idCant.relatorios[listRelat->GetSelection()]));
     pRelatorios->Show(true);
+    direito->Layout();
+    pRelatorios->Layout();
     Layout();
     
 }

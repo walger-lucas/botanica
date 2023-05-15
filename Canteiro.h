@@ -15,16 +15,12 @@ struct idCanteiros
   int id;
   string nome;
   vector<idRelatorios> relatorios;
+  static map<string, idCanteiros> dict_canteiros;
 };
 
 const idCanteiros CANTEIRO_NULO = {-1, "__nulo__"};
 bool canteiroEhNulo(idCanteiros canteiro);
 
-class DictCanteiros
-{
-public:
-  map<string, idCanteiros> dict_canteiros;
-};
 
 class DadosCanteiro
 {

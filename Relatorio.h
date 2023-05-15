@@ -11,20 +11,16 @@ using namespace std;
 
 struct idRelatorios
 {
+  
   int id;
   string nome;
   int id_cant;
+  static map<string, idRelatorios> dict_relatorios;
 };
 
 const idRelatorios RELATORIO_NULO = {-1, "__nulo__", -1};
 bool relatorioEhNulo(idRelatorios relatorio);
 vector<idRelatorios> removerDaLista(vector<idRelatorios> lista, idRelatorios relatorio);
-
-class DictRelatorios
-{
-public:
-  map<string, idRelatorios> dict_relatorios;
-};
 
 class DadosRelatorio
 {

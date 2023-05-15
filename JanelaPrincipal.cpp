@@ -1,5 +1,6 @@
 #include "JanelaPrincipal.h"
 #include "GerenciadorJanelas.h"
+#include "Canteiro.h"
 
 //conecta ids com funcoes em compilador
 wxBEGIN_EVENT_TABLE(JanelaPrincipal,wxFrame)
@@ -69,29 +70,24 @@ void JanelaPrincipal::PrepararJanela()
 
 void JanelaPrincipal::NewCanteiro(wxCommandEvent& ev)
 {
-    cout<<"add canteiro\n";
     gJ->MudarJanela(Janelas::J_ADD_CANTEIRO);
     
 }
 void JanelaPrincipal::OpenCanteiro(wxCommandEvent& ev)
 {
-    cout<<"ver canteiro\n";
     gJ->MudarJanela(Janelas::J_VER_CANTEIRO);
     
 }
 void JanelaPrincipal::OpenRelatorio(wxCommandEvent& ev)
 {
-    cout<<"ver relatorio\n";
     gJ->MudarJanela(Janelas::J_VER_RELATORIO);
 }
 void JanelaPrincipal::NewRelatorio(wxCommandEvent& ev)
 {
-    cout<<"add relatorio\n";
     gJ->MudarJanela(Janelas::J_ADD_RELATORIO);
 }
 
 void JanelaPrincipal::OpenCronograma(wxCommandEvent& ev)
 {
-    cout<<"ver cronograma\n";
     gJ->MudarJanela(Janelas::J_CRONOGRAMA);
 }
